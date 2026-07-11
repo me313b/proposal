@@ -6,16 +6,16 @@
 <title>Project Plan (36 months) — Per-Slot Machine Drives</title>
 <style>
   /* ============ page setup ============ */
-  @page { size: A4 landscape; margin: 1cm; }
+  @page { size: A4 landscape; margin: 2cm; }
   * { box-sizing: border-box; margin: 0; padding: 0;
       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   html, body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; }
   body { background: #e9e8e4; }
-  .sheet { width: 27.7cm; margin: 0.8cm auto; padding: 0.5cm;
+  .sheet { width: 25.7cm; margin: 0.8cm auto; padding: 0.5cm;
            background: #ffffff; box-shadow: 0 2px 14px rgba(0,0,0,0.18); }
   @media print {
     body { background: #ffffff; }
-    .sheet { width: 27.7cm; margin: 0; padding: 0; box-shadow: none; }
+    .sheet { width: 25.7cm; margin: 0; padding: 0; box-shadow: none; }
   }
 
   /* ============ palette (validated: worst adjacent CVD dE 47.2; greyscale levels ~111/168/145/69) ============ */
@@ -32,15 +32,15 @@
   /* ============ title block ============ */
   .titleblock { padding: 0 0 0.06cm 0; }
   .titleblock h1 { font-size: 11pt; line-height: 1.2; }
-  .titleblock .sub { font-size: 7.5pt; color: var(--ink2); margin-top: 0.06cm; }
-  .confirm { font-size: 7.5pt; font-weight: bold; color: #7a4a00;
+  .titleblock .sub { font-size: 11pt; color: var(--ink2); margin-top: 0.06cm; }
+  .confirm { font-size: 11pt; font-weight: bold; color: #7a4a00;
              background: #fdf3dd; border: 1px solid #e5c98a;
              padding: 0.04cm 0.15cm; margin: 0.08cm 0 0.12cm 0; }
 
   /* ============ shared row scaffolding ============ */
   .row  { display: flex; align-items: stretch; }
   .lbl  { flex: 0 0 var(--lblw); padding: 0.02cm 0.28cm 0.02cm 0.08cm;
-          font-size: 7pt; line-height: 1.15; display: flex; align-items: center; }
+          font-size: 11pt; line-height: 1.15; display: flex; align-items: center; }
   .lane { flex: 1 1 auto; position: relative; border-left: 1px solid var(--gridyr);
           background-image:
             linear-gradient(to right, var(--gridyr) 1px, transparent 1px),
@@ -50,23 +50,23 @@
   /* ============ year + month headers ============ */
   .yr .lbl, .mo .lbl { border: none; }
   .yr .lane, .mo .lane { display: flex; background-image: none; }
-  .yr .cell { flex: 1 1 0; text-align: center; font-size: 7.5pt; font-weight: bold;
+  .yr .cell { flex: 1 1 0; text-align: center; font-size: 11pt; font-weight: bold;
               color: var(--ink2); border-left: 1px solid var(--gridyr);
               background: var(--head-bg); padding: 0.05cm 0; }
-  .mo .cell { flex: 1 1 0; text-align: center; font-size: 7pt; color: var(--muted);
+  .mo .cell { flex: 1 1 0; text-align: center; font-size: 11pt; color: var(--muted);
               border-left: 1px solid var(--grid); padding: 0.02cm 0 0.03cm 0; }
   .mo .cell:nth-child(12n+1) { border-left: 1px solid var(--gridyr); }
-  .hdrnote { font-size: 7pt; color: var(--muted); justify-content: flex-end;
+  .hdrnote { font-size: 11pt; color: var(--muted); justify-content: flex-end;
              display: flex; align-items: flex-end; padding-right: 0.28cm; }
 
   /* ============ WP swimlanes ============ */
   .wphead { background: var(--head-bg); border-top: 1.5px solid var(--ink);
             min-height: 0.5cm; }
   .wphead .lbl { display: block; padding-top: 0.04cm; padding-bottom: 0.04cm; }
-  .wphead .wpname { font-size: 8pt; font-weight: bold; }
-  .wphead .wpmeta { font-size: 7pt; color: var(--ink2); margin-top: 0.02cm; }
+  .wphead .wpname { font-size: 11pt; font-weight: bold; }
+  .wphead .wpmeta { font-size: 11pt; color: var(--ink2); margin-top: 0.02cm; }
   .rqtag { position: absolute; top: 50%; transform: translateY(-50%);
-           font-size: 7pt; font-weight: bold; color: #ffffff;
+           font-size: 11pt; font-weight: bold; color: #ffffff;
            border-radius: 2px; padding: 1px 5px 2px 5px; white-space: nowrap; }
   .env { position: absolute; height: 0.09cm; top: 50%; transform: translateY(-50%);
          border-radius: 1px; }
@@ -89,14 +89,14 @@
   .dm1 { background: var(--wp1d); } .dm2 { background: var(--wp2d); }
   .dm3 { background: var(--wp3d); } .dm4 { background: var(--wp4d); }
   .dl { position: absolute; top: 50%; transform: translateY(-50%);
-        font-size: 7pt; font-weight: bold; color: var(--ink2); white-space: nowrap; }
+        font-size: 11pt; font-weight: bold; color: var(--ink2); white-space: nowrap; }
 
   /* ============ milestone row ============ */
   .msrow { min-height: 0.6cm; border-top: 1.5px solid var(--ink); }
-  .msrow .lbl { font-weight: bold; font-size: 7.5pt; }
+  .msrow .lbl { font-weight: bold; font-size: 11pt; }
   .msd { position: absolute; width: 0.21cm; height: 0.21cm; background: var(--ink);
          top: 32%; transform: translate(-50%,-50%) rotate(45deg); }
-  .msl { position: absolute; top: 52%; font-size: 7pt; font-weight: bold;
+  .msl { position: absolute; top: 52%; font-size: 11pt; font-weight: bold;
          color: var(--ink); transform: translateX(-50%); white-space: nowrap; }
   .msl.edge { transform: translateX(-92%); }
 
@@ -109,7 +109,7 @@
   /* ============ footer: legend, keys, notes ============ */
   .foot { margin-top: 0.08cm; border-top: 1px solid var(--grid); padding-top: 0.06cm; }
   .legend { display: flex; flex-wrap: wrap; gap: 0.12cm 0.45cm; align-items: center;
-            font-size: 7pt; color: var(--ink); }
+            font-size: 11pt; color: var(--ink); }
   .sw { display: inline-block; width: 0.34cm; height: 0.18cm; border-radius: 2px;
         border: 1px solid; vertical-align: -1px; margin-right: 3px; }
   .keydot { display: inline-block; width: 0.17cm; height: 0.17cm; border-radius: 50%;
@@ -118,7 +118,7 @@
              transform: rotate(45deg); vertical-align: -1px; margin-right: 4px; }
   .keygate { display: inline-block; width: 0.4cm; border-top: 1.5px dashed var(--ink2);
              vertical-align: 2px; margin-right: 3px; }
-  .mskey, .depnote, .abbr { font-size: 7pt; color: var(--ink2); line-height: 1.25;
+  .mskey, .depnote, .abbr { font-size: 11pt; color: var(--ink2); line-height: 1.25;
                             margin-top: 0.06cm; }
   .depnote b, .mskey b { color: var(--ink); }
 </style>
@@ -222,7 +222,7 @@
     <div class="row wphead">
       <div class="lbl">
         <span class="wpname">WP3 &mdash; Reconfigurable Field Control</span>
-        <div class="wpmeta">M1&ndash;M30 &middot; Lead: PI + both Co-Is + PDRA&nbsp;1</div>
+        <div class="wpmeta">M1&ndash;M30 &middot; Lead: PI + PDRA&nbsp;1</div>
       </div>
       <div class="lane"><div class="env" style="left:0%; width:83.333%; background:var(--wp3)"></div><span class="rqtag" style="right:4px; background:var(--wp3d)">RQ4</span></div>
     </div>
@@ -239,7 +239,7 @@
       <div class="lane"><div class="bar b3" style="left:30.556%; width:36.111%"></div></div>
     </div>
     <div class="row task">
-      <div class="lbl"><span><span class="tcode">T3.4</span>Hardware-in-the-loop (HIL) validation incl. fault re-optimisation timing &mdash; M18&ndash;M30</span></div>
+      <div class="lbl"><span><span class="tcode">T3.4</span>Hardware-in-the-loop (HIL) validation including fault re-optimisation timing &mdash; M18&ndash;M30</span></div>
       <div class="lane"><div class="bar b3" style="left:47.222%; width:36.111%"></div></div>
     </div>
     <div class="row deliv">
@@ -312,10 +312,10 @@
     </div>
     <div class="mskey"><b>Milestones:</b> <b>MS1</b> (M6) WP1&ndash;WP2 interface parameter freeze &middot; <b>MS2</b> (M12) validated models exchanged across WPs &middot; <b>MS3</b> (M18) design freeze and integration go/no-go &middot; <b>MS4</b> (M24) demonstrator commissioned &middot; <b>MS5</b> (M30) control validated on hardware &middot; <b>MS6</b> (M36) dataset released, programme complete.</div>
     <div class="depnote"><b>Dependencies:</b> WP1 and WP2 run in parallel from month 1, exchanging interface parameters at MS1 and validated models at MS2. WP3 begins analytical formulation from month 1 using parameterised placeholder models and consumes validated WP1/WP2 outputs as they arrive. Only WP4 is dependent, starting at M18 upon the MS3 go/no-go.</div>
-    <div class="abbr"><b>Abbreviations:</b> WP work package &middot; RQ research question &middot; M project month &middot; Dn.k deliverable &middot; MS milestone &middot; PDRA Postdoctoral Research Associate &middot; ZVS zero-voltage switching &middot; back-EMF back electromotive force &middot; HIL hardware-in-the-loop &middot; 2N-DOF two-N degrees of freedom (N driven sections).</div>
+    <div class="abbr"><b>Abbreviations:</b> WP work package &middot; RQ research question &middot; M project month &middot; Dn.k deliverable &middot; MS milestone &middot; PDRA Postdoctoral Research Associate &middot; SPICE Simulation Program with Integrated Circuit Emphasis &middot; ZVS zero-voltage switching &middot; back-EMF back electromotive force &middot; HIL hardware-in-the-loop &middot; 2N-DOF two-N degrees of freedom (N driven sections).</div>
   </div>
 
 </div>
-<!-- [Word count (visible text): 537] -->
+<!-- [Word count (visible text): 542] -->
 </body>
 </html>

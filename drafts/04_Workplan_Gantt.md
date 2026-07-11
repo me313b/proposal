@@ -17,15 +17,15 @@ This file is the canonical data behind the one-page A4 landscape Gantt chart (`g
 | WP1 | T1.3 | Distributed-parameter transmission-line transient voltage model | M8–M15 | Co-I Asef + PDRA 2 | RQ3 |
 | WP1 | T1.4 | Conventional-baseline model + winding geometry freeze | M12–M18 | Co-I Asef + PDRA 2 | RQ1 |
 | **WP2 — Per-Slot Circuit Module Architecture** | | | **M1–M18** | **PI + PDRA 1 + Co-I Everts** | **RQ2, RQ5** |
-| WP2 | T2.1 | SPICE-level zero-voltage-switching (ZVS) envelope mapping under winding-source/back-electromotive-force (back-EMF) conditions | M1–M9 | PI + PDRA 1 | RQ2 |
+| WP2 | T2.1 | Simulation Program with Integrated Circuit Emphasis (SPICE)-level zero-voltage-switching (ZVS) envelope mapping under winding-source/back-electromotive-force (back-EMF) conditions | M1–M9 | PI + PDRA 1 | RQ2 |
 | WP2 | T2.2 | Floating-domain control-signal architecture | M4–M10 | PI + PDRA 1 | RQ2 |
 | WP2 | T2.3 | Thermal resistance network + packaging specification | M6–M14 | Co-I Everts + PDRA 1 | RQ5 |
 | WP2 | T2.4 | Build + characterisation of 12–18 discrete functional-equivalent prototype boards | M9–M18 | PI + PDRA 1 | RQ2, RQ5 |
-| **WP3 — Reconfigurable Field Control** | | | **M1–M30** | **PI + both Co-Is + PDRA 1** | **RQ4** |
+| **WP3 — Reconfigurable Field Control** | | | **M1–M30** | **PI + PDRA 1** | **RQ4** |
 | WP3 | T3.1 | 2N-degree-of-freedom (2N-DOF) formulation + offline convex loss maps, healthy state | M1–M12 | PI + PDRA 1 | RQ4 |
 | WP3 | T3.2 | Fault-state map family | M9–M18 | PI + PDRA 1 | RQ4 |
 | WP3 | T3.3 | Real-time model predictive control (MPC) implementation | M12–M24 | PI + PDRA 1 | RQ4 |
-| WP3 | T3.4 | Hardware-in-the-loop (HIL) validation incl. fault re-optimisation timing | M18–M30 | PI + both Co-Is + PDRA 1 | RQ4 |
+| WP3 | T3.4 | Hardware-in-the-loop (HIL) validation including fault re-optimisation timing | M18–M30 | PI + PDRA 1 | RQ4 |
 | **WP4 — Integrated Demonstrator** | | | **M18–M36** | **All investigators + both PDRAs** | **RQ5 + validation of RQ1–RQ4** |
 | WP4 | T4.1 | Demonstrator integration + commissioning | M18–M24 | All | RQ5 |
 | WP4 | T4.2 | Efficiency + thermal mapping vs WP1 baseline | M24–M30 | All | RQ5 + validation of RQ1 |
@@ -75,7 +75,7 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %b %y
 
-    section WP1 Machine EM Design (RQ1, RQ3)
+    section WP1 Machine Electromagnetic Design (RQ1, RQ3)
     T1.1 Analytical winding-factor models      :t11, 2027-01-01, 2027-07-01
     T1.2 Multi-harmonic FEA + coupling matrix  :t12, 2027-04-01, 2028-01-01
     T1.3 Transmission-line transient model     :t13, 2027-08-01, 2028-04-01
