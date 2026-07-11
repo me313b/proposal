@@ -4,7 +4,7 @@ This file contains three candidate drafts for the UKRI Funding Service Summary s
 
 ## Variant 1 - The binding constraint
 
-Electric aircraft need motors that are both light and powerful. Engineers have excellent tools for the two challenges people usually think of: making the magnetic parts stronger and keeping the motor cool. The limit that now binds is a third challenge with far weaker tools — the electrical insulation inside the motor. Designers raise the supply voltage to save weight, because higher voltage means lower current and thinner, lighter cables. But every rise in voltage demands thicker insulation around the motor windings. Worse, at cruise altitude the air pressure is only about a quarter of that at sea level, and thin air breaks down electrically at much lower voltages. Tiny sparks, known as partial discharge, then form inside the winding and quietly erode the insulation on every flight — invisible to ground testing until the damage is done.
+Electric aircraft need motors that are both light and powerful. Engineers have excellent tools for the two familiar challenges: making the magnetic parts stronger and keeping the motor cool. The limit that now binds is a third challenge with far weaker tools — the electrical insulation inside the motor. Designers raise the supply voltage to save weight, because higher voltage means lower current and thinner, lighter cables. But every rise in voltage demands thicker insulation around the motor windings. Worse, at cruise altitude the air pressure is only about a quarter of that at sea level, and thin air breaks down electrically at much lower voltages. Tiny sparks, known as partial discharge, then form inside the winding and quietly erode the insulation on every flight — invisible to ground testing until the damage is done.
 
 This programme will establish a way of building the motor in which those sparks can never start. Instead of one large converter feeding the whole motor at the full 270 volts, we place a pair of tiny integrated circuits — complete electronic drive units, each on a single chip — at every slot of the motor winding. Each pair drives only its own short section of winding, so the 270-volt supply is shared out across the machine and no part of the winding ever experiences more than 20 to 50 volts. That is several times below the level at which sparks can form, even in the thin air at altitude. The conditions for discharge never arise, so the insulation can be thin and light.
 
@@ -14,7 +14,7 @@ This is early-stage research: the aim is the underpinning science, not flight ha
 
 The beneficiaries are the UK aerospace industry, including the propulsion integrators who need lighter and more reliable electric drives to compete in the fast-growing electric aviation market [PI TO CONFIRM: UK advanced air mobility market approximately £3.2 billion by 2030, Aerospace Technology Institute (ATI)]; researchers in electrical machines and power electronics, who gain the first design methods for this new class of motor; and society more widely, through progress towards the UK's Jet Zero commitment to net-zero aviation by 2050 and support for the jobs that depend on UK leadership in next-generation propulsion [PI TO CONFIRM: approximately 111,000 direct UK aerospace jobs, the trade body ADS Group].
 
-*[Word count: 552]*
+*[Word count: 549]*
 
 ## Variant 2 - The self-inflicted failure mode
 
