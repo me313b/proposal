@@ -2,7 +2,7 @@
 
 > **STATUS NOTE — PREPARED SKELETON, NOT SUBMISSION-READY.** The PI has not yet secured letters of support from Eaton or Airbus (master handover checklist item 7). Every substantive cell and claim in this section is therefore flagged [PI TO CONFIRM]. Nothing below may be treated as agreed, costed or committed until the corresponding signed letter is in hand. If either letter cannot be secured before submission, delete that partner's table row and narrative paragraph here, and revise the *Impact and Beneficiaries* and *Scope and Funding Rationale* passages of the Vision, both of which name the two companies.
 
-## Contribution table (UKRI Funding Service template format)
+## Contribution table (UK Research and Innovation (UKRI) Funding Service template format)
 
 | Partner | Nature of contribution | Contribution value (cash / in-kind) | Period |
 |---|---|---|---|
@@ -11,7 +11,7 @@
 
 ## Why Eaton is the right partner [PI TO CONFIRM: entire paragraph subject to a signed letter]
 
-Universities do not carry a propulsion architecture from bench-scale validation into qualified aerospace hardware; Tier-1 power-system suppliers do. A programme whose stated hand-off is a validated TRL 3 multi-physics co-design framework therefore needs a Tier-1 supplier's perspective on module packaging, power-system integration and industrialisation from month 1, not retrofitted at the end. Eaton is a Tier-1 aerospace power supplier with exactly that perspective, and its aerospace business is engaged with the group's SkyDrive integrated-propulsion programme at the UCL Advanced Propulsion Laboratory [PI TO CONFIRM: current form and status of that engagement]. That engagement concerns a separate, higher-TRL collaborative programme; it is cited here solely as evidence of an established working relationship between Eaton and the applicant laboratory, and implies no commitment to the present proposal. The role proposed for this programme — advisory input on the packaging of per-slot integrated-circuit (IC) modules and their integration into aerospace power systems, participation in six-monthly reviews, and evaluation of the TRL 3 outputs for follow-on Innovate UK or Aerospace Technology Institute (ATI) development at TRL 4–6 — remains a proposal until Eaton confirms it in writing.
+Universities do not carry a propulsion architecture from bench-scale validation into qualified aerospace hardware; Tier-1 power-system suppliers do. A programme whose stated hand-off is a validated TRL 3 multi-physics co-design framework therefore needs a Tier-1 supplier's perspective on module packaging, power-system integration and industrialisation from month 1, not retrofitted at the end. Eaton is a Tier-1 aerospace power supplier with exactly that perspective. [PI TO CONFIRM: whether Eaton's aerospace business is engaged with the group's SkyDrive integrated-propulsion programme at the UCL Advanced Propulsion Laboratory — the engagement is stated only in the SkyDrive Q7 appendix and is not recorded in the master handover; verify before submission or delete this bracket. If confirmed, reinstate: "That engagement concerns a separate, higher-TRL collaborative programme; it is cited here solely as evidence of an established working relationship between Eaton and the applicant laboratory, and implies no commitment to the present proposal."] The role proposed for this programme — advisory input on the packaging of per-slot integrated-circuit (IC) modules and their integration into aerospace power systems, participation in six-monthly reviews, and evaluation of the TRL 3 outputs for follow-on Innovate UK or Aerospace Technology Institute (ATI) development at TRL 4–6 — remains a proposal until Eaton confirms it in writing.
 
 ## Why Airbus is the right partner [PI TO CONFIRM: entire paragraph subject to a signed letter]
 
@@ -26,6 +26,6 @@ Each letter of support should be on company letterhead, project-specific (not a 
 3. **Statement of strategic fit.** Why per-slot machine drives matter to the partner's product or platform strategy, in the partner's own words; for Eaton, the fit to aerospace power-system supply; for Airbus, the fit to platform electrification requirements.
 4. **Commitment to review participation and follow-on evaluation.** Explicit commitment to the six-monthly programme reviews and to evaluating the validated TRL 3 framework for follow-on development at TRL 4–6 (for example through Innovate UK or ATI routes), without overstating any obligation to fund that follow-on work.
 
-Letters are uploaded separately in the Funding Service; this section must remain consistent with their final wording, and the table figures must be transcribed from the letters, not estimated independently.
+The PI uploads letters separately in the Funding Service; this section must remain consistent with their final wording, and the table figures must be transcribed from the letters, not estimated independently.
 
-*[Word count: 839]*
+*[Word count: 865]*
