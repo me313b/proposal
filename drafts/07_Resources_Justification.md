@@ -43,7 +43,7 @@ This request covers open-access publication charges for programme outputs, and d
 
 The architecture research runs on discrete prototype boards and on APL's existing dynamometer, oscilloscopes, electronic loads, hardware-in-the-loop platform and modelling tools — all provided at no cost to the grant. Grant funds therefore buy only what is project-specific and does not exist: the staff who do the science, the machine and boards that embody the architecture, and the two instruments that make the RQ3 and RQ5 measurements possible.
 
-*[Word count: 804]*
+*[Word count: 833]*
 
 ---
 
@@ -71,4 +71,4 @@ Every requested resource maps to a specific work package (WP), research question
 
 **Value for money.** APL's dynamometer, oscilloscopes, electronic loads, hardware-in-the-loop platform and modelling tools all come at no cost to the grant. Grant funds buy only what does not exist and cannot be borrowed: the researchers, the machine and boards that embody the architecture, and the two instruments that make the RQ3 and RQ5 measurements possible.
 
-*[Word count: 564]*
+*[Word count: 590]*

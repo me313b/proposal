@@ -36,15 +36,18 @@ This file is the canonical data behind the one-page A4 landscape Gantt chart (`g
 
 | Deliverable | Description | Month |
 |---|---|---|
-| D1.1 | Validated multi-harmonic electromagnetic model | M12 |
-| D1.2 | Per-slot voltage/transient characterisation + coupling matrix handed to WP3 | M15 |
-| D1.3 | Build-ready winding geometry + modelled conventional baseline | M18 |
+| D1.1 | Candidate winding geometries + WP1–WP2 interface parameter set | M6 |
+| D1.2 | Validated multi-harmonic electromagnetic model | M12 |
+| D1.3 | Per-slot voltage/transient characterisation + coupling matrix handed to WP3 | M15 |
+| D1.4 | Build-ready winding geometry + modelled conventional baseline | M18 |
 | D2.1 | ZVS envelope map | M9 |
-| D2.2 | Validated thermal model + packaging specification | M14 |
-| D2.3 | Characterised per-slot drive cells | M18 |
+| D2.2 | Floating-domain control-signal architecture specification | M10 |
+| D2.3 | Validated thermal model + packaging specification | M14 |
+| D2.4 | Characterised per-slot drive cells | M18 |
 | D3.1 | 2N-DOF formulation + healthy-state loss maps | M12 |
 | D3.2 | Fault-state loss maps | M18 |
-| D3.3 | HIL-validated controller + quantified re-optimisation response | M30 |
+| D3.3 | Real-time MPC implementation | M24 |
+| D3.4 | HIL-validated controller + quantified re-optimisation response | M30 |
 | D4.1 | Demonstrator commissioned | M24 |
 | D4.2 | Efficiency/thermal dataset | M30 |
 | D4.3 | Fault + torque-ripple characterisation | M33 |
@@ -108,4 +111,4 @@ gantt
     MS6 Dataset released                       :milestone, 2029-12-31, 0d
 ```
 
-*[Word count: 1,095]*
+*[Word count: 1,126]*
