@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Plan (36 months) — Per-Slot Machine Drives</title>
+<style>
+  /* ============ page setup ============ */
+  @page { size: A4 landscape; margin: 1cm; }
+  * { box-sizing: border-box; margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { font-family: Arial, Helvetica, sans-serif; color: #0b0b0b; }
+  body { background: #e9e8e4; }
+  .sheet { width: 27.7cm; margin: 0.8cm auto; padding: 0.5cm;
+           background: #ffffff; box-shadow: 0 2px 14px rgba(0,0,0,0.18); }
+  @media print {
+    body { background: #ffffff; }
+    .sheet { width: 27.7cm; margin: 0; padding: 0; box-shadow: none; }
+  }
+
+  /* ============ palette (validated: worst adjacent CVD dE 47.2; greyscale levels ~111/168/145/69) ============ */
+  .sheet {
+    --wp1: #2a78d6;  --wp1d: #1c5cab;   /* WP1 blue   */
+    --wp2: #eda100;  --wp2d: #9a6800;   /* WP2 yellow */
+    --wp3: #1baf7a;  --wp3d: #0e7a55;   /* WP3 aqua   */
+    --wp4: #4a3aa7;  --wp4d: #352a78;   /* WP4 violet */
+    --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --gridyr: #b7b6ae; --head-bg: #f4f3f0;
+    --lblw: 7.4cm;
+  }
+
+  /* ============ title block ============ */
+  .titleblock { padding: 0 0 0.06cm 0; }
+  .titleblock h1 { font-size: 11pt; line-height: 1.2; }
+  .titleblock .sub { font-size: 7.5pt; color: var(--ink2); margin-top: 0.06cm; }
+  .confirm { font-size: 7.5pt; font-weight: bold; color: #7a4a00;
+             background: #fdf3dd; border: 1px solid #e5c98a;
+             padding: 0.04cm 0.15cm; margin: 0.08cm 0 0.12cm 0; }
+
+  /* ============ shared row scaffolding ============ */
+  .row  { display: flex; align-items: stretch; }
+  .lbl  { flex: 0 0 var(--lblw); padding: 0.02cm 0.28cm 0.02cm 0.08cm;
+          font-size: 7pt; line-height: 1.15; display: flex; align-items: center; }
+  .lane { flex: 1 1 auto; position: relative; border-left: 1px solid var(--gridyr);
+          background-image:
+            linear-gradient(to right, var(--gridyr) 1px, transparent 1px),
+            linear-gradient(to right, var(--grid) 1px, transparent 1px);
+          background-size: calc(100%/3) 100%, calc(100%/36) 100%; }
+
+  /* ============ year + month headers ============ */
+  .yr .lbl, .mo .lbl { border: none; }
+  .yr .lane, .mo .lane { display: flex; background-image: none; }
+  .yr .cell { flex: 1 1 0; text-align: center; font-size: 7.5pt; font-weight: bold;
+              color: var(--ink2); border-left: 1px solid var(--gridyr);
+              background: var(--head-bg); padding: 0.05cm 0; }
+  .mo .cell { flex: 1 1 0; text-align: center; font-size: 7pt; color: var(--muted);
+              border-left: 1px solid var(--grid); padding: 0.02cm 0 0.03cm 0; }
+  .mo .cell:nth-child(12n+1) { border-left: 1px solid var(--gridyr); }
+  .hdrnote { font-size: 7pt; color: var(--muted); justify-content: flex-end;
+             display: flex; align-items: flex-end; padding-right: 0.28cm; }
+
+  /* ============ WP swimlanes ============ */
+  .wphead { background: var(--head-bg); border-top: 1.5px solid var(--ink);
+            min-height: 0.5cm; }
+  .wphead .lbl { display: block; padding-top: 0.04cm; padding-bottom: 0.04cm; }
+  .wphead .wpname { font-size: 8pt; font-weight: bold; }
+  .wphead .wpmeta { font-size: 7pt; color: var(--ink2); margin-top: 0.02cm; }
+  .rqtag { position: absolute; top: 50%; transform: translateY(-50%);
+           font-size: 7pt; font-weight: bold; color: #ffffff;
+           border-radius: 2px; padding: 1px 5px 2px 5px; white-space: nowrap; }
+  .env { position: absolute; height: 0.09cm; top: 50%; transform: translateY(-50%);
+         border-radius: 1px; }
+
+  .task { min-height: 0.38cm; }
+  .task .lbl { color: var(--ink); }
+  .tcode { font-weight: bold; margin-right: 3px; white-space: nowrap; }
+  .bar { position: absolute; height: 0.26cm; top: 50%; transform: translateY(-50%);
+         border-radius: 3px; border: 1px solid; }
+  .b1 { background: var(--wp1); border-color: var(--wp1d); }
+  .b2 { background: var(--wp2); border-color: var(--wp2d); }
+  .b3 { background: var(--wp3); border-color: var(--wp3d); }
+  .b4 { background: var(--wp4); border-color: var(--wp4d); }
+
+  /* deliverable rows */
+  .deliv { min-height: 0.33cm; border-bottom: 1px solid var(--grid); }
+  .deliv .lbl { color: var(--muted); font-style: italic; }
+  .dm { position: absolute; width: 0.19cm; height: 0.19cm; border-radius: 50%;
+        top: 50%; transform: translate(-50%,-50%); box-shadow: 0 0 0 1.5px #ffffff; }
+  .dm1 { background: var(--wp1d); } .dm2 { background: var(--wp2d); }
+  .dm3 { background: var(--wp3d); } .dm4 { background: var(--wp4d); }
+  .dl { position: absolute; top: 50%; transform: translateY(-50%);
+        font-size: 7pt; font-weight: bold; color: var(--ink2); white-space: nowrap; }
+
+  /* ============ milestone row ============ */
+  .msrow { min-height: 0.6cm; border-top: 1.5px solid var(--ink); }
+  .msrow .lbl { font-weight: bold; font-size: 7.5pt; }
+  .msd { position: absolute; width: 0.21cm; height: 0.21cm; background: var(--ink);
+         top: 32%; transform: translate(-50%,-50%) rotate(45deg); }
+  .msl { position: absolute; top: 52%; font-size: 7pt; font-weight: bold;
+         color: var(--ink); transform: translateX(-50%); white-space: nowrap; }
+  .msl.edge { transform: translateX(-92%); }
+
+  /* M18 go/no-go gate line across the plan body */
+  .plan { position: relative; }
+  .gate { position: absolute; top: 0; bottom: 0;
+          left: calc(var(--lblw) + (100% - var(--lblw)) * 0.5);
+          border-left: 1.5px dashed var(--ink2); pointer-events: none; }
+
+  /* ============ footer: legend, keys, notes ============ */
+  .foot { margin-top: 0.08cm; border-top: 1px solid var(--grid); padding-top: 0.06cm; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.12cm 0.45cm; align-items: center;
+            font-size: 7pt; color: var(--ink); }
+  .sw { display: inline-block; width: 0.34cm; height: 0.18cm; border-radius: 2px;
+        border: 1px solid; vertical-align: -1px; margin-right: 3px; }
+  .keydot { display: inline-block; width: 0.17cm; height: 0.17cm; border-radius: 50%;
+            background: var(--ink2); vertical-align: -1px; margin-right: 3px; }
+  .keydiam { display: inline-block; width: 0.17cm; height: 0.17cm; background: var(--ink);
+             transform: rotate(45deg); vertical-align: -1px; margin-right: 4px; }
+  .keygate { display: inline-block; width: 0.4cm; border-top: 1.5px dashed var(--ink2);
+             vertical-align: 2px; margin-right: 3px; }
+  .mskey, .depnote, .abbr { font-size: 7pt; color: var(--ink2); line-height: 1.25;
+                            margin-top: 0.06cm; }
+  .depnote b, .mskey b { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ============ title ============ -->
+  <div class="titleblock">
+    <h1>Foundations of Monolithically Integrated Per-Slot Machine Drives for Reconfigurable Aerospace Propulsion &mdash; Project Plan (36 months)</h1>
+    <div class="sub">EPSRC Standard Grant &middot; Principal Investigator (PI): Dr Mehdi Baghdadi, UCL Advanced Propulsion Laboratory &middot; Co-Investigators (Co-Is): Dr Pedram Asef (machines), Dr Marilize Everts (thermal) &middot; two PDRAs &middot; Technology Readiness Level 1&ndash;3</div>
+  </div>
+  <div class="confirm">[PI TO CONFIRM: task/deliverable/milestone skeleton proposed by drafting team]</div>
+
+  <!-- ============ year + month grid headers ============ -->
+  <div class="row yr">
+    <div class="lbl hdrnote">Work package (WP) &middot; task &middot; months &middot; research questions (RQ)</div>
+    <div class="lane">
+      <div class="cell">Year 1 (M1&ndash;M12)</div>
+      <div class="cell">Year 2 (M13&ndash;M24)</div>
+      <div class="cell">Year 3 (M25&ndash;M36)</div>
+    </div>
+  </div>
+  <div class="row mo">
+    <div class="lbl"></div>
+    <div class="lane">
+      <div class="cell">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell">13</div><div class="cell">14</div><div class="cell">15</div><div class="cell">16</div><div class="cell">17</div><div class="cell">18</div><div class="cell">19</div><div class="cell">20</div><div class="cell">21</div><div class="cell">22</div><div class="cell">23</div><div class="cell">24</div><div class="cell">25</div><div class="cell">26</div><div class="cell">27</div><div class="cell">28</div><div class="cell">29</div><div class="cell">30</div><div class="cell">31</div><div class="cell">32</div><div class="cell">33</div><div class="cell">34</div><div class="cell">35</div><div class="cell">36</div>
+    </div>
+  </div>
+
+  <div class="plan">
+    <div class="gate"></div>
+
+    <!-- ============ WP1 ============ -->
+    <div class="row wphead">
+      <div class="lbl">
+        <span class="wpname">WP1 &mdash; Machine Electromagnetic Design</span>
+        <div class="wpmeta">M1&ndash;M18 &middot; Lead: Co-I Asef + PDRA&nbsp;2</div>
+      </div>
+      <div class="lane"><div class="env" style="left:0%; width:50%; background:var(--wp1)"></div><span class="rqtag" style="right:4px; background:var(--wp1d)">RQ1 &middot; RQ3</span></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T1.1</span>Analytical multi-harmonic winding-factor models &mdash; M1&ndash;M6</span></div>
+      <div class="lane"><div class="bar b1" style="left:0%; width:16.667%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T1.2</span>Multi-harmonic finite element analysis + inter-slot coupling matrix &mdash; M4&ndash;M12</span></div>
+      <div class="lane"><div class="bar b1" style="left:8.333%; width:25%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T1.3</span>Distributed-parameter transmission-line transient voltage model &mdash; M8&ndash;M15</span></div>
+      <div class="lane"><div class="bar b1" style="left:19.444%; width:22.222%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T1.4</span>Conventional-baseline model + winding geometry freeze &mdash; M12&ndash;M18</span></div>
+      <div class="lane"><div class="bar b1" style="left:30.556%; width:19.444%"></div></div>
+    </div>
+    <div class="row deliv">
+      <div class="lbl">Deliverables: (D1.1 M12 &middot; D1.2 M15 &middot; D1.3 M18)</div>
+      <div class="lane">
+        <div class="dm dm1" style="left:33.333%"></div><div class="dl" style="left:calc(33.333% + 5px)">D1.1</div>
+        <div class="dm dm1" style="left:41.667%"></div><div class="dl" style="left:calc(41.667% + 5px)">D1.2</div>
+        <div class="dm dm1" style="left:50%"></div><div class="dl" style="left:calc(50% + 5px)">D1.3</div>
+      </div>
+    </div>
+
+    <!-- ============ WP2 ============ -->
+    <div class="row wphead">
+      <div class="lbl">
+        <span class="wpname">WP2 &mdash; Per-Slot Circuit Module Architecture</span>
+        <div class="wpmeta">M1&ndash;M18 &middot; Lead: PI + PDRA&nbsp;1 + Co-I Everts</div>
+      </div>
+      <div class="lane"><div class="env" style="left:0%; width:50%; background:var(--wp2)"></div><span class="rqtag" style="right:4px; background:var(--wp2d)">RQ2 &middot; RQ5</span></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T2.1</span>SPICE zero-voltage-switching (ZVS) envelope mapping, winding-source/back-EMF conditions &mdash; M1&ndash;M9</span></div>
+      <div class="lane"><div class="bar b2" style="left:0%; width:25%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T2.2</span>Floating-domain control-signal architecture &mdash; M4&ndash;M10</span></div>
+      <div class="lane"><div class="bar b2" style="left:8.333%; width:19.444%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T2.3</span>Thermal resistance network + packaging specification &mdash; M6&ndash;M14</span></div>
+      <div class="lane"><div class="bar b2" style="left:13.889%; width:25%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T2.4</span>Build + characterisation of 12&ndash;18 discrete functional-equivalent prototype boards &mdash; M9&ndash;M18</span></div>
+      <div class="lane"><div class="bar b2" style="left:22.222%; width:27.778%"></div></div>
+    </div>
+    <div class="row deliv">
+      <div class="lbl">Deliverables: (D2.1 M9 &middot; D2.2 M14 &middot; D2.3 M18)</div>
+      <div class="lane">
+        <div class="dm dm2" style="left:25%"></div><div class="dl" style="left:calc(25% + 5px)">D2.1</div>
+        <div class="dm dm2" style="left:38.889%"></div><div class="dl" style="left:calc(38.889% + 5px)">D2.2</div>
+        <div class="dm dm2" style="left:50%"></div><div class="dl" style="left:calc(50% + 5px)">D2.3</div>
+      </div>
+    </div>
+
+    <!-- ============ WP3 ============ -->
+    <div class="row wphead">
+      <div class="lbl">
+        <span class="wpname">WP3 &mdash; Reconfigurable Field Control</span>
+        <div class="wpmeta">M1&ndash;M30 &middot; Lead: PI + both Co-Is + PDRA&nbsp;1</div>
+      </div>
+      <div class="lane"><div class="env" style="left:0%; width:83.333%; background:var(--wp3)"></div><span class="rqtag" style="right:4px; background:var(--wp3d)">RQ4</span></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T3.1</span>2N-degree-of-freedom formulation + offline convex loss maps, healthy state &mdash; M1&ndash;M12</span></div>
+      <div class="lane"><div class="bar b3" style="left:0%; width:33.333%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T3.2</span>Fault-state map family &mdash; M9&ndash;M18</span></div>
+      <div class="lane"><div class="bar b3" style="left:22.222%; width:27.778%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T3.3</span>Real-time model predictive control implementation &mdash; M12&ndash;M24</span></div>
+      <div class="lane"><div class="bar b3" style="left:30.556%; width:36.111%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T3.4</span>Hardware-in-the-loop (HIL) validation incl. fault re-optimisation timing &mdash; M18&ndash;M30</span></div>
+      <div class="lane"><div class="bar b3" style="left:47.222%; width:36.111%"></div></div>
+    </div>
+    <div class="row deliv">
+      <div class="lbl">Deliverables: (D3.1 M12 &middot; D3.2 M18 &middot; D3.3 M30)</div>
+      <div class="lane">
+        <div class="dm dm3" style="left:33.333%"></div><div class="dl" style="left:calc(33.333% + 5px)">D3.1</div>
+        <div class="dm dm3" style="left:50%"></div><div class="dl" style="left:calc(50% + 5px)">D3.2</div>
+        <div class="dm dm3" style="left:83.333%"></div><div class="dl" style="left:calc(83.333% + 5px)">D3.3</div>
+      </div>
+    </div>
+
+    <!-- ============ WP4 ============ -->
+    <div class="row wphead">
+      <div class="lbl">
+        <span class="wpname">WP4 &mdash; Integrated Demonstrator</span>
+        <div class="wpmeta">M18&ndash;M36 &middot; All investigators + both PDRAs</div>
+      </div>
+      <div class="lane"><div class="env" style="left:50%; width:50%; background:var(--wp4)"></div><span class="rqtag" style="left:4px; background:var(--wp4d)">RQ5 + validation of RQ1&ndash;RQ4</span></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T4.1</span>Demonstrator integration + commissioning &mdash; M18&ndash;M24</span></div>
+      <div class="lane"><div class="bar b4" style="left:47.222%; width:19.444%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T4.2</span>Efficiency + thermal mapping vs WP1 baseline &mdash; M24&ndash;M30</span></div>
+      <div class="lane"><div class="bar b4" style="left:63.889%; width:19.444%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T4.3</span>Fault-insertion + torque-ripple campaigns &mdash; M27&ndash;M33</span></div>
+      <div class="lane"><div class="bar b4" style="left:72.222%; width:19.444%"></div></div>
+    </div>
+    <div class="row task">
+      <div class="lbl"><span><span class="tcode">T4.4</span>Open dataset + final analysis &mdash; M30&ndash;M36</span></div>
+      <div class="lane"><div class="bar b4" style="left:80.556%; width:19.444%"></div></div>
+    </div>
+    <div class="row deliv">
+      <div class="lbl">Deliverables: (D4.1 M24 &middot; D4.2 M30 &middot; D4.3 M33 &middot; D4.4 M36)</div>
+      <div class="lane">
+        <div class="dm dm4" style="left:66.667%"></div><div class="dl" style="left:calc(66.667% + 5px)">D4.1</div>
+        <div class="dm dm4" style="left:83.333%"></div><div class="dl" style="left:calc(83.333% + 5px)">D4.2</div>
+        <div class="dm dm4" style="left:91.667%"></div><div class="dl" style="left:calc(91.667% + 5px)">D4.3</div>
+        <div class="dm dm4" style="left:99.7%"></div><div class="dl" style="right:calc(0% + 6px)">D4.4</div>
+      </div>
+    </div>
+
+    <!-- ============ milestones ============ -->
+    <div class="row msrow">
+      <div class="lbl">Milestones MS1&ndash;MS6</div>
+      <div class="lane">
+        <div class="msd" style="left:16.667%"></div><div class="msl" style="left:16.667%">MS1</div>
+        <div class="msd" style="left:33.333%"></div><div class="msl" style="left:33.333%">MS2</div>
+        <div class="msd" style="left:50%"></div><div class="msl" style="left:50%">MS3</div>
+        <div class="msd" style="left:66.667%"></div><div class="msl" style="left:66.667%">MS4</div>
+        <div class="msd" style="left:83.333%"></div><div class="msl" style="left:83.333%">MS5</div>
+        <div class="msd" style="left:99.7%"></div><div class="msl edge" style="left:100%">MS6</div>
+      </div>
+    </div>
+  </div><!-- /plan -->
+
+  <!-- ============ footer ============ -->
+  <div class="foot">
+    <div class="legend">
+      <span><span class="sw" style="background:var(--wp1); border-color:var(--wp1d)"></span>WP1 Machine electromagnetic design (RQ1, RQ3)</span>
+      <span><span class="sw" style="background:var(--wp2); border-color:var(--wp2d)"></span>WP2 Per-slot circuit modules (RQ2, RQ5)</span>
+      <span><span class="sw" style="background:var(--wp3); border-color:var(--wp3d)"></span>WP3 Reconfigurable field control (RQ4)</span>
+      <span><span class="sw" style="background:var(--wp4); border-color:var(--wp4d)"></span>WP4 Integrated demonstrator (RQ5 + validation of RQ1&ndash;RQ4)</span>
+      <span><span class="keydot"></span>Deliverable Dn.k</span>
+      <span><span class="keydiam"></span>Milestone</span>
+      <span><span class="keygate"></span>M18 design freeze / integration go/no-go gate (MS3)</span>
+    </div>
+    <div class="mskey"><b>Milestones:</b> <b>MS1</b> (M6) WP1&ndash;WP2 interface parameter freeze &middot; <b>MS2</b> (M12) validated models exchanged across WPs &middot; <b>MS3</b> (M18) design freeze and integration go/no-go &middot; <b>MS4</b> (M24) demonstrator commissioned &middot; <b>MS5</b> (M30) control validated on hardware &middot; <b>MS6</b> (M36) dataset released, programme complete.</div>
+    <div class="depnote"><b>Dependencies:</b> WP1 and WP2 run in parallel from month 1, exchanging interface parameters at MS1 and validated models at MS2. WP3 begins analytical formulation from month 1 using parameterised placeholder models and consumes validated WP1/WP2 outputs as they arrive. Only WP4 is dependent, starting at M18 upon the MS3 go/no-go.</div>
+    <div class="abbr"><b>Abbreviations:</b> WP work package &middot; RQ research question &middot; M project month &middot; Dn.k deliverable &middot; MS milestone &middot; PDRA Postdoctoral Research Associate &middot; ZVS zero-voltage switching &middot; back-EMF back electromotive force &middot; HIL hardware-in-the-loop &middot; 2N-DOF two-N degrees of freedom (N driven sections).</div>
+  </div>
+
+</div>
+<!-- [Word count (visible text): 537] -->
+</body>
+</html>
