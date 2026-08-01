@@ -22,13 +22,14 @@ You are working on **Forge**, a single-file HTML app ("Forge · EPSRC Workbench"
 
 **Variant status conventions in the import file:** settled Vision text = `[chosen]` with source `(handover)` (verbatim-locked — Forge must not present it for rewriting); drafted content = `[candidate]` `(claude)`; the partner-contributions skeleton = `[draft]`. `[PI TO CONFIRM: …]` flags inside any text must survive round-trips untouched.
 
-## 2. Hosting constraint — read this before writing any code
+## 2. Hosting — CONFIRMED DEPLOYMENT: `https://mb-vault.vercel.app/`
 
-- **If Forge is hosted as a claude.ai Artifact, GitHub sync CANNOT work.** Artifact pages run under a strict CSP that blocks ALL external requests — `api.github.com`, `raw.githubusercontent.com`, and the Google Fonts links Forge currently uses. An artifact-hosted Forge stays import-by-paste only (which still works, via `exports/FORGE_Import.md`).
-- **Working options for a synced Forge:**
-  1. **Local file** — user opens `forge.html` from disk. `fetch` to `api.github.com` works from a `file://` origin because the GitHub API sends `Access-Control-Allow-Origin: *`. Zero infrastructure. Recommended default.
-  2. **Netlify or Vercel** — the user already has both GitHub apps installed on their account, so deploying the single HTML file to either gives a stable HTTPS URL with working API calls.
-- Whichever hosting: **inline the fonts or add a system-font fallback stack** so the page degrades gracefully offline/under CSP.
+The user hosts Forge inside their Vercel app at **https://mb-vault.vercel.app/**. Consequences for your implementation:
+
+- **GitHub API sync works from this origin.** `api.github.com` sends `Access-Control-Allow-Origin: *`, so browser `fetch` with the `Authorization` header succeeds from any HTTPS origin. No proxy or backend needed.
+- **`localStorage` is scoped to `mb-vault.vercel.app`** — state persists per browser on that origin. If the vault app embeds Forge in an `<iframe>`, the iframe must NOT carry a `sandbox` attribute lacking `allow-same-origin allow-scripts`, or storage and fetch both break; serving Forge as a normal same-origin route/page is safest.
+- **PRIVACY WARNING — public URL:** Vercel deployments are public by default; anyone with the URL can open this page. That is acceptable ONLY as long as the proposal text is NOT baked into the HTML. Keep the shipped file content-free (structure/seed only) and load all proposal content at runtime via the GitHub pull — then the unpublished proposal stays behind the user's token and browser. Never embed imported drafts, the user's GitHub token, or chosen text into the deployed HTML. If the user wants content served rather than pulled, the deployment needs access protection first.
+- **If a copy is ever hosted as a claude.ai Artifact instead:** artifact CSP blocks ALL external requests (GitHub API and the current Google Fonts links included) — that copy is paste-import only. Inline the fonts or add a system-font fallback stack so the page degrades gracefully either way.
 
 ## 3. Authentication — the repo is private
 
