@@ -18,6 +18,19 @@
 | 07_2026_preprints_digest.md | Hybrid-stacked BTMLC preprint (Mar. 2026) + on-chip balancer preprint (Mar. 2026) | ~4,000 | Stacked-module results (16-level ~49.5 V half-sine at up to 6 A, 98.5% peak, 60–85 mΩ); both preprints print the EP/T517793/1 + Project Ref 2600345 acknowledgement and the "based on a chapter of the author's 2025 UCL PhD thesis" statement — a citable four-output EPSRC lineage; neither carries a DOI (cite by title/date/hosting); machine-load applicability asserted but demonstrations are resistive-only |
 | 08_SkyDrive_appendices_digest.md | SkyDrive Q7/Q9/Q12/Q13/Q10 appendices — CONTEXT ONLY | ~3,600 | Every market figure with its (mostly absent) stated source; Pegasus III → Linx P9 phasing; customer-pull companies; Q12 WP structure and verbatim Eaton "non-funded Tier-1 adviser" wording; full 55-risk register with L×I scores; explicit note that UCL APL facilities appear NOWHERE in the SkyDrive documents; internal inconsistencies catalogued |
 
+## The gap-research files (11–16): literature filling the corpus gaps
+
+Each digest above now also carries a detailed "PROPOSAL USE MAP" — fact-by-fact mapping to exact proposal locations with ★-marked load-bearing items, ready-to-use fragments in the proposal register, and "Traps" lists of usages that would be wrong. The six research files below fill the gaps the corpus could not cover, each with verified citations and its own use map:
+
+| File | Gap filled | Headline outcome |
+|---|---|---|
+| 11_open_end_winding_research.md | No OEW literature held despite the architecture being a bilateral OEW drive | Canon secured (Stemmler & Guggenbach EPE 1993; variants; zero-sequence/common-mode challenges); differentiation: conventional OEW keeps two lumped machine-rated inverters and bus-scale winding voltage |
+| 12_gearbox_burden_research.md | Gearbox vulnerability claims uncited | CS-29.927(c) 30-minute loss-of-lubrication endurance; chip detectors; Super Puma planet-gear fatigue accidents (29 fatalities across two); 0.5–1% loss per mesh; wind-turbine reliability canon (Carroll 2016; NREL); eVTOL direct-drive trend (Joby abandoned gearing; Archer geared as counterexample) |
+| 13_end_winding_research.md | 20–40% resistance share and cooling claims uncited | Recast as aspect-ratio-dependent range (short stacks up to 50–57%; FSCW well below 20%); hot-spot claim strongly citable (Madonna TIE 2019 DOI 10.1109/TIE.2018.2868288; oil-spray/potting literature); hairpin axial figures (Nottingham VPPC 2023) |
+| 14_per_slot_prior_art_research.md | ⚠️ NOVELTY-CRITICAL: closest prior art unexamined | ISCAD (Dajaku/Gerling, SAE 2016-01-1179) did per-slot excitation AND electronic pole changing at 48 V/110 kW — but SUPPLIES 48 V externally at kA currents rather than deriving safe voltages from a HV bus; Wisconsin GaN IMMD (Wang/Li/Han TIA 2015) series-stacks modules to fraction the bus capacitively outside the winding. The unique claim survives as the CONJUNCTION (bilateral open-end + magnetic bus distribution + monolithic IC + PD-by-design + adiabatic ZVS). 8-row differentiation table + Novelty-paragraph fragments included; the proposal MUST cite both |
+| 15_multiphase_research.md | Multiphase costs argued from reasoning alone | Levi 2008/2016 reviews with DOIs; derating numbers (five-phase ~70%, six-phase 65–70% single-neutral, dual three-phase 50%, three-phase zero); both differentiators confirmed; the nine-phase pole-phase-modulation line flagged as the citable exception to "pole count fixed"; no published mass/volume audit exists (channel-count arithmetic supplied instead) |
+| 16_aero_environment_research.md | 270 V, certification and power-class claims unsourced | MIL-STD-704F + B787 ±270 V anchor the bus choice; SC-VTOL-01 (2019) continued-safe-flight requirement grounds the fault-tolerance framing (no standard says "gradual degradation" verbatim — corrected wording supplied); "5–50 kW per-motor" WRONG for passenger eVTOL (Joby ~236 kW, Archer 120 kW×12) — replacement wording positions the 5–15 kW demonstrator as the scalable per-module building block |
+
 ## The evidence chains (claim → sources)
 
 **1. "The complete per-slot drive fits on one chip" (feasibility of integration).** BTMLC paper (01): switches, gate drivers, level shifters, dead-time, Zener floating supplies on 15.2 mm²/130 nm BCD, silicon-measured. Farhat thesis (03): the four-prototype progression and scaling tables behind it. Preprints (07): the platform stacks — two ICs + off-chip half-bridge reach 16 levels/~49.5 V/6 A at 98.5%.
@@ -48,6 +61,9 @@
 8. "£3.2 bn UK AAM by 2030" unsupported; verified substitutes PwC 2023 (£2.1 bn annual by 2040) or DfT 2024 (£45 bn by 2030, whole drone/eVTOL economy). "111,000 jobs" is ADS 2019; current verified ~104,000 (ADS Outlook 2024).
 9. SkyDrive partner is ARC Aerosystems (not "ARC Additive"); Eaton's role verbatim: non-funded Tier-1 adviser on certification, industrialisation readiness and system safety.
 10. No published "Edwards IMD review" exists; the viva is not citable.
+11. The Novelty claim must be reframed as a conjunction and must openly cite ISCAD (per-slot excitation + electronic pole changing exist at 48 V) and the Wisconsin GaN IMMD (series-stacked modules see bus fractions) — differentiation table and fragments in file 14. [PI TO CONFIRM: adopt the reframed Novelty passage]
+12. "5–50 kW per-motor class" is wrong for passenger eVTOL; replacement wording in file 16. [PI TO CONFIRM]
+13. The 20–40% end-winding share is supportable only as an aspect-ratio-dependent range, not a literature constant — recast per file 13; certification framing must say "partial, bounded, predictable failures" (SC-VTOL continued-safe-flight), not "gradual degradation" — per file 16.
 
 ## How to use this dossier in a new Claude page
 
