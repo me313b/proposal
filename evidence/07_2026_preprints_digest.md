@@ -130,3 +130,83 @@ Evidences breadth of on-chip integration capability in the **same 130-nm BCD pro
 2. Both cite the same two companion Authorea preprints (BTMLC IC, Oct. 2025; multiple-output level shifters, Feb. 2026), establishing a four-output publication chain from one thesis on one process platform.
 3. Neither document prints a DOI — cite by title/date/hosting, and check engrXiv for assigned DOIs before submission.
 4. Machine-load applicability is asserted (motor driving, machine insulation stress, "compact motor drive systems" — Part A, pp. 2, 3, 25) but all delivered-power demonstrations are into resistive loads; the proposal should present inductive/machine loading as the next step the new work funds.
+
+---
+
+## PROPOSAL USE MAP (detailed)
+
+Fact-by-fact mapping into the proposal set: drafts/02_Vision_ArcRevision.md (Vision parts), drafts/03_Approach.md (RQ1–RQ5, WP1–WP4, Building on previous work), and EPSRC_Master_Handover.md S5/S6 plus the R4RI Capability section (Capability Module 2, prior-investment evidence). Conventions for every fragment below: UK English; no em dashes; the author and thesis are anonymised as "the group's work" or "the group's doctoral work" in body text; no DOI is asserted, citation is by title, date and hosting [PI TO CONFIRM: engrXiv DOI check]. The SIX highest-value items are marked ★.
+
+**Citation strings (reference list only, never body text):**
+- Part A: "A Scalable Hybrid Multilevel Power Converter Using Low-Voltage On-Chip Power Modules", preprint, 9 March 2026, hosted on engrXiv [PI TO CONFIRM: engrXiv DOI check; no DOI or server branding is printed in the PDF].
+- Part B: "On-Chip Scalable High-Speed Active Battery Balancers", preprint, 7 March 2026, hosted preprint (PDF is a captured hosting view) [PI TO CONFIRM: hosting venue and any assigned DOI].
+
+### ★ 1. Stacked two-IC sixteen-step demonstration (Part A, pp. 20–23)
+- **Fact.** Two eight-tap BTMLC ICs plus an off-chip half-bridge of 50 V MOSFETs synthesise sixteen-step half-sine waveforms (3.3 V per step, references to 49.5 V), delivering up to 6 A into resistive loads; per-tap DC efficiency 98.5% peak, 85% worst tap.
+- **(a) Location.** The single strongest support for Vision "Crossing the line: the 50 V claim" (VIS-CROSS-v7 buildability paragraph) and for the Approach "Building on previous work" lineage: it shows the platform scales toward per-slot voltage and current levels. Directly replaces the placeholder at drafts/03_Approach.md line 65 ("[PI TO CONFIRM: preprint citation — candidate entry in References]"). Also feeds handover S6 WP2 feasibility and the standard risk table (discrete plus IC hybrid partition already demonstrated).
+- **(b) Usage mode.** Quantitative evidence claim plus reference-list citation; the numbers 49.5 V, 6 A, sixteen steps, 98.5% are the load-bearing figures.
+- **(c) Fragment.** "The platform scales towards per-slot voltage and current levels: in the group's work, two stacked converter ICs and an off-chip half-bridge synthesise sixteen-step waveforms of approximately 49.5 V at up to 6 A into resistive loads, with per-tap efficiencies of 98.5% down to 85%."
+
+### ★ 2. Printed stacking-scalability argument (Part A, p. 5)
+- **Fact.** The eight-tap ceiling per chip is set by technology breakdown; higher voltage is reached by SOI-class processes or by board-level stacking, stated as "a scalable pathway for constructing higher-voltage and higher-power systems while maintaining compatibility with mainstream low-voltage IC technologies".
+- **(a) Location.** Vision "Crossing the line" and the Building-on-previous-work scaling narrative: this is the printed, citable version of exactly the scaling story the proposal extends from battery strings to stator slots. Also usable in Novelty (handover S5b) to show the scaling route is published, while its machine application is not.
+- **(b) Usage mode.** Direct quotation or close paraphrase with citation; anchors the claim that scaling is a demonstrated property of the platform, not a hope.
+- **(c) Fragment.** "The group's work has shown that stacking low-voltage converter ICs at board level provides a scalable pathway to higher-voltage systems while retaining mainstream low-voltage IC technology; this programme carries that pathway into the stator, where each slot section requires only tens of volts."
+
+### ★ 3. Motor-drive positioning statements (Part A, pp. 3, 25)
+- **Fact.** The architecture is printed as "supporting unified power-processing functions including motor driving, charging, and cell balancing" (p. 3) and as "a promising building block for future high-voltage converters, battery-integrated power electronics, and compact motor drive systems" (p. 25).
+- **(a) Location.** Vision "Crossing the line" (the platform was built with machine drive in view) and the Approach differentiation paragraph; also the intellectual-lineage table (handover S7d).
+- **(b) Usage mode.** Short quotation as intent evidence; must be paired with the honesty caveat that machine loading is asserted, not demonstrated (see Traps).
+- **(c) Fragment.** "The converter platform was published with motor driving explicitly among its unified power-processing functions; what remains undemonstrated, and what this programme establishes, is its operation from a machine winding rather than a battery string."
+
+### ★ 4. EP/T517793/1 acknowledgements in both preprints (Part A pp. 25–26; Part B p. 32)
+- **Fact.** Both preprints print the acknowledgement of an EPSRC PhD studentship, Grant No. EP/T517793/1 (Project Reference 2600345), and both carry the printed footnote that they derive from a chapter of a 2025 UCL PhD thesis.
+- **(a) Location.** Capability Module 2 (the R4RI track-record section, handover S10 territory): printed, citable evidence that prior EPSRC investment matured into the enabling IC platform, closing the loop for the return-on-public-investment argument in "Scope and Funding Rationale" (S5b).
+- **(b) Usage mode.** Track-record statement with grant number; the Capability section is where naming the grant is appropriate. In the anonymised body, use only "the group's doctoral work".
+- **(c) Fragment.** "The enabling integrated-circuit platform was developed under prior EPSRC investment: the 2026 preprints recording the stacked converter and the on-chip balancer both carry printed acknowledgement of EPSRC studentship EP/T517793/1 (Project Reference 2600345). This proposal converts that investment into a new class of machine drive."
+
+### ★ 5. Measured thermal behaviour without cooling (Part A, p. 23; Part B, pp. 26–27)
+- **Fact.** At 6 A on the highest tap: R_path = 82 mΩ, P_cond = 2.952 W, chip at 102 °C against a 28 °C board, effective thermal resistance approximately 25.1 °C/W with no external cooling; die attach and heat spreading flagged for improvement. The balancer chip reached approximately 65 °C at maximum imbalance, also uncooled.
+- **(a) Location.** RQ5 and WP2 (thermal network and packaging specification) in 03_Approach.md; the risk-table row "IC junction temperature exceeds limit".
+- **(b) Usage mode.** Quantitative baseline: the group's own measured thermal figures motivate RQ5 (an uncooled bench chip already reaches 102 °C, so a 120–150 °C winding environment is a genuine research question, not a detail) and give WP2 a validated starting point.
+- **(c) Fragment.** "Measured thermal data from the group's work, an effective junction-to-board thermal resistance of approximately 25 °C per watt with chip temperatures reaching 102 °C at 6 A without external cooling, define the starting point for RQ5: per-slot modules must reject comparable losses into a winding environment at 120 to 150 degrees Celsius."
+
+### 6. Path resistance and efficiency envelope (Part A, pp. 18–21)
+- **Fact.** Optimised packaging gives 60–85 mΩ path resistance across all taps at 2–6 A DC; efficiency 98.5% to 85% per tap; edge-connector sockets identified as removable loss.
+- **(a) Location.** WP2 (SPICE modelling under winding-source conditions needs measured device and path parameters) and Feasibility.
+- **(b) Usage mode.** Design-input numbers; supporting evidence that per-slot conduction loss is compatible with the efficiency claims of the Vision cascade.
+- **(c) Fragment.** "Measured path resistances of 60 to 85 milliohms per tap at 2 to 6 A in the group's work bound the conduction loss of a per-slot module and seed the WP2 circuit models with silicon-validated parameters."
+
+### 7. Dynamic frequency and magnitude agility (Part A, p. 22)
+- **Fact.** NLC operation with dynamic frequency changes (10 Hz to 1 kHz single module; 10 Hz to 500 Hz stacked) and arbitrary reference steps (3.3 V to 23.1 V single; 3.3 V to 49.5 V stacked) with stable response throughout.
+- **(a) Location.** RQ4/WP3 (reconfigurable field control) feasibility: per-slot waveform agility is the actuator capability that software-defined pole reconfiguration assumes.
+- **(b) Usage mode.** Feasibility evidence, one sentence.
+- **(c) Fragment.** "The converter platform has demonstrated stable synthesis under step changes of both frequency and magnitude, from 10 Hz to 1 kHz and from 3.3 V to 49.5 V, which is precisely the waveform agility that per-slot spatial field reconfiguration requires of its actuators."
+
+### ★ 8. Second IC: the on-chip active balancer (Part B, throughout)
+- **Fact.** A second fabricated and measured IC (3.4 mm², same 130-nm BCD family, 5 V LDMOS): four stacked half-bridges with fully integrated dead-time, multiple-output level shifting and gate driving; 1 kHz to 5 MHz; 2.4 to 4.3 V; up to 2.5 A average balancing current in dual-IC complementary mode; emulated cells balanced to about 1% SOC difference.
+- **(a) Location.** Capability Module 2 and Building on previous work: proves the group's on-chip integration capability is a repeatable platform (two distinct fabricated ICs, shared IP), not a single device. Also supports "Research environment and facilities" ("IC design flows developed for the group's prior chip work transfer directly into WP2").
+- **(b) Usage mode.** Breadth-of-capability evidence; one to two sentences plus reference.
+- **(c) Fragment.** "The same 130 nm BCD platform has produced a second fabricated and measured IC, an on-chip active battery balancer operating from 1 kHz to 5 MHz and delivering up to 2.5 A of balancing current, demonstrating that the group's floating-domain gate-drive, level-shifting and dead-time IP is a reusable design platform rather than a single device."
+
+### 9. Shared IP chain and thesis lineage (Part A pp. 25–26 refs [23]/[24]; Part B refs [31]/[32]; both p. 1 footnotes)
+- **Fact.** Both preprints derive from the same 2025 thesis, cite the same two companion Authorea preprints (BTMLC IC, Oct. 2025; multiple-output level shifters, Feb. 2026), and reuse identical level-shifter and dead-time circuit IP.
+- **(a) Location.** The intellectual-lineage table (handover S7d) and the Building-on-previous-work table in 03_Approach.md; strengthens the "every constituent capability has a prior demonstration within the group" sentence in Novelty (S5b).
+- **(b) Usage mode.** Structural evidence for the lineage argument; the four-output publication chain from one thesis on one process shows sustained, coherent capability.
+- **(c) Fragment.** "Across four related outputs from the group's doctoral work, converter IC, level shifters, stacked converter and balancer, the same floating-domain circuit IP recurs on one process platform, evidencing a coherent and transferable design capability rather than isolated results."
+
+### 10. Stated limitations as the funded gap (Part A §A5; Part B §B5)
+- **Fact.** All delivered-power demonstrations are into resistive loads; the off-chip 50 V stage is "not optimised for low on-state resistance or compactness"; three-phase machine drive and bipolar operation are conceptual only; balancer validation used battery emulators.
+- **(a) Location.** RQ2 gap statement and the "Remaining gap" column of the Building-on-previous-work table ("Battery-cell resistive loads only"); also Feasibility (honest framing pre-empts reviewer challenge).
+- **(b) Usage mode.** Deliberate self-limitation: state the resistive-load boundary explicitly and define the programme as the work that crosses it.
+- **(c) Fragment.** "Every delivered-power demonstration of the platform to date is into resistive loads. Operation from an inductive winding section with back-EMF, under the coupled conditions of a shared magnetic core, is exactly the boundary of knowledge that RQ2 and WP2 are designed to cross."
+
+### Traps
+
+1. **Do not present resistive-load demonstrations as machine-validated.** Every delivered-power result in both preprints is into resistive loads (4 Ω and 8 Ω benches); motor driving is asserted intent, not a demonstration. Phrase the stacked result as a converter-platform result whose machine-source extension is what the programme funds; any wording implying the platform "drives machines" overclaims and hands reviewers an easy objection.
+2. **Do not assert a DOI.** Neither PDF prints a DOI, and neither carries server branding on its pages; engrXiv hosting for Part A is inferred from the filename only, and Part B is a captured hosting view. Cite by title, date and hosting, keep the [PI TO CONFIRM: engrXiv DOI check] flag live, and resolve it before submission; an invented or wrong DOI in an EPSRC reference list is a credibility wound.
+3. **Efficiency framing.** 98.5% is the peak per-tap DC efficiency at 2 to 6 A, falling to 85%; it is not a system efficiency for the 49.5 V stacked waveform synthesis. Never attach 98.5% directly to the sixteen-step demonstration.
+4. **Die-area consistency.** The Vision text cites a 15.2 mm² die [1]; this preprint's die is 20.52 mm² (5474 by 3750 micrometres). These figures refer to different prototypes or accounting; reconcile before both appear in the same document [PI TO CONFIRM: which die area belongs to which IC].
+5. **Current-rating context.** "Up to 6 A" holds for the optimised wire-bonded board; JLCC-packaged parts were limited to about 2.5 A by bond-wire fusing. Quote 6 A only with the stacked or optimised-board context.
+6. **Anonymisation discipline.** Both preprints are single-author with printed personal e-mails and a QUB affiliation footnote. Body text must say "the group's work" or "the group's doctoral work"; grant number EP/T517793/1 belongs in the Capability section, not in anonymised Vision or Approach body text.
+7. **Balancer validation medium.** Part B used Keithley battery emulators, not physical cells; write "emulated cells" wherever balancing performance is quoted.

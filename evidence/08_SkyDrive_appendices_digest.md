@@ -187,14 +187,76 @@ Notable body figures (SkyDrive's claims): ~£1.9m programme over three years; ~�
 
 ---
 
-## 6. Proposal mapping — what the EPSRC proposal may draw from SkyDrive, and how
+## PROPOSAL USE MAP (detailed)
 
-| EPSRC section | Permitted use of SkyDrive material | Mandatory caveats |
-|---|---|---|
-| **Capability / track record — industrial engagement** | Cite the SkyDrive programme (ATI project 10192096, iNetic + UCL + ARC) as evidence of an active industrial translation environment; cite iNetic's AS9100 facilities and dynamometer rig and ARC's flight-representative Pegasus environment as infrastructure the EPSRC outputs could later exploit. | Context and translation pathway only; state that SkyDrive is separately funded with independent objectives. Do **not** claim UCL APL facilities from these documents — no SkyDrive appendix mentions them. |
-| **Partner contributions — Eaton evidence** | Quote Eaton's role verbatim: "non-funded Tier-1 adviser on certification, industrialisation readiness and system safety", advising across all WPs; plus Q7's "actively supporting system architecture, certification strategy, and industrialisation planning" and SAE AE-7/AE-10 involvement (Q10 doc). | Eaton's commitment is to *SkyDrive*; an EPSRC letter of support must be obtained separately. Never imply Eaton funding — the documents state it is non-funded. |
-| **Impact narrative — context** | Sector framing (decarbonisation drivers, Jet Zero/AGP alignment, 1 kV class, power-density trajectory, staged certification pathway) may set the scene. Every figure (435M passengers; 38,000 aircraft/£4.65tn; £35bn; 120,000 jobs; 3,000 companies; ATI £1.37bn/£20bn; 1.5→3.5 kW/kg) is **[PI TO CONFIRM]** — another programme's claims, mostly uncited, with the ATI power-density provenance uncertain. | Attribute explicitly ("figures stated in the ATI-funded SkyDrive documentation") or substitute independently cited sources (ADS, ATI publications, DfT Jet Zero). Never present SkyDrive's revenue/jobs forecasts as EPSRC impact claims. |
-| **Research vision / objectives** | May state that findings could transfer to programmes "such as" a 100 kW, 1 kV, 18,000 rpm class integrated drive — an *application class*, not a deliverable. | SkyDrive specs must never appear as EPSRC objectives, KPIs or milestones. The internal inconsistencies (13 vs 16 vs >15 kW/kg; LINX P3 vs Linx P9; Q13/Q14 cross-references) are further reason not to import numbers. |
-| **Risk management** | The Q13 register informs which risk *themes* are real in this domain (PD at altitude, rotor containment at 18 krpm, SiC/GaN supply, model-correlation criteria, interface freeze) and evidences L×I pre/post-control practice. | EPSRC risks must be written afresh; no SkyDrive rows, scores or owners copied. |
+Standing rule restated: SkyDrive is **context only** — a separate higher-TRL programme cited as translation environment, industrial-engagement evidence and impact background. Citing it **implies no commitment** to the EPSRC proposal by any SkyDrive party, and **every figure drawn from it carries [PI TO CONFIRM] as another programme's claim**. Fact-by-fact map below; the five highest-value items are marked ★.
 
-**Blanket rule:** every SkyDrive-derived number in EPSRC text carries attribution to SkyDrive and a **[PI TO CONFIRM]** flag until verified or substituted with an independent source.
+### ★ 1. SkyDrive programme identity — the translation environment
+
+- **Fact:** ATI project 10192096; iNetic (lead) + UCL + ARC Aerosystems, Eaton as non-funded adviser; 100 kW-class, 1 kV, 18,000 RPM integrated propulsion; TRL 3–6, TRL6 by ~2029 (Q7, Q12).
+- **(a) Proposal location:** Capability R4RI (`/home/user/proposal/drafts/05_Capability_R4RI.md`) Module 2 "Development of others / working relationships" (Variant A ¶2 of that module; Variant B, PI block) and Module 4 "Broader users and societal benefit" (both variants) — already deployed there; Approach section "Maximising translation of outputs into outcomes and impact" (handover S6 sub-heading list).
+- **(b) Usage mode:** cite as evidence of an active, delivery-based industrial relationship and the environment into which TRL 1–3 outputs feed. Mandatory caveat wording: a **separate higher-TRL programme**, separately funded (ATI/Innovate-UK-class) with independent objectives; citing it **implies no commitment** to the present proposal; the 100 kW / 18,000 RPM / 1 kV figures describe *that* programme's target class, never this one's, and each is **[PI TO CONFIRM] as another programme's claim**.
+- **(c) Fragment:** "The ATI-funded SkyDrive programme (project 10192096) — a separate, higher-TRL (TRL 3–6) collaborative programme in which the applicant group develops 100 kW-class integrated aerospace propulsion with iNetic and ARC Aerosystems [PI TO CONFIRM: figures are that programme's claims] — evidences the working industrial translation environment into which this programme's TRL 1–3 outputs feed; it is separately funded with independent objectives and implies no commitment to the present proposal."
+
+### ★ 2. Eaton's role — verbatim adviser wording (Q12)
+
+- **Fact (verbatim):** "Eaton participates as a non-funded Tier-1 adviser on certification, industrialisation readiness and system safety"; WP diagram: "Eaton advising across all of them" (WP0–WP4).
+- **(a) Proposal location:** Partner contributions (`/home/user/proposal/drafts/09_Partner_Contributions.md`), "Why Eaton is the right partner" — the verbatim quote is already embedded there; secondarily Vision "Impact and Beneficiaries" (handover S5b names Eaton [PI TO CONFIRM]).
+- **(b) Usage mode:** quote verbatim, attributed to "the SkyDrive technical-approach documentation". Mandatory caveat wording (as already written in drafts/09): "That engagement concerns a **separate, higher-TRL** collaborative programme; it is cited here solely as evidence of an established working relationship … and **implies no commitment** to the present proposal." Eaton is stated non-funded — never imply funding; the EPSRC letter of support is a separate, unsecured item (handover checklist item 7, **[PI TO CONFIRM]**).
+- **(c) Fragment:** "Eaton participates in the group's SkyDrive integrated-propulsion programme as a 'non-funded Tier-1 adviser on certification, industrialisation readiness and system safety', advising across all of that programme's work packages (SkyDrive technical-approach documentation). That engagement concerns a separate, higher-TRL programme and implies no commitment to the present proposal."
+
+### ★ 3. Eaton's active support and standards roles (Q7, Q10 doc)
+
+- **Fact (verbatim):** Eaton "actively supporting system architecture, certification strategy, and industrialisation planning" (Q7); Eaton participation in **SAE AE-7/AE-10** aerospace-electrification standards work (Q10 doc).
+- **(a) Proposal location:** drafts/09 — Eaton narrative paragraph and letters-guidance item 3 "strategic fit" (feeds what the letter should say); Approach "Maximising translation" (standards route for outputs).
+- **(b) Usage mode:** as depth-of-relationship and standards-pathway evidence only, same mandatory caveats: **separate higher-TRL programme**, **implies no commitment**, non-funded, letter **[PI TO CONFIRM]**; SAE roles are SkyDrive-document claims — **[PI TO CONFIRM] as another programme's claim** before naming committees in EPSRC text.
+- **(c) Fragment:** "Eaton's engagement in the adjacent SkyDrive programme extends to certification strategy and industrialisation planning and to SAE AE-7/AE-10 standards activity [PI TO CONFIRM: stated in SkyDrive documentation], giving the proposed advisory role a standards route through which per-slot drive findings could inform emerging aerospace electrification practice — subject to Eaton's separate written confirmation for this proposal."
+
+### ★ 4. Staged flight-validation and TRL 4–9 pathway (Q7 §1.2, Q12)
+
+- **Fact:** four-phase deployment (Pegasus III jump take-off module → production ramp → Linx P9 primary propulsion → OEM replication); ARC's flight-representative Pegasus platform; ARC-confirmed willingness to support post-project TRL 7–9.
+- **(a) Proposal location:** Approach "Maximising translation of outputs into outcomes and impact"; supports the settled Vision "Scope and Funding Rationale" hand-off sentence ("validated TRL-3 framework hands to Eaton and Airbus for follow-on Innovate UK or ATI development at TRL 4–6", handover S5b); drafts/09 letters-guidance item 4 (follow-on evaluation).
+- **(b) Usage mode:** evidence that a concrete, staged TRL 4–9 route *exists* in the group's industrial orbit — not that this proposal's outputs are on it. Mandatory caveats: **separate higher-TRL programme**; the pathway and ARC's willingness are SkyDrive commitments to SkyDrive, **imply no commitment** here; platform names and dates **[PI TO CONFIRM] as another programme's claims** (note internal LINX P3 / Linx P9 inconsistency).
+- **(c) Fragment:** "A staged route from bench validation to flight already operates around the applicant group: the separate SkyDrive programme progresses through ground rigs to flight-representative platform validation with ARC Aerosystems [PI TO CONFIRM: that programme's stated pathway]. This demonstrates the maturity of the translation environment awaiting this programme's TRL 1–3 outputs; it implies no commitment of that programme or its partners to the present proposal."
+
+### ★ 5. Q13 risk themes — corroboration that the EPSRC problem set is industry-real
+
+- **Fact:** SkyDrive's own register scores PD/insulation model uncertainty at 1 kV and reduced pressure (T1), inverter fault-ride-through at 1 kV (T3), rotor containment at 18 krpm (T15), SiC/GaN supply (T6/T7), interface freeze (T2/T30) — with L×I pre/post-control discipline.
+- **(a) Proposal location:** Approach "Feasibility and risk management" (theme selection only — the agreed EPSRC risk table in handover S6 stands); optionally one clause in the Vision problem framing (PD at altitude as a live industrial concern).
+- **(b) Usage mode:** themes only — evidence that PD at altitude, graceful fault degradation and thermal integration are what an active industrial programme worries about, so the TRL 1–3 research targets real constraints. Mandatory caveats: **separate higher-TRL programme**; no SkyDrive rows, scores or owners copied — EPSRC risks are research risks owned by the EPSRC team; any cited detail **[PI TO CONFIRM] as another programme's claim** and **implies no commitment**.
+- **(c) Fragment:** "That partial discharge at altitude, fault-tolerant degradation and electronics-in-winding thermal management dominate the risk registers of active industrial propulsion programmes [PI TO CONFIRM: e.g. the separate ATI-funded SkyDrive programme] confirms that the constraints this programme removes at TRL 1–3 are the ones industry meets at TRL 3–6."
+
+### 6. iNetic AS9100 facilities and dynamometer rig; ARC test environment (Q7 §1.5, Q12 caption, Q9 §9.6, Q13 T1)
+
+- **(a) Proposal location:** Approach "Maximising translation" (downstream infrastructure); NOT "Research environment and facilities", which must describe facilities this programme will actually use.
+- **(b) Usage mode:** partner-side infrastructure that *follow-on* (TRL 4–6) work could exploit — never facilities available to, or relied on by, this proposal; access **[PI TO CONFIRM]**; **separate higher-TRL programme**, **implies no commitment**; AS9100 status is a SkyDrive-document claim, **[PI TO CONFIRM] as another programme's claim**.
+- **(c) Fragment:** "Downstream industrialisation infrastructure — iNetic's AS9100-certified manufacturing and dynamometer facilities and ARC's flight-representative test environment [PI TO CONFIRM: as described in SkyDrive documentation] — already exists within the group's industrial network for any follow-on TRL 4–6 programme; none is required by, or committed to, the present TRL 1–3 research."
+
+### 7. Sector and policy framing figures (Q7 §1.1)
+
+- **Facts:** 435M passengers by 2050; 38,000 aircraft / £4.65tn; £35bn sector; 120,000 jobs / 3,000 companies; ATI £1.37bn / £20bn; 1.5→3.5 kW/kg trajectory; Jet Zero / AGP alignment.
+- **(a) Proposal location:** Vision "Timeliness" and "Impact and Beneficiaries" background only (handover S5b already carries its own [PI TO CONFIRM]-flagged figures — prefer those).
+- **(b) Usage mode:** scene-setting at most, attributed as "figures stated in the ATI-funded SkyDrive documentation"; every one is **[PI TO CONFIRM] as another programme's claim** — mostly uncited in source, and the 1.5→3.5 kW/kg ATI provenance is independently unverified. Strongly prefer substituting ADS / ATI publications / DfT Jet Zero citations. **Separate higher-TRL programme**; use **implies no commitment**.
+- **(c) Fragment:** "[PI TO CONFIRM — substitute an independently cited source before use: sector figures currently traceable only to another programme's (SkyDrive's) uncited claims.]"
+
+### 8. SkyDrive commercial and benefits figures (Q7 §1.5, Q10 doc)
+
+- **Facts:** unit prices, volumes, £268m/£200m revenue, ~1,220 jobs, tCO₂ abatement, £37m industrialisation, "£1 leverages ~£14", five PhDs, patent families.
+- **(a) Proposal location:** none. **(b) Usage mode:** do not use — these are SkyDrive's benefit claims and would read as the applicants' own impact projections; if a reviewer-facing sentence ever needs them, full attribution + **[PI TO CONFIRM] as another programme's claim** + **separate higher-TRL programme** + **implies no commitment**. **(c) Fragment:** none provided deliberately.
+
+### 9. Wider customer-pull names (Q7 §1.3: Boeing, Rolls-Royce Electrical, Ontic, Beyond Gravity, Vertical Aerospace)
+
+- **(a) Proposal location:** none at present. **(b) Usage mode:** avoid — engagement is claimed by SkyDrive, unquantified, and naming these firms in EPSRC text would imply relationships this team has not evidenced; **implies no commitment**, **[PI TO CONFIRM]** in full if ever used. **(c) Fragment:** none.
+
+### Traps — numbers and claims that must NEVER appear as EPSRC research targets
+
+The EPSRC programme's own confirmed parameters (handover S3) are 270 V bus, 20–50 V per slot section, 6,000–10,000 RPM, 5–50 kW per-motor class, TRL 1–3. The following SkyDrive numbers must never migrate into EPSRC objectives, KPIs, milestones, specs or the Gantt — only into attributed context sentences per items 1–7:
+
+- **100 kW** (continuous rating), and "modular toward megawatt class".
+- **18,000 RPM** (and the 18 krpm rotor/containment context) — the EPSRC machine is 6,000–10,000 RPM.
+- **1 kV** (and "1 kV class" operation at altitude) — the EPSRC platform context is 270 V DC.
+- **All kW/kg power-density targets:** 13 kW/kg motor and 16 kW/kg system (Q9), >1.5 kW/kg system and >15 kW/kg active-material (Q12), the 1.5→3.5 kW/kg sector trajectory (Q7), and 2.0–2.5 kW/kg (Harbour Air comparison). Note Q9 vs Q12 are mutually inconsistent — never blend, never adopt.
+- Supporting SkyDrive spec numbers: 95–98% / >97% efficiency, 25 A/mm², >3 GPa sleeves, torque-ripple/EMI/mass-percentage KPIs, TRL6 by ~2029, and all revenue/jobs/CO₂ forecasts.
+- **UCL APL cannot be evidenced from here:** the UCL Advanced Propulsion Laboratory appears **nowhere** in these SkyDrive documents (§3.2), so they **cannot resolve the open dynamometer/facilities flag** (handover S6: "APL facility specifics with distinctive numbers" still needed from the PI). The only dynamometer mentioned is **iNetic's** rig. Caution: `drafts/09_Partner_Contributions.md` currently states Eaton participates in SkyDrive "at the UCL Advanced Propulsion Laboratory" — that location claim is not supported by any SkyDrive appendix and needs independent evidence or removal [PI TO CONFIRM].
+
+**Blanket rule (unchanged):** every SkyDrive-derived number or claim in EPSRC text carries explicit attribution to SkyDrive and a **[PI TO CONFIRM]** flag until verified or substituted with an independent source.
