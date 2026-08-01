@@ -87,7 +87,7 @@ The strongest single evidence that the BTMLC platform scales beyond the single-c
 
 ## B2. Significance for the proposal
 
-Evidences breadth of on-chip integration capability in the **same 130-nm BCD process family** as the BTMLC: a second fabricated, measured IC (3.4 mm² die, 5 V lateral LDMOS) implementing four stacked half-bridge submodules with fully integrated dead-time generation, multiple-output level shifting and gate driving, operating 1 kHz–5 MHz over 2.4–4.3 V cell voltages and delivering up to 2.5 A average balancing current in a dual-IC complementary configuration. Together with Part A it shows the group can integrate the complete battery-facing power-processing suite (conversion + balancing) on one process platform — supporting the proposal's "unified power processing" claim — and it reuses the identical level-shifter/dead-time IP ([31]/[32] = the same Authorea preprints cited in Part A), demonstrating a coherent, reusable circuit-IP lineage.
+Evidences breadth of on-chip integration capability in the **same 130-nm BCD process family** as the BTMLC: a second fabricated, measured IC (3.4 mm², 5 V lateral LDMOS) — four stacked half-bridge submodules with fully integrated dead-time generation, multiple-output level shifting and gate driving — operating 1 kHz–5 MHz over 2.4–4.3 V and delivering up to 2.5 A average balancing current in dual-IC complementary mode. With Part A it shows the complete battery-facing suite (conversion + balancing) on one process platform, reusing identical level-shifter/dead-time IP ([31]/[32], the same Authorea preprints cited in Part A) — a coherent, reusable circuit-IP lineage.
 
 ## B3. Page-by-page walk
 
