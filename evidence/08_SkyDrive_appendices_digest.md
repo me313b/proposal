@@ -2,7 +2,7 @@
 
 ## Framing rule (read first)
 
-**SkyDrive is a separate Innovate-UK-class (ATI) programme, not the EPSRC research target.** It is a 100 kW, 18,000 RPM, 1 kV-class integrated electric propulsion programme (TRL 3–6) delivered by a consortium of iNetic (lead), UCL and ARC Aerosystems, with Eaton participating as a **non-funded Tier-1 adviser**. For the EPSRC proposal, SkyDrive material may be used **only as context**: as a translation environment for the research, as evidence of industrial engagement, and as background for the impact narrative. It must **never** be presented as the object of the EPSRC research, its specifications must not be adopted as EPSRC deliverables, and its market/benefit claims must not be restated as the applicants' own without attribution and PI confirmation. All quantified figures below are **SkyDrive's claims as written in its own appendices**; where the appendix states a source, that source is recorded; where it does not, that is recorded too.
+**SkyDrive is a separate Innovate-UK-class (ATI) programme, not the EPSRC research target.** It is a 100 kW, 18,000 RPM, 1 kV-class integrated electric propulsion programme (TRL 3–6) delivered by a consortium of iNetic (lead), UCL and ARC Aerosystems, with Eaton participating as a **non-funded Tier-1 adviser**. For the EPSRC proposal, SkyDrive is **context only**: translation environment, industrial-engagement evidence, and impact-narrative background. It must **never** be presented as the research target, its specifications must not become EPSRC deliverables, and its market/benefit claims must not be restated as the applicants' own. All figures below are **SkyDrive's claims as written in its appendices**; stated sources are recorded, as is their absence.
 
 Source files (all in `/home/user/proposal/`): `10192096 - SkyDrive - Appendix - Q7 Business Opportunity.docx`, `SkyDrive_Q9.docx`, `SkyDrive_Q12_Technical_Approach_FINAL (1).docx`, `10192096 SkyDrive - Risk Register - Appendix Q13.docx`, `good photos for Question 10.docx`.
 
@@ -22,7 +22,7 @@ Source files (all in `/home/user/proposal/`): `10192096 - SkyDrive - Appendix - 
 | Propulsion power-density requirements of approximately **1.5 kW/kg by 2026**, increasing toward **3.5 kW/kg by 2050**, alongside fault tolerance and high-voltage operation in the **1 kV class** | Attributed only to "Industry targets" |
 | Harbour Air retrofit comparison: **~1.0 kW/kg (battery-only)**, 30–60 min range vs SkyDrive target **2.0–2.5 kW/kg**, >2 h with fuel cell | Comparison table (Figure 5 in Q7); no external citation |
 
-**Caveat (important):** our separate verification exercise found the **ATI provenance of the 1.5 → 3.5 kW/kg power-density targets to be uncertain** — they could not be traced cleanly to a published ATI document. If any EPSRC text alludes to sector power-density trajectories, it must either cite an independently verified source or be flagged [PI TO CONFIRM]. The same applies to all unsourced macro figures above.
+**Caveat:** our separate verification found the **ATI provenance of the 1.5 → 3.5 kW/kg targets uncertain** — not traceable to a published ATI document. Any EPSRC mention of sector power-density trajectories must cite an independently verified source or be flagged [PI TO CONFIRM]; likewise all unsourced macro figures above.
 
 Policy alignment claimed: UK Aerospace Growth Partnership "Net Zero Aviation by 2050" ambition; Jet Zero and Destination Net Zero strategies; emerging CAA and EASA certification frameworks for electric propulsion.
 
@@ -30,18 +30,18 @@ Policy alignment claimed: UK Aerospace Growth Partnership "Net Zero Aviation by 
 
 Four-phase customer-led pathway with ARC Aero Systems as launch customer:
 
-1. **Phase 1** — non-primary propulsion deployment on **Pegasus** (Q7 §7.2 specifies the **Pegasus III hybrid gyrocopter**, with SkyDrive as a **jump take-off propulsion module**; ARC confirms this enables certification as an aircraft component with early in-flight data capture).
+1. **Phase 1** — non-primary propulsion on **Pegasus** (§7.2: the **Pegasus III hybrid gyrocopter**, SkyDrive as a **jump take-off propulsion module**, certifiable as an aircraft component with early in-flight data capture).
 2. **Phase 2** — production ramp and data-driven certification maturity.
 3. **Phase 3** — primary propulsion integration on the **Linx P9** (nine-seat platform).
 4. **Phase 4** — replication across other OEM platforms.
 
-ARC has confirmed willingness to support post-project TRL 7–9 progression through ground test rigs, suitable air vehicles and potential joint commercial structures.
+ARC has confirmed willingness to support post-project TRL 7–9 progression (ground test rigs, air vehicles, potential joint commercial structures).
 
 ### 1.3 Customer-pull companies named
 
 - **ARC Aero Systems** — committed launch customer (Pegasus III, then Linx P9).
 - **Eaton** — Tier-1 aerospace supplier "actively supporting system architecture, certification strategy, and industrialisation planning" (unfunded).
-- Wider engagement claimed with **Boeing, Rolls-Royce Electrical, Ontic, Beyond Gravity, and Vertical Aerospace** — described as confirming demand; no letters or commitments quantified in this appendix.
+- Wider engagement claimed with **Boeing, Rolls-Royce Electrical, Ontic, Beyond Gravity, and Vertical Aerospace** — described as confirming demand; no commitments quantified.
 
 ### 1.4 Technical differentiation claims (context for the machine class)
 
@@ -60,7 +60,7 @@ Multi-phase HV motor at **1 kV and 18,000 rpm**; modular multilevel inverter (pa
 
 ## 2. Q9 — Innovation Content
 
-Q9 is a technology-by-technology table (challenge / state of the art / innovation beyond SoA), all streams **TRL 3 → 6** except AI-powered control (TRL 4 → 6).
+Q9 is a technology-by-technology table (challenge / SoA / innovation beyond SoA); all streams **TRL 3 → 6** except AI control (TRL 4 → 6).
 
 1. **Ultra power-dense electric motor.** SoA benchmarks cited: Siemens ~5 kW/kg @ 11 krpm; Honeywell ~8 kW/kg @ 19 krpm; NASA prototypes ~10–13 kW/kg @ 20 krpm; EMRAX axial-flux ~10 kW/kg. Claim: **~13 kW/kg at 100 kW, 1 kV, 18,000 rpm, 95–98% efficiency**; additive-manufactured housings (+30% thermal conductivity, −25% temperature); hollow conductors at **25 A/mm²** with direct liquid cooling; spray cooling; amorphous laminations (−30% losses); carbon-fibre rotor sleeves (**>3 GPa**); **~24% higher density**, up to **47 kg system mass saving**, **10–15% more range**.
 2. **Reliability/redundancy through multiphase design.** Six-phase and dual three-phase machines with integrated multilevel fault-tolerant inverters; torque ripple −50–80%; common-mode voltage −40–60%; operational life +>30%; continued operation under partial winding/phase loss. KPI: "100% improvement in fault tolerance vs SoA".
@@ -81,7 +81,7 @@ Q9 is a technology-by-technology table (challenge / state of the art / innovatio
 
 ### 3.1 Concept and specifications
 
-Integrated **100 kW-class** high-voltage propulsion subsystem: **high-speed six-phase motor at 1 kV and 18,000 rpm**, fault-tolerant **multilevel inverter**, **high-speed step-down gearbox**, integrated control and thermal management, co-designed as a single jointly certifiable subsystem. Energy storage is explicitly **out of scope (bought in)**. Targets: continuous high-power operation; **system-level power density >1.5 kW/kg** for the integrated motor + inverter (**active-material density >15 kW/kg**); **system efficiency >97%**; defined fault tolerance under specified failure modes; compliance-aligned validation evidence. TRL 3 → 6 via laboratory validation, HIL testing, environmental stress testing and integrated operation on ARC's **flight-representative Pegasus platform**, with defined progression to the **nine-seat Linx P9**; MW-class scaling identified (higher-voltage insulation coordination, multi-module thermal balancing, parallel-inverter control).
+Integrated **100 kW-class** HV propulsion subsystem: **six-phase motor at 1 kV and 18,000 rpm**, fault-tolerant **multilevel inverter**, **high-speed step-down gearbox**, integrated control and thermal management, co-designed as a single jointly certifiable subsystem. Energy storage is explicitly **out of scope (bought in)**. Targets: continuous high power; **system power density >1.5 kW/kg** for the integrated motor + inverter (**active-material >15 kW/kg**); **efficiency >97%**; defined fault tolerance; compliance-aligned validation evidence. TRL 3 → 6 via laboratory validation, HIL, environmental stress testing and integrated operation on ARC's **flight-representative Pegasus platform**, progressing to the **nine-seat Linx P9**; MW-class scaling identified (insulation coordination, multi-module thermal balancing, parallel-inverter control).
 
 ### 3.2 Partner roles — exact wording
 
@@ -92,15 +92,15 @@ Integrated **100 kW-class** high-voltage propulsion subsystem: **high-speed six-
 
 ### 3.3 Work-package structure
 
-- **WP0 Project Management (iNetic)** — iNetic PM with the Principal Investigator holding technical leadership; iNetic's **xRL and PROLaunch** life-cycle tools; weekly/monthly/quarterly reviews; quarterly reports to the monitoring officer.
+- **WP0 Project Management (iNetic)** — iNetic PM, Principal Investigator holds technical leadership; **xRL and PROLaunch** life-cycle tools; weekly/monthly/quarterly reviews; quarterly reports to the monitoring officer.
 - **WP1 Six-Phase Motor Engineering (iNetic)** — WP1.1 electromagnetic/mechanical multi-physics optimisation at 18,000 rpm; WP1.2 advanced integrated cooling; WP1.3 high-speed step-down gearbox; WP1.4 hardware integration and bench test. Deliverable: manufactured and validated motor + cooling + gearbox assembly; defines the torque–speed envelope and motor interface for WP2/WP3.
 - **WP2 Fault-Tolerant Power-Electronics Drive (UCL)** — WP2.1 topology definition (candidates include **neutral-point-clamped and flying-capacitor** arrangements for >1 kV, reduced dv/dt and common-mode stress) and six-phase modulation/digital control with balanced power sharing under single-phase or device-failure scenarios; WP2.2 electro-thermal design and cooling; WP2.3 hardware build and readiness verification (electrical, thermal, EMI). Deliverable: fully fabricated, readiness-verified drive unit.
-- **WP3 System Integration and Experimental Validation (ARC Aerosystems)** — integration of motor-gearbox and drive; validation on the SkyDrive platform under aerospace-representative duty cycles: fault-injection (graceful degradation under phase and device loss), thermal endurance, altitude-representative environmental cycles, EMI characterisation; produces the TRL6 airworthiness-aligned evidence package.
-- **WP4 Exploitation and Dissemination (iNetic)** — industrialisation/feasibility assessment, exploitation strategy and IP-protection framework, publications and industry engagement.
+- **WP3 System Integration and Experimental Validation (ARC Aerosystems)** — integrates motor-gearbox and drive; validates under aerospace-representative duty cycles: fault injection (graceful degradation under phase/device loss), thermal endurance, altitude-representative cycles, EMI characterisation; produces the TRL6 airworthiness-aligned evidence package.
+- **WP4 Exploitation and Dissemination (iNetic)** — industrialisation/feasibility assessment, exploitation strategy, IP-protection framework, publications, industry engagement.
 
 ### 3.4 Timeline and milestones
 
-**36 months**; motor and power electronics in parallel for the first two years; integration from mid-point; exploitation in the final year; **TRL6 by around 2029**. Milestones: **M1** requirements/baseline designs frozen (M6); **M2** detailed designs verified by analysis, TRL 4–5 (M12); **M3** hardware manufactured and bench-tested (M20); **M4** integrated subsystem assembled (M30); **M5** integrated subsystem validated on the SkyDrive platform, TRL6 (M36).
+**36 months**; motor and power electronics in parallel for two years; integration from mid-point; exploitation in the final year; **TRL6 by ~2029**. Milestones: **M1** requirements/baselines frozen (M6); **M2** detailed designs verified by analysis, TRL 4–5 (M12); **M3** hardware manufactured and bench-tested (M20); **M4** subsystem assembled (M30); **M5** validated on the SkyDrive platform, TRL6 (M36).
 
 **Internal cross-reference note:** Q12's own preamble points to "Risks appendix (Q14)" and "Innovation appendix (Q13)", whereas the actual files are Q13 (risks) and Q9 (innovation) — evidence of drafting drift between versions; cite files by filename, not by internal cross-reference.
 
@@ -108,7 +108,7 @@ Integrated **100 kW-class** high-voltage propulsion subsystem: **high-speed six-
 
 ## 4. Q13 — Risk Register
 
-**Format:** Risk = Likelihood (1 low – 5 high) × Impact (1 low – 5 high); banded **1–8 Low, 9–15 Medium, 16–25 High**; each risk scored **pre-control and post-control**, with cause, impact, mitigation, and WP/owner. Categories: Technical (T1–T33), Commercial (C34–C40), Managerial (M41–M50), Environmental (E51–E53), Social (S54–S55). Scores below as pre → post (L×I=S).
+**Format:** Risk = Likelihood (1–5) × Impact (1–5); bands **1–8 Low, 9–15 Medium, 16–25 High**; each risk scored **pre- and post-control** with cause, impact, mitigation and WP/owner. Categories: Technical T1–T33, Commercial C34–C40, Managerial M41–M50, Environmental E51–E53, Social S54–S55. Scores shown pre → post (L×I=S).
 
 | ID | Risk (abridged) | Pre | Post | Mitigation (abridged) | Owner/WP |
 |---|---|---|---|---|---|
@@ -174,7 +174,7 @@ Integrated **100 kW-class** high-voltage propulsion subsystem: **high-speed six-
 
 ## 5. "good photos for Question 10.docx"
 
-Despite the filename, this is a full **Q10/benefits appendix draft** ("This appendix sets out the benefits SkyDrive delivers…", internally numbered §7.1–7.6) containing **six embedded PNG images** (`word/media/image1.png`–`image6.png`) and the following table/figure captions:
+Despite the filename, this is a full **Q10/benefits appendix draft** (internally numbered §7.1–7.6) containing **six embedded PNG images** (`word/media/image1.png`–`image6.png`) and these table/figure captions:
 
 - **Table 1.** "Benefits at a glance, with the source of each in this appendix" (aircraft-level 30–80 vs 150–200 gCO₂/pax-km; >400,000 tCO₂/yr abated by 2040, ~900 t per 100 kW unit; ~1,220 UK jobs and £268m revenue by 2040, £37m reinvested; sovereign capability at TRL6 by ~2029).
 - **Figure 1.** "Line of sight from validated component performance, through the efficiency and mass levers, to aircraft-level and fleet benefit."
@@ -183,7 +183,7 @@ Despite the filename, this is a full **Q10/benefits appendix draft** ("This appe
 - **Figure 4.** "Projected UK employment and revenue growth to 2040, consistent with the bid's established figures."
 - **Figure 5.** "SkyDrive commercialisation roadmap, from TRL6 validation on the Pegasus platform to higher-power derivatives."
 
-Notable figures in the body (SkyDrive's claims): ~£1.9m programme over three years; ~£0.42m industrial match funding; ATI contribution ~£1.50m; £37m post-project industrialisation 2029–2032; direct employment ~450 by 2040 (iNetic ~280, ARC ~150, UCL ~20) with **ONS aerospace multiplier 1.72** → ~1,220 total; revenue ~£130m by 2036, ~£268m by 2040 (~£200m/yr export); "every £1 of aerospace R&D leverages ~£14 of whole-economy output" (attributed to ATI's estimate); three patent families (multiphase inverter topology, integrated thermal management, fault-tolerant control); **five PhD completions and UCL-led publications**; Eaton participation in **SAE AE-7/AE-10** standards activity; noise −10–15 dB; ATI 2026 strategy alignment (double UK aerospace market share by 2035; propulsion value >US$17bn/yr by 2050; >65,000 deliveries to 2050, ~70% single-aisle).
+Notable body figures (SkyDrive's claims): ~£1.9m programme over three years; ~£0.42m industrial match; ATI contribution ~£1.50m; £37m industrialisation 2029–2032; direct employment ~450 by 2040 (iNetic ~280, ARC ~150, UCL ~20), **ONS multiplier 1.72** → ~1,220 total; revenue ~£130m by 2036, ~£268m by 2040 (~£200m/yr export); "every £1 of aerospace R&D leverages ~£14" (attributed to ATI); three patent families; **five PhD completions and UCL-led publications**; Eaton in **SAE AE-7/AE-10** standards work; noise −10–15 dB; ATI 2026 strategy alignment (double UK share by 2035; propulsion >US$17bn/yr by 2050; >65,000 deliveries to 2050, ~70% single-aisle).
 
 ---
 
@@ -191,10 +191,10 @@ Notable figures in the body (SkyDrive's claims): ~£1.9m programme over three ye
 
 | EPSRC section | Permitted use of SkyDrive material | Mandatory caveats |
 |---|---|---|
-| **Capability / track record — industrial engagement** | Cite the existence of the SkyDrive programme (Innovate UK/ATI project no. 10192096, iNetic + UCL + ARC consortium) as evidence that the applicants operate within an active industrial translation environment; cite iNetic's AS9100 facilities and dynamometer rig, and ARC's flight-representative Pegasus test environment, as translation infrastructure the EPSRC research outputs could later exploit. | Present as *context and translation pathway only*; state clearly that SkyDrive is separately funded and that the EPSRC project has independent objectives. Do **not** claim UCL APL facilities from these documents — they are not mentioned in any SkyDrive appendix. |
-| **Partner contributions — Eaton evidence** | Quote Eaton's SkyDrive role verbatim: "non-funded Tier-1 adviser on certification, industrialisation readiness and system safety", advising across all work packages, plus Q7's wording ("actively supporting system architecture, certification strategy, and industrialisation planning") and the SAE AE-7/AE-10 standards involvement (Q10 doc). | Eaton's commitment is to *SkyDrive*, not to the EPSRC project; any EPSRC letter of support must be obtained separately. Do not imply Eaton funding — the documents state explicitly it is non-funded. |
-| **Impact narrative — context** | Sector-scale framing (decarbonisation drivers, Jet Zero/AGP alignment, 1 kV-class and power-density trajectory, staged certification pathway) may set the scene. Every quantified figure (435M passengers; 38,000 aircraft/£4.65tn; £35bn; 120,000 jobs; 3,000 companies; ATI £1.37bn/£20bn; 1.5→3.5 kW/kg) is **[PI TO CONFIRM]**: these are another programme's claims, mostly uncited in Q7, and our verification found the ATI provenance of the power-density targets uncertain. | Attribute explicitly ("figures stated in the ATI-funded SkyDrive programme documentation") or replace with independently cited sources (ADS, ATI publications, DfT Jet Zero). Never present SkyDrive's revenue/jobs forecasts (£200m exports, 1,220 jobs, £268m) as EPSRC impact claims. |
-| **Research vision / objectives** | May state that findings could transfer to programmes "such as" a 100 kW, 1 kV, 18,000 rpm class integrated drive — as an *application class*, not a deliverable. | SkyDrive specs (100 kW/1 kV/18 krpm, >97% efficiency, kW/kg targets) must never appear as EPSRC objectives, KPIs or milestones. Note the internal inconsistencies (13 vs 16 vs >15 kW/kg; LINX P3 vs Linx P9; Q13/Q14 cross-references) — a further reason not to import numbers wholesale. |
-| **Risk management** | The Q13 register informs which technical risk *themes* are real in this domain (PD at altitude, rotor containment at 18 krpm, SiC/GaN supply, model-correlation criteria, interface freeze discipline) and shows familiarity with L×I pre/post-control scoring practice. | EPSRC risk table must contain research-programme risks written afresh; no SkyDrive risk rows, scores or owners are to be copied. |
+| **Capability / track record — industrial engagement** | Cite the SkyDrive programme (ATI project 10192096, iNetic + UCL + ARC) as evidence of an active industrial translation environment; cite iNetic's AS9100 facilities and dynamometer rig and ARC's flight-representative Pegasus environment as infrastructure the EPSRC outputs could later exploit. | Context and translation pathway only; state that SkyDrive is separately funded with independent objectives. Do **not** claim UCL APL facilities from these documents — no SkyDrive appendix mentions them. |
+| **Partner contributions — Eaton evidence** | Quote Eaton's role verbatim: "non-funded Tier-1 adviser on certification, industrialisation readiness and system safety", advising across all WPs; plus Q7's "actively supporting system architecture, certification strategy, and industrialisation planning" and SAE AE-7/AE-10 involvement (Q10 doc). | Eaton's commitment is to *SkyDrive*; an EPSRC letter of support must be obtained separately. Never imply Eaton funding — the documents state it is non-funded. |
+| **Impact narrative — context** | Sector framing (decarbonisation drivers, Jet Zero/AGP alignment, 1 kV class, power-density trajectory, staged certification pathway) may set the scene. Every figure (435M passengers; 38,000 aircraft/£4.65tn; £35bn; 120,000 jobs; 3,000 companies; ATI £1.37bn/£20bn; 1.5→3.5 kW/kg) is **[PI TO CONFIRM]** — another programme's claims, mostly uncited, with the ATI power-density provenance uncertain. | Attribute explicitly ("figures stated in the ATI-funded SkyDrive documentation") or substitute independently cited sources (ADS, ATI publications, DfT Jet Zero). Never present SkyDrive's revenue/jobs forecasts as EPSRC impact claims. |
+| **Research vision / objectives** | May state that findings could transfer to programmes "such as" a 100 kW, 1 kV, 18,000 rpm class integrated drive — an *application class*, not a deliverable. | SkyDrive specs must never appear as EPSRC objectives, KPIs or milestones. The internal inconsistencies (13 vs 16 vs >15 kW/kg; LINX P3 vs Linx P9; Q13/Q14 cross-references) are further reason not to import numbers. |
+| **Risk management** | The Q13 register informs which risk *themes* are real in this domain (PD at altitude, rotor containment at 18 krpm, SiC/GaN supply, model-correlation criteria, interface freeze) and evidences L×I pre/post-control practice. | EPSRC risks must be written afresh; no SkyDrive rows, scores or owners copied. |
 
-**Blanket rule repeated:** every SkyDrive-derived number in EPSRC text carries attribution to the SkyDrive programme and a **[PI TO CONFIRM]** flag until the PI has verified it or substituted an independent source.
+**Blanket rule:** every SkyDrive-derived number in EPSRC text carries attribution to SkyDrive and a **[PI TO CONFIRM]** flag until verified or substituted with an independent source.
