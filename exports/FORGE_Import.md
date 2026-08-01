@@ -1,15 +1,3 @@
-FORGE IMPORT — EPSRC Workbench exchange format
-Generated from the drafts/ folder of me313b/proposal, branch claude/epsrc-vision-approach-library-6qr50k.
-
-HOW TO IMPORT: in Forge, open Import (the wizard that says "Paste markdown"), paste this ENTIRE file, press "Read it", review the mapping, confirm. Everything above the first "## PART:" line is ignored by the parser.
-
-Mapping notes:
-- Settled Vision text is imported as [chosen] with source (handover) — it is verbatim-locked; the three openings are [candidate] because choosing one is the live decision.
-- The "Summary" blocks match no seeded Forge section: file them via "New part…" into a section of your choice, or hold in inbox.
-- New parts will be offered for: Novelty, Scope (Vision); Research design, WP structure, Building on previous work, Translation (Approach); Full-section drafts (Capability, Resources); Renumbering map (References).
-- Tables (risk register, project plan, reference map) import as raw pipe-text — Forge's renderer has no table support; the text is intact for export.
-- [PI TO CONFIRM: …] flags are preserved and must never be resolved by invention.
-
 ## PART: Vision :: Opening: stand beside the expert
 ### VARIANT: VIS-OPEN-v1 [candidate] (claude)
 **Option A — "The binding constraint is insulation, not magnetics or thermal"** *(sharpest reframe)*
