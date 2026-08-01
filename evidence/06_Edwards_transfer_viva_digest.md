@@ -167,22 +167,92 @@ Cite these directly, never the transfer report. Details as printed (volume/issue
 
 **Grey/web sources (prefer primaries):** [1] UN net-zero page; [2] IEA Global EV Outlook 2023; [3] Statista aviation-emissions page; [4] ICCT Mukhopadhaya & Graver 2022 (solid report); [5] ARPA-E FOA (16 Dec 2019); [11] Bartos, Control Engineering, 2000; [28] RS AS22759/34 datasheet; [33] Kemet FPL ferrite tiles; [34] TDK EPCOS ferrite data book 2013; [37] Embry-Riddle textbook chapter; [38] Danfoss VLT DriveMotor FCM 300; [39] H3X website; [42] Meters UK AWG table; [43] Archer aircraft page; [44] Joby Aviation news.
 
-## 4. Proposal mapping
+## PROPOSAL USE MAP (detailed)
 
-**How it positions the "IMD shortens, per-slot dissolves" differentiation.** The taxonomy (pp. 8–9) establishes that conventional IMD practice — radial housing, radial stator, axial housing, axial endplate — merely *relocates and shortens* the inverter-to-machine path: the inverter stays a discrete block, and the literature's quantified benefits (10–20% volume, 30–40% cost, via [8]) flow from cable/housing elimination alone. The IMMD/SST thread ([12], [13], and the 1 MW aerospace build [17]/[18]) is the published stepping-stone towards *dissolution*: per-tooth converters, still fed by a common DC link whose capacitors the same literature identifies as the binding constraint (~40% of drive volume per [14]; ripple-intolerant capacitors per [12]/[13]). Edwards' Configuration 1 (p. 43) is exactly the differentiated position the proposal argues: a DCAT voltage-splitting stage supplying balanced levels so that **each inverter module drives one machine slot** with a multistep waveform, dissolving both the inverter *and* the DC-link capacitor problem into the machine periphery — with Configuration 2 (dual DCAT, open-ended winding, 36→72 levels) as the scaling route the gap analysis (p. 21) motivates. The report also supplies the needed negative result: the multi-wire battery-tap alternative is quantitatively non-scalable (Table 3.1, Figure 3.4), leaving 2-wire + DCAT as the defensible route.
+**Ground rule.** The transfer viva is NOT citable. Every row below routes its fact to a published substitute. The three load-bearing substitutes are fully verified — complete bibliographic records confirmed in `drafts/06_References.md` (residual check 3), ready to insert at the tail of Part 1 of that list:
 
-**Claims that must NEVER be sourced to this report** (cite the primary, or drop):
+- **[IMD-A] Abebe 2016** — R. Abebe, G. Vakil, G. Lo Calzo, T. Cox, S. Lambert, M. Johnson, C. Gerada, and B. Mecrow, "Integrated motor drives: state of the art and future trends," *IET Electr. Power Appl.*, vol. 10, no. 8, pp. 757–771, Sep. 2016. DOI: 10.1049/iet-epa.2015.0506. *(The canonical IMD state-of-the-art review; recommended primary for the partition claim.)*
+- **[IMD-B] Lee 2018** — W. Lee, S. Li, D. Han, B. Sarlioglu, T. A. Minav, and M. Pietola, "A Review of Integrated Motor Drive and Wide-Bandgap Power Electronics for High-Performance Electro-Hydrostatic Actuators," *IEEE Trans. Transp. Electrific.*, vol. 4, no. 3, pp. 684–693, Sep. 2018. DOI: 10.1109/TTE.2018.2853994. *(Source of the 10–20% volume / 30–40% cost figures and of the four-way mounting taxonomy.)*
+- **[IMD-C] Jahns 2020** — T. M. Jahns and B. Sarlioglu, "The Incredible Shrinking Motor Drive: Accelerating the Transition to Integrated Motor Drives," *IEEE Power Electron. Mag.*, vol. 7, no. 3, pp. 18–27, Sep. 2020. DOI: 10.1109/MPEL.2020.3011275. *(Field-trajectory and modularisation/fault-tolerance source.)*
 
-1. 10–20% volume and 30–40% installation/manufacturing cost reductions → [8] Lee et al. 2018 (itself a review).
-2. "Boosts system efficiency by 30% or more" → **no adequate source exists in the report**; do not use unless an independent primary source is found.
-3. DC-link capacitors ≈ 40% of drive volume; >7.5 kW unfeasible in the motor envelope → [14] Wheeler et al. 2005 — flag the 2005 vintage.
-4. 7.5 kW thermal barrier for IMDs → [11] Bartos 2000, a trade article; avoid as evidence.
-5. ARPA-E 12 kW/kg and 93% cruise efficiency → [5] ARPA-E FOA 2019 (retrieve directly).
-6. Aviation CO₂e 882 Mt (2024) and doubling since 1990 → replace Statista [3] with a primary source; 49–88% CO₂e reduction and 3× cruise efficiency → [4] ICCT 2022.
-7. eVTOL survey statistics (120 concepts; 57% powered-lift; 53% vectored thrust) → [6] Ugwueze et al. 2023.
-8. THD 5.285% (13-level) vs 73.98% (3-level) → [20] Paterakis et al. 2017.
-9. SiC/GaN 600 °C vs Si 225 °C limits → [10] Abebe et al. 2016.
-10. Slot/pole weight-vs-speed plateaus (12/10 @ 10 krpm; 24/20 @ 15 krpm; 36/30 @ 5 krpm) → [19] El Hajji et al. 2024.
-11. **Unpublished and uncitable anywhere:** the Table 3.1 wiring comparison and non-scalability conclusion; the DCAT design algorithm, constraints and Table 3.3 parameters (36 levels, 9 cores, E20/10/6, t_f = 868 ns, t_z = 384 ns, L_m^p = 25.2 µH, L_m^g = 453 µH, 300 mm limit); the two IMD configurations and the 36→72 level doubling; the annular-oil-bath cooling concept; the UFCS/DPT hardware status. These are Edwards' original unpublished results — describable as the team's preliminary work, but never referenced to this document nor presented as established findings.
+None of the three yet carries a number in `drafts/06_References.md` Part 1. Fragments below use the [IMD-A/B/C] placeholders; replace with final keys on insertion, then log the assignment in the renumbering map.
 
-**Internal-use cautions:** the (a)/(b) caption swap on Figure 3.22, the duplicated "Figure 2.12" numbering with crossed [25]/[27]/[26]/[28] attributions, the dangling [69], the "300 μs" airgap unit misprint, the 300 vs 305 mm diameter inconsistency, and the malformed [23]: treat the draft as a working document and verify every figure and reference against the body text before reuse.
+**Proposal locations served.** The digest's proposal value concentrates on the *IMD-shortens-vs-dissolves* differentiation, which lives in exactly three places: (i) Vision **"Opening: stand beside the expert"** (VIS-OPEN-v7, `drafts/02_Vision_ArcRevision.md` — the state-of-the-art paragraph, currently citing only the general MEA reviews [15,16]); (ii) Vision **"Crossing the line: the 50 V claim"** (VIS-CROSS-v7 — the sentence "an integrated motor drive relocates a functionally intact inverter onto the housing and still meets the winding at full-voltage terminals"); (iii) Approach **"Building on previous work"**, third paragraph (`drafts/03_Approach.md` — "IMD *shortens* the converter–machine partition; this proposal *dissolves* it"), whose `[PI TO CONFIRM: cite a published IMD state-of-the-art review here]` is the one outstanding citation slot this map closes.
+
+### Fact-by-fact rows (★ = the six highest-value items)
+
+**★ ROW 1 — The partition claim: an IMD relocates a functionally intact inverter; the converter remains an electrically distinct unit meeting the winding at full-bus-voltage terminals.**
+- (a) *Location:* Vision "Crossing" (the relocates-vs-dissolves sentence); Approach "Building on previous work" ¶3 — this row fills its open `[PI TO CONFIRM]` slot.
+- (b) *Cite:* **[IMD-A] Abebe 2016** (recommendation in `drafts/06_References.md`); optionally reinforced by [IMD-C].
+- (c) *Fragment:* "Integrated motor drives mount a functionally complete inverter onto or into the machine, shortening cables and pooling cooling, while the converter remains an electrically distinct unit connected to the winding at full-bus-voltage terminals [IMD-A]. IMD *shortens* the converter–machine partition; this proposal *dissolves* it."
+
+**★ ROW 2 — Field trajectory: the converter has moved progressively closer to the machine; integration is the field's direction of travel.**
+- (a) *Location:* Vision "Opening" ¶1 ("Integrated motor drives have moved the inverter out of the equipment bay and onto the machine housing…").
+- (b) *Cite:* **[IMD-C] Jahns 2020** — a magazine review titled for exactly this trajectory; add [IMD-A] for the survey backbone.
+- (c) *Fragment:* "Integrated motor drives have moved the inverter out of the equipment bay and onto the machine housing, shortening cables and pooling two thermal systems into one [IMD-A, IMD-C]."
+
+**★ ROW 3 — Quantified IMD benefits: 10–20% volume reduction and 30–40% installation/manufacturing cost reduction from eliminating separate housings and shielded cables.**
+- (a) *Location:* Vision "Opening" ¶1 (if the state-of-the-art sentence is to be quantified); Approach "Building on previous work" ¶3 (quantifying what *shortening* buys — setting up why *dissolving* must be argued on different grounds).
+- (b) *Cite:* **[IMD-B] Lee 2018** — but these are second-hand survey numbers inside a review, so hedge with "reported".
+- (c) *Fragment:* "Mounting the inverter on the machine is reported to save 10–20% of system volume and 30–40% of installation and manufacturing cost [IMD-B] — gains that flow from shortening the partition, not from removing it; the winding still sees the full bus voltage."
+
+**★ ROW 4 — Modularisation and phase-lead integration improve fault tolerance — at the price of duplicated converter channels.**
+- (a) *Location:* Vision "Opening" ¶1 (multiphase sentence) and "The unseen line" third point / "Cascade" (redundancy-without-duplication argument).
+- (b) *Cite:* **[IMD-C] Jahns 2020** (for the benefit); the duplication-cost framing is the proposal's own argument and needs no citation.
+- (c) *Fragment:* "Modular, phase-lead-integrated drives improve fault tolerance by construction [IMD-C]; conventional multiphase machines buy the same softening by duplicating inverter channels, gate drives, isolated supplies and protection."
+
+**★ ROW 5 — Wide-bandgap devices in integrated drives: SiC/GaN practical limits (~600 °C vs ~225 °C for Si), higher switching frequency, application-dependent choice.**
+- (a) *Location:* Vision "Opening" ¶1 ("Wide-bandgap devices have raised switching frequency and efficiency together…").
+- (b) *Cite:* **[IMD-A] Abebe 2016** — the report's own source for these figures.
+- (c) *Fragment:* "Wide-bandgap devices have raised switching frequency and efficiency together and collapsed passive volume in ways silicon never permitted [IMD-A]." *(Quote the 600 °C / 225 °C figures only if needed, and only to [IMD-A].)*
+
+**★ ROW 6 — IMMD/per-tooth converters are the field's closest approach to dissolution — and still retain a shared DC link and terminal-fed sections.**
+- (a) *Location:* Approach "Building on previous work" ¶3 — the pre-emptive answer to a reviewer's "per-slot drive already exists (IMMD/Smart Stator Teeth)" objection; optionally one clause in Vision "Crossing".
+- (b) *Cite:* Brown, Jahns & Lorenz, IEEE IAS Annual Meeting 2007, pp. 1322–1328 (IMMD) and Brockerhoff et al., IEEE EDPC 2014 (SST) — **from the digest inventory, bibliographic details NOT yet independently verified; verify before insertion.** [IMD-C] also surveys IMMD and is the verified fallback if only one entry is affordable.
+- (c) *Fragment:* "Even the most granular published integration — integrated modular motor drives with per-tooth converter modules [Brown 2007; Brockerhoff 2014] — feeds every module from a common DC link whose capacitors the same literature identifies as the binding constraint, and each winding section still meets its converter at terminals rated for the link voltage. No prior architecture removes the terminal itself."
+
+**ROW 7 — IMD mounting taxonomy: radial/axial × housing/stator-mounted; radial suits high-speed machines; stator-mounted variants are 'purer' but complicate cooling.**
+- (a) *Location:* Approach "Building on previous work" ¶3, only if the differentiation needs taxonomy depth (one clause at most — the proposal must not read as an IMD survey).
+- (b) *Cite:* **[IMD-B] Lee 2018** (the taxonomy figure's source); [IMD-A] equivalently.
+- (c) *Fragment:* "Whether housing- or stator-mounted, radial or axial [IMD-B], every configuration relocates the same electrically intact converter."
+
+**ROW 8 — EMC/parasitics improve when inverter–machine interconnects are removed.**
+- (a) *Location:* Vision "Opening" ¶1 ("shrinking electromagnetic-interference filtering"); Vision "The unseen line" first point (dV/dt at the terminals).
+- (b) *Cite:* **[IMD-B] Lee 2018**.
+- (c) *Fragment:* "Integration shortens or removes the shielded feeder whose parasitics convert fast switching edges into terminal overvoltage [IMD-B]."
+
+**ROW 9 — Aerospace is already pushing IMD integration to megawatt scale (2 kV, 1 MW, 20,000 rpm IMMD with explicit PD countermeasures).**
+- (a) *Location:* Vision "Opening" ¶1 or "Timeliness" (evidence the field is investing in integration yet retaining the partition); Approach "Building on previous work" ¶3 as the state-of-the-art bound.
+- (b) *Cite:* Wang et al., IEEE JESTPE 2025, pp. 394–407 (and Swanke et al., IEMDC 2021) — **digest inventory; verify volume/issue before use.**
+- (c) *Fragment:* "The most aggressive aerospace integration to date — a 2 kV, 1 MW, 20,000 rpm integrated modular motor drive [Wang 2025] — mitigates partial discharge with added insulation and geometry control at PD-prone regions; the bus voltage still reaches the winding."
+
+**ROW 10 — Integration motivated by PD: shorter interconnects reduce the parasitics that create terminal overvoltage and PD risk.**
+- (a) *Location:* Vision "The unseen line" first point; Vision Openings A–C.
+- (b) *Cite:* the proposal's **existing PD anchors** — Lusuardi et al., IEEE Access 2021 (current [13] in `drafts/06_References.md`) and, if a second is wanted, Madonna et al., IEEE Trans. Ind. Appl., vol. 57, no. 2, pp. 1389–1398, 2021 (verified in the [14] note there). Do **not** import PD sourcing via this report.
+- (c) *Fragment:* none needed — the Vision's PD text is already drafted and anchored; this row exists to block accidental re-sourcing.
+
+### Trap rows — claims that must NEVER be sourced to this report
+
+| # | Tempting claim (as printed in the viva) | Why it is a trap | Required action |
+|---|---|---|---|
+| T1 | "System-level efficiency boost of 30% or more" from integration | Printed with **no citation at all** in the viva; physically dubious | **Never use anywhere** unless an independent primary source is found; no substitute exists |
+| T2 | 10–20% volume, 30–40% installation/manufacturing cost savings | Real source is [IMD-B] Lee 2018 — itself a review carrying second-hand numbers | Cite [IMD-B] with "reported"; never the viva (see ★ ROW 3) |
+| T3 | DC-link capacitors ≈ 40% of drive volume; >7.5 kW unfeasible in the motor envelope | Sourced to Wheeler et al., EPE **2005** — twenty years old | If used, cite Wheeler 2005 and flag the vintage explicitly |
+| T4 | 7.5 kW "thermal barrier" for IMDs | Bartos, *Control Engineering*, **2000** — 25-year-old trade article, not peer-reviewed | Avoid as evidence entirely; historical colour only |
+| T5 | ARPA-E targets: 12 kW/kg, 93% cruise efficiency | Viva cites the FOA second-hand | Retrieve and cite the ARPA-E FOA (16 Dec 2019) directly |
+| T6 | Aviation CO₂e 882 Mt (2024); doubled since 1990 | Viva's source is a Statista topic page | Replace with ICCT/IATA/IEA primary data |
+| T7 | Electric aircraft 49–88% CO₂e reduction; 3× cruise efficiency | Second-hand via viva | Cite ICCT (Mukhopadhaya & Graver 2022) directly |
+| T8 | eVTOL survey: 120 concepts, 57% powered-lift, 53% vectored thrust | Second-hand via viva | Cite Ugwueze et al., AIAA SciTech 2023 |
+| T9 | THD 5.285% (13-level) vs 73.98% (3-level) | Second-hand via viva | Cite Paterakis, Marouchos & Darwish, UPEC 2017 |
+| T10 | SiC/GaN ~600 °C vs Si ~225 °C limits | Second-hand via viva | Cite [IMD-A] Abebe 2016 (see ★ ROW 5) |
+| T11 | Slot/pole weight-vs-speed plateaus (12/10 @ 10 krpm; 24/20 @ 15 krpm; 36/30 @ 5 krpm) | Second-hand via viva | Cite El Hajji et al., *Aerospace* 2024 |
+| T12 | Foundational DCAT citation (Grimm, Wood & Baghdadi 2020) | The viva's entry [23] is **malformed** (authors duplicated into page field, no venue) | Establish the correct record independently before citing; the proposal's DCAT anchor is already Wood et al., PCIM 2016 ([3] in `drafts/06_References.md`) |
+| T13 | Multiport DC solid-state transformer results (Kolahian et al. 2025) | TechRxiv **preprint**, not peer-reviewed | Cite only with explicit preprint labelling, if at all |
+| T14 | Battery-tap wiring study: Table 3.1, non-scalability conclusion, 2-wire+DCAT decision | Edwards' **unpublished original work** | Uncitable anywhere; describable only as the team's unpublished preliminary work, unreferenced |
+| T15 | DCAT design algorithm and parameters (36 levels, 9 cores, E20/10/6, t_f = 868 ns, t_z = 384 ns, L_m^p = 25.2 µH, L_m^g = 453 µH, ≤300 mm) | Unpublished original work | Same as T14 |
+| T16 | The two IMD configurations (per-slot Configuration 1; dual-DCAT open-end 36→72 levels) and the annular-oil-bath cooling concept | Unpublished original work — and Configuration 1 superficially resembles this proposal's per-slot architecture | Never cite; never present as established. The proposal's per-slot claim rests on its own published silicon [1]–[3] in `drafts/06_References.md`, not on Edwards' concept figures |
+| T17 | UFCS current-sensor and double-pulse-test hardware status | Unpublished, experiments not yet run | Uncitable; internal knowledge only |
+
+### Internal-use cautions (when mining the viva for anything else)
+
+Figure 3.22's (a)/(b) caption is swapped against the text (follow the text); "Figure 2.12" is duplicated on pp. 19–20 with crossed [25]/[26]/[27]/[28] attributions; in-text "[69]" dangles (list ends at [44]); the gate-core airgap "300 μs" is a unit misprint for µm; the diameter limit is 300 mm in text vs 305 mm in Figure 3.18's caption; nearly all journal entries omit volume/issue. Treat every figure, number and reference as unverified until checked against the body text and the primary source.

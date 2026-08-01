@@ -123,11 +123,84 @@ Per-chapter remarks restate the contributions. **Stated further work:** *Discret
 - CS2CAB uses the most switches (4n) and its balancing energy loss is not the lowest despite the shortest balancing time (pp. 182–183).
 - The Ch. 6 model neglects edge effects (accuracy degrades as width-to-thickness ratio falls); sub-50 kHz measurements were analyser-limited (pp. 213–214).
 
-## 6. Proposal mapping
+## PROPOSAL USE MAP (detailed)
 
-**WP2 — control-signal isolation across stacked floating domains (RQ2).** The thesis is the group's silicon-proven evidence that gate-command isolation can live *inside* a submodule IC with a coreless on-chip transformer, no external isolator and no per-domain isolated supply: 500 µm ten-turn interleaved top-metal transformer in 130 nm BCD; three fabricated modulation schemes; measured edge delays ≈38–40 ns; AM passing a 1.5 MHz input, PM stable to 418 kHz; PM cutting isolation power 87.4 % versus AM. For a per-slot drive whose converters sit in series-stacked 20–50 V floating domains, this is precisely the signal path RQ2 must scale — the thesis supplies the validated circuit family, the HFSS→Spectre→GDS design flow, sizing bounds (viable between ~300 and 500 µm; 100 µm fails), decoupling lessons, and the known PM frequency ceiling WP2 improves upon. It pairs with the group's TCAS-I multiple-output level-shifter work: the thesis's MMC uses sub-5 ns level shifters where stacked references share a ground, the OCI where none exists — spanning both isolation regimes a per-slot stack needs.
-**Integration-boundary principle for partitioning.** The Ch. 3 rule — integrate until repeated control/support circuits are eliminated, but keep lateral power currents out of IC metal (pp. 69–71) — transfers directly to deciding what belongs on a per-slot die (gate drive, dead time, isolation, monitoring) versus the slot busbar (phase current), and stands as prior in-house design methodology.
-**The UPU-to-per-slot conceptual bridge (Vision).** The thesis's central move is granular co-location: pair each energy element (cell) with its own processing electronics, make units identical and stackable, absorb the functions of centralised converter blocks, and win on scalability, fault bypass, waveform quality, partial-load efficiency and serviceability (pp. 34–36). The per-slot proposal mirrors this on the machine side: pair each *stator slot* with its own integrated converter section, for the same dividends — low-voltage devices in a series stack, graceful degradation, removal of the centralised inverter. The Impact Statement's aim "to advance the consideration of cell-scale power processing concepts across a range of applications" (Impact Statement, p. 4) and the further-work call to extend the concept to other device/control technologies (p. 218) are the thesis's own warrant for the extension. Evidence-base numbers (anonymised as "the group's work"): silicon-validated 5-level CHB / 4-level MMC / isolated half-bridges in 130 nm BCD; 98 % SoC-balancing improvement on a 25-level prototype; CS2CAB balancing in 37 s versus 330–750 s prior art; 90 % leakage-inductance reduction with a validated analytical magnetics model — demonstrating capability from concept through IC design to experimental proof.
+Standing rule for every item below: the thesis is ANONYMISED in proposal text (Master Handover §3 and §7c). In the Vision and Approach it appears only as "the group's doctoral work" or "a doctoral thesis from the group"; the full bibliographic entry goes in the References section. Author names never appear in body text. Citation keys are unreconciled between drafts (the Vision uses [21] for the doctoral OCI work, the Approach uses [5]); renumber per Handover §9 before reuse.
+
+The EIGHT highest-value items are marked ★.
+
+**★ 1. UPU concept as the conceptual bridge to per-slot drive (pp. 34-36; §1.4 definition p. 34).**
+(a) Location: Vision, "Crossing the line: the 50 V claim" (VIS-CROSS-v7 in drafts/02, the sentence citing on-chip digital isolation "demonstrated in the group's doctoral work [21]") and, per Handover §7c, an optional framing paragraph in "The Research Opportunity" grounding per-slot drive in a validated battery-domain precedent.
+(b) Usage mode: anonymised conceptual precedent. The thesis pairs each battery cell with its own power electronics in identical stackable units that absorb the functions of centralised converter blocks; the proposal makes the same move on the machine side, pairing each stator slot with its own integrated converter section. Same dividends claimed in both: low-voltage devices, graceful degradation, no centralised converter.
+(c) Fragment: "The architectural move has a validated precedent within the group: doctoral work on cell-scale power processing demonstrated that a centralised converter can be dissolved into identical low-voltage units, each pairing an energy element with its own integrated electronics, and validated the approach from concept through custom silicon to experimental proof in the battery domain. This programme carries the same principle across to the machine winding, pairing each stator slot with its own integrated drive section."
+
+**★ 2. On-chip transformer digital isolation (OCI), silicon validated (pp. 83-95, 115-125).**
+(a) Location: Approach, WP2 T2.2 (floating-domain control-signal architecture, D2.2, M10), serving RQ2; already anchored there as "the on-chip digital isolation the group demonstrated in the same 130 nm BCD process [5]".
+(b) Usage mode: enabling-capability evidence plus design input. Supplies the validated circuit family (AM, PM, PTM modulators and demodulators), the HFSS to Spectre to GDS design flow, and sizing bounds (500 um ten-turn interleaved top-metal transformer selected; 300 um still works; 100 um fails), all reusable for the 12 to 18 floating per-slot domains.
+(c) Fragment: "Control-signal isolation across floating domains is already proven in the target process: the group's doctoral work fabricated coreless on-chip transformer isolation in the same 130 nm BCD technology, with three modulation schemes validated in silicon and measured edge delays of approximately 38 to 40 ns, requiring no external isolator and no per-domain isolated supply. T2.2 adapts this signal path to the 12 to 18 floating per-slot domains of the proposed machine."
+
+**★ 3. Integrated power submodule die, 4 mm x 4 mm in 130 nm BCD, five circuits fabricated and tested (pp. 112-125).**
+(a) Location: Capability Module 1 of the R4RI track-record section (Handover §10), as anonymised evidence of in-house full-custom power IC capability; also supports the facilities claim that "BTMLC/TCAS-I BCD design flows transfer directly".
+(b) Usage mode: capability evidence. Doctoral output demonstrating the group takes multilevel power submodules from architecture through layout, tape-out, packaging and experimental validation.
+(c) Fragment: "Doctoral work within the group carried an integrated multilevel power submodule from architecture to validated silicon: a 4 mm by 4 mm die in 130 nm BCD carrying five complete circuit sets, including five-level cascaded H-bridge and four-level modular multilevel stages, packaged, bonded and experimentally verified. The design flow, from electromagnetic field simulation through co-simulation to layout, is established in-house and transfers directly to the per-slot module."
+
+**★ 4. Integration-boundary principle (pp. 69-71).**
+(a) Location: Approach, "Building on previous work", and the WP2 rationale for what sits on the per-slot die versus the board and busbar.
+(b) Usage mode: prior in-house design methodology, paraphrased. Rule: integrate until repeated control and support circuitry is eliminated; keep lateral power currents out of thin IC metal; bound total stacked voltage per die by process breakdown.
+(c) Fragment: "The partitioning of the per-slot module follows a design rule established in the group's doctoral work on integrated submodules: integration proceeds until repeated control, communication and monitoring circuitry is eliminated, while high-current paths remain in external conductors rather than thin on-chip metal. Applied here, gate drive, dead-time generation, isolation and monitoring belong on the per-slot die; the slot current does not."
+
+**★ 5. Floating-substrate CHB verified in silicon (pp. 73, 115-117).**
+(a) Location: Approach, WP2 T2.2 and the feasibility and risk narrative, serving RQ2. The per-slot stack has no fixed substrate reference; this is the direct de-risking evidence.
+(b) Usage mode: risk retirement. The configuration with no guaranteed minimum-potential node, flagged pre-silicon as the open question, worked in fabricated silicon: full five-level output at 50 Hz with leg transition delays of 7.6 ns rising and 4 ns falling.
+(c) Fragment: "The configuration most relevant to a per-slot series stack, in which no terminal has a fixed substrate reference, was identified before fabrication as the open risk and then verified experimentally: the floating-substrate cascaded H-bridge produced full five-level operation in silicon, retiring the principal feasibility concern for stacked floating domains."
+
+**★ 6. Pulse-modulation isolation performance and its known ceiling (Table 3.2, p. 107; pp. 123-124).**
+(a) Location: Approach, WP2 T2.2 specification and the honesty line in feasibility and risk management (RQ2 frequency envelope).
+(b) Usage mode: quantified starting point plus stated improvement target. PM cuts total isolation loss 87.4 percent versus AM (42.15 mW against 335.04 mW) and holds symmetric delays near 39 ns, but is measured stable only to 418 kHz, limited by demodulator feedback delay.
+(c) Fragment: "The pulse-based isolation scheme reduced total isolation loss by 87.4 percent relative to amplitude modulation while holding symmetric edge delays below 40 ns; its measured operating ceiling of 418 kHz, set by demodulator feedback delay, is a characterised limitation that WP2 addresses in specifying the per-slot signal path."
+
+**★ 7. The thesis's own warrant for extension beyond batteries (Impact Statement, p. 4; further work, p. 218).**
+(a) Location: Vision, "Timeliness" or the closing of "Crossing the line"; also Approach, "Building on previous work" (which already uses the parallel Kolahian future-work device).
+(b) Usage mode: continuation-of-line argument, paraphrased and anonymised. The Impact Statement aims to advance cell-scale power processing "across a range of applications" (verbatim, p. 4) and the stated further work is to "extend the concept to use different technologies for power devices and control devices" (verbatim, p. 218). Quote only with the page-checked wording in §4 of this digest; otherwise paraphrase.
+(c) Fragment: "The doctoral work that established the group's cell-scale platform explicitly frames its concept as extensible across applications and identifies extension to other device and control technologies as the natural next step. The programme proposed here is that step, taken into the rotating machine at per-slot resolution."
+
+**★ 8. Fast, order-independent active balancing as capability evidence (CS2CAB, pp. 185-189; published as A2, ref [6]).**
+(a) Location: Capability Module 1 (development of others; doctoral researchers publishing in IEEE Transactions during their programmes, Handover §10) and the evidence base behind "Building on previous work".
+(b) Usage mode: measured-numbers capability evidence, citable via the published TPEL paper rather than the thesis where a named citation is needed.
+(c) Fragment: "The group's switched-capacitor active balancer reached the 2 percent state-of-charge criterion in 37 seconds at 10 kHz where the best prior-art benchmark required 330 to 750 seconds depending on cell ordering, with balancing behaviour independent of cell location and only two complementary control signals for the whole stack."
+
+**9. Level shifter plus OCI: the two isolation regimes a per-slot stack needs (pp. 80-81, 111; pairs with A8, ref [2]).**
+(a) Location: Approach, WP2 T2.2 narrative.
+(b) Usage mode: completeness argument. Sub-5 ns level shifters serve stacked domains sharing a ground reference; the OCI serves domains with no common reference. Together they span the signal-routing regimes of a per-slot stack.
+(c) Fragment: "Between the group's silicon-validated floating-domain level shifters and its on-chip transformer isolation, both fabricated in the same 130 nm BCD process, the two signal-routing regimes of a series-stacked per-slot drive, shared-reference and fully floating, each have a demonstrated on-chip solution."
+
+**10. OCI sizing and shrink bounds (pp. 92-94, 100).**
+(a) Location: Approach, WP2 T2.2 design detail, or held in reserve for reviewer response.
+(b) Usage mode: design-space input. Interleaved top-metal winding selected (coupling approximately 0.9 to 0.98); viable size bounded between roughly 300 and 500 um in this process; 100 um fails to drive the demodulator.
+(c) Fragment: "The isolation transformer design space in this process is already bounded by experiment: interleaved top-metal windings at 300 to 500 um function, while 100 um induces insufficient secondary voltage, giving T2.2 a characterised starting envelope rather than an open search."
+
+**11. Packaging and supply-integrity lessons (pp. 113-114).**
+(a) Location: Approach, WP2 T2.3 packaging specification and T2.4 board build, minor supporting detail.
+(b) Usage mode: engineering-maturity evidence. Bond-wire parasitic-inductance supply bounce was diagnosed and suppressed with combined 22 uF off-chip and 50 pF on-chip decoupling.
+(c) Fragment: "Packaging-level supply-integrity effects in this process family are already characterised from the group's prior tape-out, including the decoupling strategy that suppresses bond-wire supply bounce."
+
+**12. Sensor-free preventive balancing results (Ch. 4; DSW and AHI).**
+(a) Location: Capability Module 1 supporting evidence only; not load-bearing for any work package.
+(b) Usage mode: breadth-of-platform evidence, anonymised or cited through the associated publications. Use the Ch. 7 wording "up to a 98 % improvement" in state-of-charge balancing on the 25-level prototype, not a flat "98 percent".
+(c) Fragment: "The platform's modulation-level work demonstrated sensor-free equalised energy extraction with up to a 98 percent improvement in state-of-charge balance on a 25-level experimental prototype, without hardware modification."
+
+**13. Validated analytical magnetics modelling (Ch. 6).**
+(a) Location: Capability Module 1 supporting evidence; tangentially supports WP1's multi-winding modelling credibility alongside A1.
+(b) Usage mode: modelling-capability evidence. Maxwell-equation model with no thin-conductor or frequency assumptions, resistance error under 10 percent against measurement; full interleaving cut leakage inductance by approximately 90 percent across the band.
+(c) Fragment: "The group's analytical magnetics modelling, validated to within 10 percent of measurement across the instrument band, and its demonstrated 90 percent reduction in leakage inductance through full interleaving, evidence the electromagnetic modelling depth WP1 draws on."
+
+### Traps
+
+1. **"Point of consumption" is a paraphrase, not a quotation.** Handover §7c glosses the UPU concept as "distributing conversion to the point of consumption". That phrase does not appear in the thesis. The verbatim definition (p. 34) is the UPU passage in §4 item 1 of this digest. Never present the gloss inside quotation marks or attribute it to the thesis; either quote the p. 34 passage exactly or paraphrase without quotation marks.
+2. **Battery-domain isolation results must not be claimed for winding domains.** Every OCI, floating-substrate and level-shifter result was obtained against battery-cell or bench-supply conditions. The lineage table states the gap explicitly: "Battery domain only, not winding domain". Write "demonstrated for floating battery-cell domains in the same process" and let WP2 T2.2 carry the extension; claiming winding-domain validation would contradict the proposal's own gap table and hand a reviewer an inconsistency.
+3. **Anonymisation.** The candidate's name must not appear in Vision or Approach body text; the thesis is cited only in the References section (Handover §3, §7c). Where a named, numbered citation is needed in body text, prefer the published CS2CAB paper (A2, ref [6]).
+4. **Citation-key drift.** The doctoral OCI work is [21] in the Vision draft and [5] in the Approach draft; neither matches the §9 master list. Do not copy fragments with hard-coded keys into proposal text; reconcile per Handover §9 first.
+5. **Numbers with hidden caveats.** The 98 percent balancing figure is "up to", from experiments run at 0.1 Hz fundamental (a simulator reporting limit the thesis states has no bearing on the results, p. 144). The integrated switch R_ON of 75 to 105 mOhm reflects a shared research die, not the technology's capability; do not quote it as representative. PM isolation is validated only to 418 kHz; avoid the unqualified phrase "high-frequency isolation" for the as-built silicon.
 
 ---
 *Digest prepared 1 August 2026 from a full pdftotext extraction of the 234-page PDF; all figures, tables and quotations verified against the extracted text. Note: an early extraction in this session was overwritten by a sibling task's identically named scratch file (Kolahian thesis content); the extraction was redone to a uniquely named file and every quoted passage re-verified against the Tazehkand PDF directly.*
