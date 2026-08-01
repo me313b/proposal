@@ -64,10 +64,7 @@ The strongest single evidence that the BTMLC platform scales beyond the single-c
 - JLCC packaging limited to ≈ 2.5 A by three 25 µm gold bond wires; internal pads for extra bonds/stud bumping included but "not explored in this work" (p. 15).
 - Full three-phase machine drive and bipolar (H-bridge) operation are described conceptually (p. 7) but not demonstrated; demonstrations are half-sine into resistive loads.
 
-## A6. Proposal mapping
-
-- **Building on previous work:** direct lineage evidence — this preprint is the thesis-derived record that the team's BTMLC IC (a) exists in silicon, (b) stacks at board level to ~50 V/6 A per string with 98.5% peak efficiency, and (c) is explicitly positioned for motor driving, charging and balancing. It bridges the earlier BTMLC IC paper [23] and level-shifter paper [24] to the proposal's per-slot converter concept; the eight-tap breakdown limit + stacking argument (p. 5) is precisely the scaling narrative the proposal extends.
-- **References candidate:** cite as — Q. Farhat, "A Scalable Hybrid Multilevel Power Converter Using Low-Voltage On-Chip Power Modules," preprint (engrXiv), 9 March 2026, no DOI printed. Also harvest its refs [17] (Herzog/Kolar/Huber 2025) and [10] (tree-type ANPC) for the state-of-the-art section.
+*(Proposal mapping for Part A consolidated into "PROPOSAL USE MAP (detailed)" at the end of this document.)*
 
 ---
 
@@ -123,10 +120,7 @@ Evidences breadth of on-chip integration capability in the **same 130-nm BCD pro
 - Active-mode consumption (≈ 18 mA) reducible "through design" — deferred (p. 31).
 - Full-bridge mode doubles hardware (two ICs); validation used battery emulators (Keithley 2281S), not physical cells; chip self-heating to ≈ 65 °C without cooling (pp. 26–27).
 
-## B6. Proposal mapping
-
-- **Building on previous work:** demonstrates the second pillar of the platform — cell-level balancing IC in the same 130-nm BCD family, sharing the level-shifter/dead-time IP with the BTMLC ([31]/[32]); supports the claim that the team can deliver the complete on-chip battery-interface function set (multilevel conversion, balancing, gate-driving in series-stacked domains) and that the modular/stackable design language generalises. The eight-to-ten-cell headroom and SOI upgrade path (p. 10) mirror Part A's scaling argument, giving a consistent platform narrative.
-- **References candidate:** cite as — Q. Farhat, "On-Chip Scalable High-Speed Active Battery Balancers," preprint, 7 March 2026, no DOI printed (hosted preprint view captured as PDF). Table 3 (p. 32) is directly reusable as competitive-landscape evidence; refs [16] and [21] are candidate additions for the balancing state of the art.
+*(Proposal mapping for Part B consolidated into "PROPOSAL USE MAP (detailed)" at the end of this document.)*
 
 ---
 

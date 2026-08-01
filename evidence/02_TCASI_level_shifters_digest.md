@@ -68,9 +68,78 @@ The paper solves the **floating-domain control-signal problem**: how to translat
 6. Continuous LS draws **≈15 mA DC [SIM] / ≈18 mA [MEAS]** in the conducting state — a static-power scalability question for many-domain ICs (capacitive LS avoids it).
 7. Table III vs Table IV area figures differ for two circuits (see p. 10 note); cite whichever table is referenced, with the table number.
 
-## 6. Proposal mapping
+## PROPOSAL USE MAP (detailed)
 
-- **WP2 (Per-Slot Circuit Module Architecture, M1–M18; PI + PDRA 1 + Co-I Everts).** This paper is the direct precedent for **floating-domain control-signal routing inside the 12–18 slot ICs**: one input-side dead-time generator per IC, level-shifted to all stacked half-bridge submodules, with an analytical erosion budget (Eq. 9) that WP2 can re-derive for winding-referenced domains. The Fig. 2(c) dual-NMOS architecture with drive rails harvested from adjacent domains maps onto per-slot rail generation. Silicon evidence that the whole signal chain works in the **same 130 nm BCD process as the BTMLC IC** de-risks the stretch-goal tape-out; the discrete-board primary vehicle can reuse the erosion analysis directly.
-- **RQ2 (adiabatic ZVS under inductive winding source).** ZVS timing windows are dead-time windows: the measured **25–200 ns programmable dead-time** and the simulated **3σ dead-time spread of ~0.5–0.7 ns** (continuous/capacitive) versus 8 ns (cross-coupled baseline) define the timing-precision envelope available for ZVS commutation control. RQ2's open question is whether these preserved dead-times remain valid when domain rails are winding taps with back-EMF, not battery cells.
-- **RQ5 (coupled IC/winding thermal).** Quantified per-circuit dissipation inputs for the thermal network: E_T = 70–1100 pJ/transition, 59 µW driver power per output, ≈15–18 mA continuous-LS conduction current [SIM/MEAS] — direct inputs to Co-I Everts' junction-temperature model.
-- **Evidence-chain position:** A8 in the reference plan; with the BTMLC IC it forms "Generation 2" silicon (EPSRC_References_Handover.md). Gap-table wording is accurate as it stands ("Floating-domain gate-drive circuits work in the same process | Stacked battery domain only") — keep it, and keep the 17× / 22–66× numbers explicitly labelled as post-layout/Monte Carlo simulation wherever they appear in proposal text.
+Citation key: this paper is **[2]** in the Vision draft (drafts/02_Vision_ArcRevision.md, VIS-CROSS-v7 and VIS-TIME-v7) and A8 in the handover reference plan; the Approach draft currently uses a different local numbering (its [5] is the on-chip isolation thesis, its [1,2,4] the BTMLC set). Reconcile per Handover S9/S11 item 5 before reuse.
+
+### Fact-by-fact map
+
+**★ 1. Same-process silicon anchor: floating-domain level shifting demonstrated in the very 130 nm BCD process as the BTMLC IC (Identity; S2).**
+One line: this is the fact that lets the Vision say the architecture is "buildable now, and only now".
+(a) Vision, "Crossing the line: the 50 V claim" (VIS-CROSS-v7, already cited as [2]); Vision, "Timeliness" (VIS-TIME-v7, "its floating-domain infrastructure [2]"); Approach, "Research environment and facilities" ("IC design flows developed for the group's prior chip work ... transfer directly into WP2"); Capability module (R4RI), "BTMLC/TCAS-I BCD design flows transfer directly".
+(b) Usage: direct citation as Generation 2 silicon evidence; buildability and timeliness warrant.
+(c) Fragment: "Floating-domain level shifting with preserved dead-time has been demonstrated in silicon in the same 130 nm BCD process as the per-slot drive die [2], so the complete control-signal chain for stacked floating domains already exists in the target technology."
+
+**★ 2. Input-side dead-time generation with an analytical erosion budget (Eqs. (1)–(9); pp. 2–3).**
+One line: the architectural move (dead-time generated once, proven to survive level shifting) is the methodological template WP2 re-derives for winding-referenced domains.
+(a) Approach, WP2 T2.2 (floating-domain control-signal architecture, M4–M10; RQ2); also the discrete-board build T2.4, which can reuse the erosion analysis directly; Fig. 2(c) dual-NMOS rail harvesting maps onto per-slot rail generation in the same task.
+(b) Usage: methodological precedent; the design constraint t_dt,in >= t_dt,safe + E is directly transplantable.
+(c) Fragment: "The group has shown analytically and in silicon that dead-time generated once in the input logic domain survives level shifting across all stacked domains, with a closed-form erosion budget [2]; WP2 re-derives that budget for winding-referenced domains, where the rails are magnetically defined rather than cell-defined."
+
+**★ 3. Silicon-measured performance: 25–200 ns programmable dead-time windows, delays of approximately 2 ns at 3.3 V (continuous LS), 2–4.3 V per domain, 10 kHz–1 MHz [MEAS] (pp. 11–13).**
+One line: the only fully silicon-measured timing envelope the programme has, and it bounds the ZVS commutation windows RQ2 needs.
+(a) Approach, WP2 T2.1 (ZVS envelope mapping; RQ2) and Objective O2 / Hypothesis H2; Approach, "Building on previous work" narrative and gap table.
+(b) Usage: quantitative silicon evidence; frames RQ2's open question (do preserved dead-times remain valid when rails are winding taps with back-EMF, not battery cells).
+(c) Fragment: "Silicon measurement of the multiple-output level shifters demonstrates programmable dead-time windows of 25–200 ns and propagation delays of approximately 2 ns across 2.5–4.3 V and 10 kHz–1 MHz [2]; RQ2 asks whether this timing envelope survives when each domain rail is an inductive winding tap with speed-dependent back-EMF."
+
+**★ 4. Headline improvement figures: 17x propagation-delay reduction and 22x–66x dead-time-spread reduction [SIM] (Abstract; Table III; Figs. 9, 13).**
+One line: the strongest performance numbers, but they are post-layout and Monte Carlo verification, never silicon measurement, and the proposal has been caught conflating them once already.
+(a) Vision, "Crossing the line" or "Timeliness" only if a performance figure is wanted (prefer the measured 2 ns instead); Approach, "Building on previous work"; Capability module track-record narrative.
+(b) Usage: supporting evidence with mandatory provenance framing.
+(c) Fragment: "Post-layout and Monte Carlo verification of the multiple-output level shifters shows a 17-fold reduction in propagation delay and a 22- to 66-fold reduction in dead-time spread under process and mismatch variation [2], with silicon measurement confirming approximately 2 ns delays and 25–200 ns programmable dead-time in operation."
+
+**★ 5. Per-circuit dissipation inputs: E_T = 70–1100 pJ per transition, 59 uW driver power per output, approximately 15 mA [SIM] to 18 mA [MEAS] continuous-LS conduction current (Table III; p. 11).**
+One line: the only quantified self-heating data for the floating-domain signal chain, feeding Co-I Everts' junction-temperature model directly.
+(a) Approach, WP2 T2.3 (thermal resistance network and packaging specification, M6–M14; RQ5); Objective O2 / Hypothesis H5.
+(b) Usage: quantitative model input; also motivates the capacitive (zero static power) option for many-domain scaling.
+(c) Fragment: "Characterised level-shifter dissipation from the group's silicon, 70–1100 pJ per transition and 59 uW per output in post-layout verification, with approximately 18 mA conduction current measured on silicon for the continuous variant [2], provides validated self-heating inputs to the WP2 thermal network from month 1."
+
+**6. Simulated 3-sigma dead-time spread of approximately 0.5–0.7 ns (continuous/capacitive) versus an 8 ns cross-coupled baseline [SIM] (Figs. 9, 13; Table III).**
+(a) Approach, WP2 T2.1 and RQ2 (timing-precision envelope available for ZVS commutation control).
+(b) Usage: quantitative bound, cited as post-layout Monte Carlo verification.
+(c) Fragment: "Post-layout Monte Carlo verification bounds the 3-sigma dead-time spread below 1 ns for the continuous and capacitive level shifters [2], an order of magnitude inside the ZVS commutation windows WP2 targets."
+
+**7. Linear scalability of the capacitive LS with domain count (Eq. (41); p. 9) versus silicon at only four/five domains, simulation at seven (p. 11; Limitation 5).**
+(a) Approach, WP2 T2.2 and T2.4 (12–18 floating per-slot domains); Feasibility and risk management (supports the discrete-board primary vehicle and honest framing of the tape-out stretch goal).
+(b) Usage: scalability argument plus explicit risk framing: 12–18-domain scaling rests on the analytical linearity argument, not silicon.
+(c) Fragment: "Inter-stage buffering makes the capacitive structure linearly scalable with domain count [2]; silicon exists at four and five domains, so extension to 12–18 per-slot domains is an analytical extrapolation that WP2 verifies on the discrete prototype boards before any tape-out."
+
+**8. Stacked-battery-domain-only validation; dV/dt immunity deliberately de-prioritised; outputs are pre-drivers, not gate drivers (Limitations 1–3).**
+(a) Approach, "Building on previous work" gap table (row "TCAS-I level shifter (2026) | Floating-domain gate-drive circuits work in the same process | Stacked battery domain only", accurate as it stands, keep verbatim); Vision, "Novelty and Scientific Contribution" (handover S5b: constituent capabilities demonstrated, combination inside a winding is not); Approach, Feasibility and risk management (dV/dt re-verification under winding switching belongs in the WP2 risk narrative).
+(b) Usage: gap statement; this limitation IS the research case, so state it prominently rather than defensively.
+(c) Fragment: "Every validation context to date is a stack of stiff battery cells; a winding domain adds inductive source impedance, speed-dependent back-EMF, bidirectional power flow and magnetically defined domain potentials, none of which has been characterised. That gap is the substance of RQ2, not a risk to it."
+
+**9. EPSRC lineage: Farhat funded by EPSRC studentship EP/T517793/1 (Project Reference 2600345); PhD UCL 2026, now Research Fellow at Queen's University Belfast (p. 1; p. 14).**
+(a) Capability module (R4RI): track record ("doctoral researchers publishing IEEE Transactions during their programmes", handover S10) and prior-EPSRC-investment framing; anonymise in proposal body per dossier note.
+(b) Usage: track-record evidence, name-free in body text.
+(c) Fragment: "A doctoral researcher funded by an EPSRC studentship (EP/T517793/1) published this line's floating-domain silicon in IEEE TCAS-I during their programme and now holds a research fellowship, evidence that prior EPSRC investment in this platform is already yielding people and publications."
+
+**10. Application framing: 2–4.3 V per domain, battery-chemistry compatibility, BMS context (pp. 2, 14; Table IV).**
+(a) Approach, WP2 opening sentence ("previously validated only against low-impedance battery-cell sources"); differentiation passages.
+(b) Usage: context only; do not imply the paper addressed machine drives. Its own application column reads "BMS".
+
+**11. Dead-time control as the differentiator against all six prior works in Table IV (p. 13).**
+(a) Vision, "Crossing the line" (supporting the claim that the group holds the enabling signal-routing primitive); Approach, "Building on previous work".
+(b) Usage: comparative positioning.
+(c) Fragment: "No prior multiple-output or high-speed level shifter surveyed offers dead-time control; the group's circuits are the only reported multiple-output level shifters with preserved, programmable dead-time, silicon-measured across the full 2–4.3 V domain range [2]."
+
+**12. Area figures (0.04–0.14 mm² per level shifter, buffers and isolation included) (Table III; Table IV; Fig. 4).**
+(a) Approach, WP2 stretch tape-out feasibility (signal-chain area is a small fraction of the 15.2 mm² BTMLC die, so per-slot integration is area-plausible).
+(b) Usage: quantitative feasibility support; cite one table by number and note the buffers-and-isolation inclusion (see Traps).
+
+### Traps
+
+1. **Do not misattribute [SIM] figures as measured.** The 17x delay and 22x–66x dead-time-spread reductions, the 0.5 ns / 2 ns Table III delays, the 3-sigma spreads and all Table III energies are post-layout and Monte Carlo verification. Silicon measurements are only: approximately 2 ns continuous-LS delays, 25–200 ns dead-time windows, 2–4.3 V range, approximately 18 mA conduction current, and the waveforms of Figs. 19–21 and 23. The proposal was caught on this once already. Sub-trap: the capacitive LS measured 70 ns/20 ns, not 2 ns; the 2 ns capacitive figure carries an asterisk in Table IV as a post-layout simulated value and must never be quoted as measured.
+2. **Early Access citation.** The paper is Early Access: vol. PP, no. 99, no final pagination. Cite as DOI 10.1109/TCSI.2026.3676412, Early Access; never invent volume, issue or page numbers. Page numbers in this digest are the Early Access PDF's pages 1–14 only. [PI TO CONFIRM final metadata at publication.]
+3. **Table III versus Table IV area discrepancy.** Continuous LS: 0.0752 (Table III) versus 0.0423 mm² (Table IV); capacitive: 0.1443 versus 0.1125 mm². The text never explains the difference (presumably buffer/test overhead). Always cite the table number alongside any area figure and never mix values from the two tables in one comparison.
+4. **Citation-number drift between drafts.** This paper is [2] in the Vision draft but the Approach draft's [2] belongs to the BTMLC set and its [5] is the isolation thesis. Renumber against the final reference list (Handover S9/S11 item 5) before lifting any fragment above into either draft.
