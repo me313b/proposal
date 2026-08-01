@@ -1,0 +1,373 @@
+{
+ "v": 8,
+ "meta": {
+  "title": "Foundations of Monolithically Integrated Per-Slot Machine Drives for Reconfigurable Aerospace Propulsion",
+  "oneLiner": "",
+  "wordsPerPage": 520,
+  "constraints": "UK English. No em dashes. No bullet points in prose; continuous, dense paragraphs. Expert register from the first sentence: mechanism and numbers early. Derive rather than list; acknowledge the price of each claim. Confidence roughly 70 per cent bold; physics carries the opening, policy follows.",
+  "deadline": null,
+  "createdAt": 1785591449242,
+  "firstRun": false,
+  "styleRelaxed": false,
+  "lastBackupAt": null,
+  "touchedAt": 1785611744073
+ },
+ "sections": [
+  {
+   "id": "fsjrsbzmr90",
+   "name": "Summary",
+   "abbr": "SUM",
+   "pages": 1,
+   "order": 0,
+   "notes": "EPSRC required standalone summary, about 550 words, lay register."
+  }
+ ],
+ "parts": [
+  {
+   "id": "6bzslenmr90",
+   "sectionId": "fsjrsbzmr90",
+   "name": "Summary",
+   "code": "MAIN",
+   "order": 0,
+   "strategy": "",
+   "locked": false
+  },
+  {
+   "id": "m7n4sb9mr90",
+   "sectionId": "fsjrsbzmr90",
+   "name": "Public summary (550 words)",
+   "code": "PUB",
+   "order": 1,
+   "strategy": "",
+   "locked": false
+  }
+ ],
+ "variants": [
+  {
+   "id": "j7akcqu1o71",
+   "partId": "6bzslenmr90",
+   "code": "SUM-MAIN-v1",
+   "text": "Drafting note: interpreted as the reviewer-facing technical summary heading the case for support; [PI TO CONFIRM: intended use of this part]. Every electric drive ever deployed keeps the power converter and the machine winding as separate electrical objects, met at terminals, with insulation rated for the full bus. This programme will establish the foundations of the architecture that dissolves that partition: a pair of integrated circuits at every one of 32 stator slots, each driving its own winding section bilaterally across an open-end winding, with a bus of up to 1 kV DC composed magnetically along the machine as 64 steps so that no section sees more than approximately 16 V [PI TO CONFIRM: per-section envelope of 15 to 16 V derived from 1 kV across 64 steps]. Partial discharge at altitude is eliminated by architecture, pole count becomes a control variable so the gearbox leaves the drivetrain, and a single fault costs about three per cent of capability rather than a third. The price, and the science, is coupling: 32 sections sharing one core form a 64-degree-of-freedom co-design problem with no existing methodology. The programme delivers that methodology, the controllability theory, a scaled per-slot IC through a costed fabrication run, and validation on a 100 kW, 14,000 RPM demonstrator. Word count: 196.",
+   "status": "draft",
+   "source": "claude",
+   "note": "",
+   "createdAt": 1785594808765,
+   "updatedAt": 1785594808765,
+   "history": []
+  },
+  {
+   "id": "nf8bfcp1o71",
+   "partId": "m7n4sb9mr90",
+   "code": "SUM-PUB-v1",
+   "text": "Electric aircraft promise quieter skies and an end to aviation's fossil-fuel dependence, and the United Kingdom has committed to net zero aviation by 2050. Standing in the way is a piece of engineering architecture so old that it is rarely questioned. In every electric vehicle, train and aircraft flying today, the electric motor and the power electronics that drive it are two separate objects. The electronics create high voltages; thick insulation protects the motor's copper windings from them; and the two meet at a set of terminals. That separation, invisible to passengers, sets the limits of what electric flight can be. It forces motors to carry insulation instead of useful copper. It leaves aircraft vulnerable to an effect called partial discharge, in which the thin air at cruising altitude allows tiny sparks to gnaw invisibly through insulation that passed every test on the ground. It means a single electrical fault can remove a third of a motor's output in an instant. And because a motor's natural speed is fixed by how it is wound, aircraft must often carry a gearbox, with its oil, its inspections and its own history of serious accidents. This programme will establish the foundations of a machine in which the separation no longer exists. Instead of one large converter feeding the whole motor, a pair of tiny silicon chips sits at every one of the motor's 32 slots, each driving its own small section of winding. The high supply voltage, up to a thousand volts, is never delivered to the winding at all; it is divided magnetically along the machine itself, so that no section of copper ever experiences more than about sixteen volts. Sixteen volts cannot spark at any altitude; the physics that erodes conventional insulation simply never begins. The consequences multiply. With every slot independently controlled, the motor's characteristics become software: it can reshape itself in flight to suit the propeller, so the gearbox disappears. If one section fails, the machine loses about three per cent of its capability rather than a third, and keeps flying predictably, which is exactly what new safety rules for electric vertical take-off aircraft demand. Reliability, efficiency and simplicity improve together, because they all flow from the same design decision rather than being traded against one another. The research challenge, and the reason this needs a university programme, is that the thirty-two sections share one magnetic core and therefore influence each other. Designing and controlling sixty-four interacting quantities at once, across electromagnetics, electronics, heat and control, is a scientific problem no one has yet had to solve, because the old separation kept those disciplines conveniently apart. The team spans exactly those disciplines: the microchips already exist in prototype form and have been published, an earlier converter from the same family has already driven an industrial motor in the laboratory, and the programme will build and test a full 100-kilowatt demonstrator, the size of motor now flying on electric air-taxi prototypes. The work is supported by Eaton and Airbus, and its results, the design methods, the control theory and the measured evidence, will be published openly. If it succeeds, it gives the UK the foundations of a propulsion technology that is safer at altitude, simpler to certify, lighter to fly and cheaper to maintain than anything the old architecture allows. Word count: 531.",
+   "status": "candidate",
+   "source": "claude",
+   "note": "",
+   "createdAt": 1785594808765,
+   "updatedAt": 1785594808765,
+   "history": []
+  },
+  {
+   "id": "7xud4rq1o71",
+   "partId": "m7n4sb9mr90",
+   "code": "SUM-PUB-v2",
+   "text": "Some technologies improve by refinement; others improve when an assumption is removed. This programme removes one of the oldest assumptions in electrical engineering: that a motor and the electronics driving it must be separate objects. In today's electric aircraft, a power converter generates high voltages, cables carry them to the motor, and layers of insulation protect the motor's windings from them. Every part of that arrangement costs something. The insulation takes up space that should be copper doing useful work. The converter, its cabinet and its cabling add mass an aircraft must lift. At cruising altitude the thin air allows partial discharge, tiny sparks that quietly erode insulation which passed every ground test, a hidden ageing process unique to flight. A single electrical fault can instantly remove a third of the motor's power. And because a motor's speed characteristics are fixed by its winding, many aircraft need a gearbox, a component with oil to monitor, inspections to schedule and a documented record of serious in-flight failures. Engineers have spent decades softening each of these problems separately. This programme will establish what happens when their shared cause is removed. In the proposed machine, a pair of silicon chips sits at every one of the motor's 32 slots, and there is no separate converter anywhere. The supply, up to one thousand volts, is divided magnetically along the machine's own winding into sixty-four small steps, so no piece of copper ever sees more than about sixteen volts. At sixteen volts, the spark physics that endangers aircraft insulation cannot start, at any altitude, ever; safety is achieved by architecture instead of by ever-thicker insulation. Because every slot is individually driven, the motor's behaviour becomes programmable. It can change its effective gearing electronically in flight, so the mechanical gearbox and its failure modes leave the aircraft entirely. If one of the thirty-two sections fails, the machine sheds about three per cent of its capability and continues predictably, precisely the graceful behaviour new certification rules for electric vertical take-off aircraft reward, and it achieves this without duplicating electronics the way today's fault-tolerant designs must. Performance, reliability and simplicity stop competing with each other and start arriving together. What makes this a research programme rather than a product is coupling: the thirty-two sections share one magnetic core, so each influences the others. Designing and controlling sixty-four interdependent quantities spanning magnetism, microelectronics, heat and control is a new class of engineering problem, and solving it in general, not just for one motor, is the programme's central contribution. The foundations are already laid. The team has published the prototype chip that puts a complete drive on a single sliver of silicon, and a converter from the same family has already driven a full-size industrial motor in the laboratory. Over three years the team will scale the chip, build a 100-kilowatt demonstrator, the power class of motors on today's electric air-taxi prototypes, and prove discharge-free operation in altitude-like conditions, supported by Eaton and Airbus. The methods, theory and data will be published openly, giving the UK's aerospace sector, which employs around 104,000 people, an early lead in a propulsion architecture that is lighter, safer, simpler to certify and cheaper to maintain, and giving electric flight one fewer limit on what it can become. Word count: 528.",
+   "status": "candidate",
+   "source": "claude",
+   "note": "",
+   "createdAt": 1785594808765,
+   "updatedAt": 1785594808765,
+   "history": []
+  }
+ ],
+ "tasks": [],
+ "inbox": [
+  {
+   "id": "tciab8i1o71",
+   "title": "Vision :: Opening: stand beside the expert",
+   "text": "Every electric machine ever flown obeys a partition so old it has become invisible: the power converter makes the voltages, the winding makes the torque, and an insulation system stands between the two, rated for the full bus. As propulsion power rises, that bus is climbing toward the kilovolt class, and every consequence of the partition climbs with it. The insulation thickens and takes slot area from copper. The winding must be qualified against partial discharge in air whose breakdown strength collapses at altitude. The converter remains a separate mass of silicon, busbars and cable. The pole count stays frozen in the winding pattern, so a gearbox translates between what the machine does and what the propulsor needs. Reviewers of this proposal will recognise each of these costs individually, because each has its own literature, its own mitigation community and its own incremental progress. This programme will establish what happens when the assumption beneath all four is removed at once: when one pair of integrated circuits (ICs) sits at every stator slot and the converter, as a separate object, ceases to exist. Word count: 182.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "25ix1zi1o71",
+   "title": "Vision :: Opening: stand beside the expert",
+   "text": "An aircraft propulsion motor that cannot suffer partial discharge at any altitude, that loses about three per cent of its capability to any single fault instead of a third, and that needs no gearbox because its pole count is a control variable, is not available at any price today. The obstacle is not materials or devices; it is a partition. Since the first drive was built, the power converter and the machine winding have been separate electrical objects, met at terminals, with insulation rated for the full bus standing between them. Every expert reading this knows the four costs of that arrangement: insulation displacing copper from the slot, discharge inception falling toward the bus voltage at cruise altitude, a step loss of output when a phase fails, and a mechanical gearbox translating a frozen pole count into the speed the propulsor needs. Each cost has its own literature and its own mitigation community. This programme will establish the foundations of the architecture that removes their common cause: a pair of integrated circuits (ICs) at every stator slot, and no converter anywhere else. Word count: 178.\nDrafting note: v1 opens inside the reviewer's picture and lands the claim last; v2 opens with the impact triad per the A2 answer and grounds it immediately. Both conform to the no-conceit register; the LINE part follows either without edits.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "g4h0jg51o71",
+   "title": "Vision :: The unseen line",
+   "text": "The partition's costs arrive as four constraint families. First, insulation and partial discharge (PD). In kilovolt-class form-wound machines only some 40 to 60 per cent of the slot is conductor; the rest is insulation and unavoidable gap [9]. At cruise altitude the problem sharpens from expensive to dangerous: partial discharge inception voltage (PDIV) roughly halves from sea level, to approximately 350 to 500 V peak near 20 kPa, approaching the pressure-independent floor of about 330 V set by the Paschen minimum for air [5], [6]. A machine that passes every ground qualification can discharge continuously at altitude, eroding its insulation from the first flight, and fast wide-bandgap switching sharpens the turn-to-turn stress it must survive [7]. Second, the gearbox. Pole count is wired into the winding, so the machine has one torque-speed characteristic while the propulsor needs another, and the translation is mechanical: an oil system, a thirty-minute loss-of-lubrication endurance requirement and mandatory chip detection under CS-29 [29], a documented fatigue accident record [30], [31], and half to one per cent of transmitted power lost per mesh. The certified electric aircraft sector is already fleeing the component where it can: Joby abandoned gearing, Beta drives direct, and Archer's geared Midnight stands as the honest live counterexample. Third, fault fragility, and the honest price of the remedy. Three phases from one inverter lose roughly a third of output in a step when one phase opens. The field's answer is the multiphase machine [10], [11]: five phases retain about 70 per cent with one phase open, dual three-phase about 50 per cent. But the softening is bought by duplicating inverter channels, gate drives, isolated supplies, sensing and protection, diluting the power density it defends, and the winding still sits at bus voltage with its pole count fixed. Fourth, end-windings: copper outside the core, the machine's hot spot and least productive conductor [8], carrying an aspect-ratio-dependent share of winding resistance that reaches 50 per cent and more in short stacks. Four literatures, four mitigation communities, one unquestioned assumption underneath. Word count: 336.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "24mau7c1o71",
+   "title": "Vision :: Crossing the line: the 50 V claim",
+   "text": "Drafting note: content asserts the 16 V claim from a 1 kV bus per the PI's directive; the part header is preserved verbatim per template, and a workbench rename to \"the 16 V claim\" is recommended [PI TO CONFIRM: part rename].\nThis programme will establish the architecture in which the bus never reaches the insulation at all. One pair of integrated circuits (ICs) sits at every one of 32 stator slots, each pair driving its own winding section bilaterally across an open-end winding. The bus, up to 1 kV DC, is not delivered to the winding and insulated against; it is composed magnetically along the machine, on the autotransformer principle the group has operated above 99 per cent efficiency [4], as 64 voltage steps, 32 at each end-face, so that no winding section ever sees more than approximately 16 V [PI TO CONFIRM: per-section envelope of 15 to 16 V derived from 1 kV across 64 steps]. The comparison is stark in both directions. A conventional machine on a 1 kV bus sits a factor of two to three above measured cruise-altitude inception [5]; every section of this machine sits roughly twenty times below the physical floor of about 330 V that no pressure can lower [6]. The IC is simultaneously the machine's per-slot excitation source and the converter's switching element; the winding conductor is simultaneously the torque-producing medium and the converter's voltage-distribution network. The enabling die exists: the group's per-slot drive infrastructure occupies 15.2 mm2 in a 130 nm BCD process [1], with floating-domain gate control in the same process [2]. The converter as a separate object dissolves into the machine. Word count: 240.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "dkktk7j1o71",
+   "title": "Vision :: The cascade and its price",
+   "text": "One decision, independently programmable current in every slot, and each benefit follows without being added. Partial discharge is eliminated by architecture rather than insulation, because the voltage that would cause discharge never arrives at any insulation boundary. Pole count becomes a software parameter: 32 independently driven sections synthesise any spatial harmonic set up to 16 pole pairs, so the torque-speed characteristic is retuned to the propulsor at every operating point and the gearbox, its oil, its inspection schedule and its failure mode leave the drivetrain; prior variable-pole work proved the principle at terminal level over a shared bus [20], [21], and this architecture generalises it to full spatial resolution. Fault tolerance arrives without duplication: the effective phase count equals the section count, so nothing is added to obtain redundancy, and the loss of one section removes, to first order, about three per cent of the ampere-conductor capability, degrading continuously in exactly the partial, bounded and predictable manner the certification framework for vertical-lift aircraft expects [23], where five-phase machines retain about 70 per cent and dual three-phase about 50 per cent at far greater channel cost [10], [11]. End-windings are structurally eliminated, since conductors terminate at IC modules at the end-faces where cooling is most effective [8]. Adiabatic zero-voltage switching gives inherently smooth per-section transitions, and the external converter, its cabinet, busbars and cables disappear from the mass budget. The price is the programme's central scientific problem. The 32 sections share one magnetic core, so they are 32 coupled actuators, and the design space becomes a 64-degree-of-freedom co-design spanning winding electromagnetics, circuit envelope, thermal path and control, a problem with no existing methodology because the partition allowed those disciplines to remain separate. That co-design framework, not the demonstrator machine, is the contribution. Its open questions are the research: whether adiabatic soft switching survives an inductive back-EMF source, whether 64-degree-of-freedom control remains stable and controllable under inter-slot coupling or whether coupling imposes a fundamental limit, and how IC modules survive thermally inside a winding at 120 to 150 degrees Celsius against a junction limit near 150 to 175 degrees Celsius. Word count: 344.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "luwel011o71",
+   "title": "Vision :: Novelty and scientific contribution",
+   "text": "Honesty about the closest prior art defines what is claimed. Slot-level converter granularity exists: the intelligent stator cage drive demonstrated one half-bridge per slot bar with electronic pole changing in a 110 kW vehicle drive [13]. Sub-bus module voltages exist: the Wisconsin integrated modular motor drive series-stacks gallium nitride converter modules so each sees a fraction of the DC link [14]. Bilateral feed exists in open-end winding drives [12], and electronic pole changing at terminal level exists [13], [20], [21]. None of these derives safe voltages from a high-voltage bus inside the machine. The stator cage drive is supplied externally at 48 V and pays for it in kiloampere system currents; the Wisconsin stack divides the bus capacitively, outside the winding, per pole, unilaterally, hard-switched. What has never existed, and what this programme will establish, is the conjunction: bilateral open-end drive at every slot, magnetic composition of a bus of up to 1 kV into sections of approximately 16 V by the winding itself, monolithic IC integration of the complete per-slot drive, elimination of partial discharge at altitude by design rather than by insulation, and adiabatic soft switching throughout. The scientific contribution is the co-design and control theory of 32 magnetically coupled actuators sharing one core, a 64-degree-of-freedom problem for which no methodology exists, delivered with a property-by-property differentiation against every neighbouring architecture. Word count: 219.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "700gcpz1o71",
+   "title": "Vision :: Timeliness: the ATI collision",
+   "text": "Drafting note: ATI power-density trajectories dropped per the B6 answer; part header preserved verbatim per template, workbench rename to \"Timeliness: three lines converge\" recommended [PI TO CONFIRM: part rename].\nThree independent developments make this the moment, and none of them existed together before the current cycle. The silicon is complete: the group's per-slot drive infrastructure on a single die is published [1], floating-domain gate control in the same process is in press [2], and the doctoral work that closed the platform's converter lineage demonstrated a binary-tree converter driving a 400 V industrial induction machine under closed-loop control while naming inductive and motor loads at scale as the explicit next step [3]; this programme is that step, taken at per-slot resolution. The certification framework now rewards the architecture's failure behaviour: the special condition governing vertical take-off and landing aircraft requires continued safe flight and landing after failure of a lift or thrust unit [23], which is precisely what a drive that loses three per cent per fault, rather than a third, is built to satisfy. And the electrical environment is moving toward this proposal, not away from it: 270 V DC is standardised military practice and flies today on production aircraft [28], and distribution voltages continue to rise with propulsion power toward the kilovolt class this architecture is designed to tame. Foundational work at technology readiness levels 1 to 3 must begin now if UK capability is to meet that convergence rather than follow it. Word count: 219.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "cjj51jd1o71",
+   "title": "Vision :: National importance",
+   "text": "The United Kingdom has committed, through the Jet Zero Strategy, to net zero aviation by 2050 [24], and the propulsion architectures that reach certification in the 2030s are being decided in research programmes now. The economic stakes are quantified from two directions. PwC's assessment of advanced air mobility estimates up to 2.1 billion pounds of annual UK socioeconomic benefit by 2040 from that sector alone [26], while the Department for Transport's Future of Flight Action Plan projects a 45 billion pound boost to the UK economy by 2030 from the wider drone and electric aviation economy [25]; the two figures measure different scopes and both depend on airworthy electric propulsion. The sector employs approximately 104,000 people in UK aerospace [27]. This programme concentrates value where the UK is genuinely strong: mixed-signal power IC design, electrical machine research and certification expertise, and it trains researchers, including a doctoral student co-supervised with industry [PI TO CONFIRM: co-funded studentship agreement], in exactly the cross-disciplinary co-design capability the partition has so far made unnecessary and the future makes essential. Word count: 175.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "kgsk0xm1o71",
+   "title": "Vision :: Scope and funding rationale",
+   "text": "This is a technology readiness level (TRL) 1 to 3 programme. Its deliverables are the coupled electromagnetic, circuit, thermal and control co-design methodology, the controllability theory of magnetically coupled per-slot actuation, the scaled per-slot IC, and validated evidence from a 100 kW, 14,000 RPM demonstrator operating from a bus of up to 1 kV. It is pre-competitive by construction: the theory is platform-agnostic and publishable, and no single company can appropriate a design methodology that redefines the boundary between two industries' products, which is precisely why industry supports this work but will not fund its foundations. Adjacent, separately funded industrial programmes in the group's orbit evidence the translation environment awaiting these outputs while implying no commitment to this proposal. EPSRC support is the mechanism by which the foundational layer becomes UK public capability rather than a single supplier's advantage. Word count: 140.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "3xlklfq1o71",
+   "title": "Approach :: Hypotheses and objectives",
+   "text": "Four hypotheses structure the programme. H1: a machine winding can serve as the magnetic voltage-distribution network of its own drive, composing a bus of up to 1 kV DC into 64 steps so that no section exceeds approximately 16 V, while simultaneously producing torque. H2: adiabatic zero-voltage switching (ZVS), demonstrated by the group against capacitive loads, survives an inductive back-electromotive-force source. H3: the 64-degree-of-freedom (DOF) control problem posed by 32 magnetically coupled sections is stable and controllable at full slot count, or the conditions under which coupling imposes a fundamental limit can be stated and proven. H4: monolithic drive integrated circuits (ICs) can operate inside a winding environment of 120 to 150 degrees Celsius within a junction limit near 150 to 175 degrees Celsius. Five research questions carry these hypotheses. RQ1: what winding geometry admits bilateral end-face IC access, kilovolt magnetic composition and multi-harmonic excitation, and whether 32 or 36 slots is the correct resolution. RQ2: under what conditions adiabatic ZVS holds against an inductive source. RQ3: what transient per-slot voltages arise during switching, faults and pole transitions, and whether they remain below inception thresholds with margin. RQ4: how 64-DOF loss-minimising control is formulated, how fast post-fault re-optimisation can act, and under what conditions the coupled system is controllable at full slot count, including whether coupling imposes a fundamental limit. RQ5: what coupled thermal behaviour and packaging permits H4. Objectives: O1, deliver the co-design methodology and the RQ1 winding; O2, deliver the scaled per-slot IC through a costed fabrication run; O3, deliver the RQ4 control framework with proofs and hardware validation; O4, demonstrate 100 kW at 14,000 RPM from a bus of up to 1 kV with discharge-free operation verified at altitude-representative pressure; O5, demonstrate electronic pole reconfiguration and single-section fault ride-through above 95 per cent of capability. Word count: 296.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "gonr8eq1o71",
+   "title": "Approach :: WP1 (scope to confirm)",
+   "text": "WP1: the reconfigurable per-slot machine (lead: Dr Asef, months 1 to 30). WP1 establishes the electromagnetic foundation. T1.1 (M1 to M6) fixes the machine topology: a rotor without a committed pole count, with cage and synchronous reluctance candidates traded against the pole programme, and the slot-count decision between 32 slots, which keeps the 64-step voltage ladder binary-tree native, and 36 slots, which offers a richer pole-divisor set at the cost of a hybrid ladder stage. Drafting note: 32 slots is carried as the baseline throughout this draft on the binary-native argument; T1.1 makes the trade explicit [PI TO CONFIRM: baseline slot count]. T1.2 (M3 to M12) designs the winding as a dual-function object: hairpin-class conductors terminating at both end-faces for bilateral IC access, sized for the section currents the 100 kW rating implies, with the magnetic composition of the 1 kV bus embedded in the winding's own turns; per-section current targets are a T1.2 output of the shared model [PI TO CONFIRM: per-section current envelope]. T1.3 (M6 to M18) manufactures winding coupons and a full stator, and executes the partial-discharge campaign at altitude-representative pressure against RQ3. T1.4 (M18 to M30) supports demonstrator integration and supplies the electromagnetic layer of the delivered methodology. Deliverables: D1.1 topology and slot-count decision report (M6); D1.2 winding design and section-current specification (M12); D1.3 coupon partial-discharge dataset at 20 kPa (M15); D1.4 full stator delivered to WP4 (M20). Word count: 240.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "fe1qn4m1o71",
+   "title": "Approach :: WP2: circuit in winding",
+   "text": "WP2: the circuit in the winding (lead: PI, months 1 to 30). WP2 scales the group's silicon from its demonstrated 2 A class [1] to the per-slot module the 100 kW machine requires, and packages it into the winding. T2.1 (M1 to M9) specifies the per-slot module from the shared model: output-stage current scaling by paralleled stages and dies, floating-domain gate control carried over from the level-shifter platform [2], and the adiabatic soft-switching regime whose lineage runs through the group's autotransformer converters [3], [4]; the predecessor's hard-switched IC and the adiabatic converter lineage are deliberately distinct inheritances, unified for the first time here. T2.2 (M6 to M12) is the design freeze and submission of a costed multi-project-wafer fabrication run in the established 130 nm BCD process, funded at 50,000 pounds from the project budget with a further 50,000 pounds contributed by Eaton conditional on award [PI TO CONFIRM: form of Eaton contribution, cash or in-kind]. T2.3 (M12 to M24) characterises returned silicon across the 120 to 150 degree Celsius winding environment against RQ2 and RQ5, and develops end-face packaging with WP4's thermal design. T2.4 (M18 to M30) assembles and qualifies the 64 per-slot modules for the demonstrator, with a hybrid fallback stack built from predecessor-class silicon held ready per risk R2. Deliverables: D2.1 module specification (M9); D2.2 tape-out submission (M12); D2.3 silicon characterisation report (M20); D2.4 64 qualified modules delivered to WP4 (M24). Word count: 242.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "mggnhqu1o71",
+   "title": "Approach :: WP3: coupled control",
+   "text": "WP3: coupled 64-degree-of-freedom control (lead: PI, months 1 to 33). WP3 answers RQ4 in its expanded form. T3.1 (M1 to M12) develops the analytical layer: controllability and observability of 32 magnetically coupled sections sharing one core, conditions under which coupling imposes a fundamental limit at full slot count, and formal statements of the loss-minimising current-allocation problem across the pole programme. T3.2 (M6 to M18) moves onto hardware early, using the group's existing rotating bench, on which the same converter family already drives a 400 V industrial machine under closed-loop control [3], to validate coupled-control primitives, soft-switching coexistence with a rotating back-EMF, and estimator designs, at reduced section count before the demonstrator exists. T3.3 (M12 to M27) delivers the full control stack: real-time 64-channel allocation, electronic pole-transition trajectories, and post-fault re-optimisation whose speed is itself a measured research output. T3.4 (M24 to M33) executes the control campaigns on the demonstrator with WP4, including fault injection demonstrating ride-through above 95 per cent of capability with one section removed. Deliverables: D3.1 controllability results including any fundamental-limit theorem (M12); D3.2 reduced-scale validation report (M18); D3.3 control stack release (M24); D3.4 demonstrator control campaign dataset (M33). Word count: 204.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "2ptetjc1o71",
+   "title": "Approach :: WP4 (scope to confirm)",
+   "text": "WP4: validation at 100 kW (lead: Dr Everts, months 18 to 36). WP4 validates the framework; it is the evidence, not the contribution. T4.1 (M18 to M24) integrates the WP1 stator with the WP2 modules and completes the thermal design for ICs cohabiting a 120 to 150 degree Celsius winding, the direct object of RQ5 and Dr Everts' domain. T4.2 (M22 to M28) commissions the demonstrator on the laboratory dynamometer at 100 kW and 14,000 RPM, approximately 68 newton metres at rated speed, from a bus of up to 1 kV [PI TO CONFIRM: dynamometer and high-voltage supply ratings at these levels]. T4.3 (M26 to M34) executes the validation matrix: magnetic composition of the full bus with per-section voltages held near 16 V, efficiency mapping, electronic pole reconfiguration under load, single-section fault ride-through, and partial-discharge surveillance at altitude-representative pressure on the integrated machine [PI TO CONFIRM: reduced-pressure test capability for the assembled machine]. T4.4 (M30 to M36) closes the loop, feeding measurements into the delivered co-design methodology and the final dataset release. Deliverables: D4.1 integrated demonstrator (M24); D4.2 commissioning report (M28); D4.3 validation matrix dataset (M34); D4.4 measurement-informed methodology release (M36). Word count: 205.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "5i5sved1o71",
+   "title": "Approach :: Risk register and mitigation",
+   "text": "R1, silicon current-scaling shortfall (likelihood medium, impact high): the scaled output stage may not reach the per-section current the 100 kW rating implies; mitigation is staged parallelism of output stages and dies fixed at D2.1, with a derated demonstrator campaign as a bounded fallback that still validates every hypothesis. R2, fabrication-run slip (medium, high): multi-project-wafer schedules move; mitigation is submission at M12 against a M18 need, plus a hybrid stack of predecessor-class silicon held ready so WP4 integration proceeds at reduced power while full silicon follows. R3, coupled-control instability at full slot count (medium, high): RQ4 may reveal a fundamental limit; mitigation is hierarchical control with reduced effective degrees of freedom, and a proven limit is itself a publishable core result, so the workpackage succeeds on either branch. R4, thermal exceedance of the junction limit in the winding environment (medium, medium): mitigation is segmented duty in T2.3 characterisation, enhanced end-face cooling in T4.1, and packaging qualification that includes the mechanical robustness of module assembly at 14,000 RPM. R5, facility shortfall for the 100 kW, 1 kV, reduced-pressure campaigns (low, high): mitigation is early confirmation at M3 and, if required, procured access costed under Resources [PI TO CONFIRM: facility ratings]. R6, high-voltage laboratory safety qualification for operation up to 1 kV (low, medium): mitigation is UCL safety-case preparation from M12. R7, partner contribution not realised (low, medium): the Eaton fabrication contribution is conditional; mitigation is that the project-held 50,000 pounds funds a viable single run, with the contribution expanding scope rather than enabling it. Word count: 259.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "4oy1tah1o71",
+   "title": "Approach :: APL facilities and equipment",
+   "text": "The UCL Advanced Propulsion Laboratory (APL) provides the programme's experimental base: power-electronics laboratories with the group's existing binary-tree converter benches and the rotating back-to-back rig on which the 400 V machine demonstration was performed [3], integrated circuit design infrastructure with access to the established 130 nm BCD multi-project-wafer route, machine prototyping capacity for the 32-slot stator, and instrumentation for calorimetric, electrical and thermal-imaging measurement. The demonstrator campaign requires dynamometer capability at 100 kW and 14,000 RPM with a supply of up to 1 kV, and reduced-pressure partial-discharge testing at approximately 20 kPa for coupons and for the assembled machine [PI TO CONFIRM: ratings and availability of the APL dynamometer, high-voltage supply and reduced-pressure facility at these levels; any gap moves to Resources as access costs]. Word count: 128.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "x0mhs3v1o71",
+   "title": "Approach :: Gantt, milestones and deliverables",
+   "text": "Milestones: MS1 (M6) co-design envelope frozen, comprising topology, slot count and section-current targets, gating D1.1 and D2.1 alignment. MS2 (M12) design freeze and fabrication-run submission, with D1.2 and D2.2 delivered and the WP3 analytical layer reported in D3.1. MS3 (M18) silicon received and reduced-scale rotating validation complete (D3.2), releasing WP4. MS4 (M24) integrated demonstrator assembled with 64 qualified modules (D2.4, D4.1) and control stack released (D3.3). MS5 (M28) demonstrator commissioned at rated speed and voltage (D4.2). MS6 (M36) validation matrix, control campaign and methodology release complete (D3.4, D4.3, D4.4). The one-page landscape Gantt is typeset from this schedule: WP1 months 1 to 30, WP2 months 1 to 30, WP3 months 1 to 33, WP4 months 18 to 36, deliverable and milestone markers as above, and the R2 fallback path shown as a dashed branch from M18. Word count: 146.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "kowkmwo1o71",
+   "title": "Approach :: Management and partnership",
+   "text": "The PI (12.5 per cent) directs the programme and leads WP2 and WP3; Dr Asef (7.5 per cent) leads WP1; Dr Everts (7.5 per cent) leads WP4 and the thermal strand of WP2. Two postdoctoral researchers carry the machines-and-silicon and control strands respectively, and a co-funded doctoral student, in collaboration with Eaton as industrial support, works across WP1 and WP3 [PI TO CONFIRM: studentship agreement]. Management is deliberately light: monthly all-hands workpackage reviews against the shared co-design model, a milestone gate at each MS point, and quarterly reviews with the industrial partners, both of whom have provided letters of support [PI TO CONFIRM: named partner contacts]. Data management follows UCL policy with datasets released at D3.4 and D4.4. Word count: 121.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "rmfr3q01o71",
+   "title": "Approach :: Research design and methodology",
+   "text": "The methodology is co-design under coupling, built and validated in three strands. The modelling strand constructs a unified state-space in which the 32 winding sections appear simultaneously as electromagnetic actuators, converter voltage steps, thermal sources and control channels, with inter-slot magnetic coupling retained rather than diagonalised away; model order and structure are themselves research outputs, since no existing formulation spans the four domains. The hardware strand advances on two benches: the group's existing rotating bench, on which a binary-tree converter of the same family already drives a 400 V industrial induction machine closed-loop [3], hosts early coupled-control and soft-switching experiments from month 6, de-risking the second bench, the 32-slot, 100 kW demonstrator, which validates the framework at full scale. The measurement strand closes the loop: partial-discharge testing of winding coupons at altitude-representative pressure near 20 kPa, calorimetric and electrical efficiency measurement, thermal imaging of in-slot modules, and fault-injection campaigns feed measured parameters back into the models so that the delivered methodology is measurement-informed rather than idealised. Every workpackage consumes and produces elements of the shared model, which is the mechanism forcing genuine co-design rather than sequential hand-off. Word count: 192.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "8zgt6o61o71",
+   "title": "Approach :: Work package structure and parallelism",
+   "text": "Four work packages run with deliberate parallelism. WP1, the reconfigurable machine, and WP2, the circuit in the winding, both start in month 1 and exchange constraints through the shared co-design model from month 3. WP3, coupled control, begins analytically in month 1 and moves onto existing rotating hardware in month 6, well before the demonstrator exists. Only WP4, validation at 100 kW, is dependent, beginning in month 18 when the scaled silicon returns and the WP1 stator design freezes. WP2 and WP3 are the programme's two centres of gravity, because the scaled per-slot IC and the 64-degree-of-freedom control theory are where the science that does not yet exist must be created; WP4 validates the framework and is deliberately not framed as the contribution. This structure means no work package waits on another for its first twelve months, and the single genuine dependency, silicon into demonstrator, is protected by the risk register's fallback paths. Word count: 155.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "ybpelx51o71",
+   "title": "Approach :: Building on previous work",
+   "text": "The programme stands on a completed silicon and converter lineage. The group's published per-slot drive integrated circuit integrates the complete drive infrastructure on a 15.2 mm2 die in 130 nm BCD, operating at 2 A and approximately 26 V from DC to 5 kHz, with measured die temperatures of 50 to 66 degrees Celsius under loaded 5 kHz operation and a modelled total loss of 1.522 W at 2 A and 10 kHz [1]; it is a hard-switched device, and its role here is the integration precedent, not the switching regime. The floating-domain level-shifter platform in the same process has measured propagation delays near 2 ns at 3.3 V with programmable dead-time from 25 to 200 ns across 2 to 4.3 V domains [2]; its wide post-layout robustness figures are simulation results and are stated as such. The adiabatic regime has its own lineage: the group's DC autotransformer demonstrated magnetic voltage distribution above 99 per cent efficiency [4], and the doctoral work that closed the converter family showed an eight-tap core composing 400 V from 50 V modules at 98.8 per cent in autotransformer mode, holding an unloaded tap firmly at its nominal level under stepped loading, and, decisively, drove a 4 kW-rated 400 V industrial induction machine on a back-to-back bench under closed-loop control [3]. That thesis lineage names experimental evaluation with inductive and motor loads at scale as its explicit future work, and states that a discrete realisation of per-slot infrastructure would exceed the machine's own volume. Integrated motor drives shorten the converter-machine partition by relocating an intact inverter onto the housing [15], [16], [17]; this programme dissolves the partition, which is the difference between packaging and architecture. Word count: 275.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "1cm0n9g1o71",
+   "title": "Approach :: Maximising translation of outputs",
+   "text": "Outputs translate through three routes. Publication: the co-design methodology, controllability results and validation datasets are published openly, with a dual-use screen applied before release as described under Ethics. Standards and certification: Eaton's advisory engagement gives the results a route toward emerging aerospace electrification practice and standards activity [PI TO CONFIRM: Eaton standards-committee roles as stated in partner documentation], and the demonstrator's failure-behaviour evidence speaks directly to the vertical-lift certification framework [23]. Industrial environment: a separately funded, higher-readiness industrial programme in the group's orbit evidences the translation environment into which these foundations feed, implying no commitment to this proposal; intellectual property is managed through UCL's standard channels [PI TO CONFIRM: IP arrangements with partners]. Word count: 115.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "f54mjy91o71",
+   "title": "Applicant and Team Capability :: PI track record",
+   "text": "Dr Mehdi Baghdadi leads the research group whose completed lineage this programme extends. Under his direction the group conceived and published the per-slot drive integrated circuit, placing the complete drive infrastructure on a single 15.2 mm2 die in a 130 nm BCD process [1], and the floating-domain gate-control platform that makes series-stacked voltage domains drivable [2]. He supervised the doctoral work that closed the group's converter family, including the eight-tap magnetic composition of 400 V from 50 V modules and the closed-loop drive of a 400 V industrial induction machine [3], and the adiabatic autotransformer lineage on which the proposal's switching regime rests [4]. Prior EPSRC doctoral investment (EP/T517793/1) produced part of this enabling platform, and this programme carries that investment from the laboratory bench into the machine winding. He directs the group's industrial engagement, including an active delivery-based relationship with Eaton in a separately funded, higher-readiness programme, cited as evidence of relationship rather than commitment [PI TO CONFIRM: additional PI track-record items, grants held, and any leadership roles to name]. Word count: 172.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "7wwwr0k1o71",
+   "title": "Applicant and Team Capability :: Co I: electrical machines",
+   "text": "Dr Pedram Asef leads WP1 and brings the electrical machine design and optimisation expertise on which RQ1 rests: winding geometry for bilateral end-face access, the slot-count and rotor-topology trades, and the electromagnetic layer of the shared co-design model. His record in machine design, optimisation methods and their application to transport electrification underpins the workpackage [PI TO CONFIRM: two or three named outputs, grants or roles for Dr Asef, including any prior work on hairpin windings, variable-pole machines or aerospace machines to cite here]. He co-supervises the proposed doctoral student across WP1 and WP3 [PI TO CONFIRM: studentship agreement]. Word count: 98.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "o3a9wcq1o71",
+   "title": "Applicant and Team Capability :: Co I: thermal management",
+   "text": "Dr Marilize Everts leads WP4 and the thermal strand of WP2, and brings the thermal management expertise on which RQ5 rests: the coupled thermal behaviour of integrated circuits cohabiting a winding at 120 to 150 degrees Celsius, end-face packaging and cooling, and the thermal layer of the shared co-design model through to the 100 kW validation campaigns. Her record in heat transfer and thermal management of power-dense systems underpins the workpackage [PI TO CONFIRM: two or three named outputs, grants or roles for Dr Everts, including any two-phase or electronics-cooling work to cite here]. Word count: 93.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "xm9xn1a1o71",
+   "title": "Applicant and Team Capability :: Team fit and industrial partnership",
+   "text": "The team is the co-design problem made flesh: power integrated circuits (the PI), electrical machines (Dr Asef) and thermal management (Dr Everts) are exactly the three disciplines the partition has kept apart and this programme couples, and each research question has a named owner working alongside the others from month 1 through the shared model. The industrial partnership matches the programme's technology readiness level 1 to 3 character: Eaton contributes 50,000 pounds toward the fabrication run conditional on award, advisory engagement on certification and industrialisation, and industrial support to the co-funded doctoral studentship [PI TO CONFIRM: form of contribution; studentship agreement], while Airbus contributes airframer-perspective review of requirements and the operating environment; both letters of support are secured [PI TO CONFIRM: named partner contacts]. The adjacent, separately funded industrial programme in which the group works with Eaton is cited as evidence of an established working relationship and implies no commitment to this proposal. Word count: 154.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "bkgyzre1o71",
+   "title": "Applicant and Team Capability :: Full R4RI section draft",
+   "text": "Drafting note: team-woven per the D1 answer; four R4RI-style module headings as below, exact heading strings to be verified against the live Funding Service form; personal track-record items beyond the group's verified outputs are flagged, and approximately 500 words of headroom to the 1,500-word limit are deliberately reserved for them.\nThe team spans the three disciplines the co-design problem couples: power integrated circuits (the PI, Dr Mehdi Baghdadi), electrical machines (Dr Pedram Asef) and thermal management (Dr Marilize Everts), and it is assembled so that every research question has a named owner working alongside the others from month 1.\nHow the team has contributed to the generation of new ideas, tools, methodologies or knowledge. The architecture proposed here is the direct continuation of a research line the PI's group has carried from concept to published silicon. The group conceived and published the per-slot drive integrated circuit, placing the complete drive infrastructure on a single 15.2 mm2 die in a 130 nm BCD process, in IEEE Transactions on Power Electronics [1], and the floating-domain gate-control platform that makes series-stacked voltage domains drivable, in IEEE Transactions on Circuits and Systems I [2]. The adiabatic magnetic voltage-distribution principle at the proposal's heart is the group's own converter lineage, demonstrated above 99 per cent efficiency [4] and extended in the group's doctoral work to an eight-tap core composing 400 V from 50 V modules and to closed-loop drive of a 400 V industrial induction machine [3]; prior EPSRC doctoral investment (EP/T517793/1) produced part of this enabling platform, and this programme carries that investment from the laboratory bench into the machine winding. Dr Asef contributes an established record in electrical machine design and optimisation, the direct foundation of WP1 [PI TO CONFIRM: two or three named outputs or grants for Dr Asef]. Dr Everts contributes an established record in thermal management of power-dense systems, the foundation of RQ5 and WP4 [PI TO CONFIRM: two or three named outputs or grants for Dr Everts].\nHow the team has developed others and maintained effective working relationships. The PI supervises a research group in which the doctoral work underpinning this proposal was trained and completed, with graduates progressing into the field [PI TO CONFIRM: destinations]. The three investigators hold an established working relationship within UCL's propulsion research environment [PI TO CONFIRM: prior joint activity], and the proposed co-funded studentship, in collaboration with Eaton as industrial support, extends that development role into industrially connected doctoral training [PI TO CONFIRM: studentship agreement].\nHow the team has contributed to the wider research and innovation community. The group's outputs are published in the community's principal journals and conferences, and the team engages in refereeing and community service across power electronics, machines and thermal sciences [PI TO CONFIRM: editorships, committee roles, conference service for all three investigators].\nHow the team has contributed to broader research or innovation users and audiences. The group works with industry on the translation environment for integrated propulsion, including an active delivery-based engagement with Eaton in a separately funded, higher-readiness programme, cited as evidence of relationship rather than commitment, and both Eaton and Airbus have provided letters of support for this proposal. The programme's public outputs are designed for use beyond academia: open datasets, a published co-design methodology, and evidence addressed to the certification community through the vertical-lift special condition [23] [PI TO CONFIRM: any policy, standards or outreach activity to name]. Word count: 520 of 1,500; remainder reserved for flagged insertions.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "j71zrkk1o71",
+   "title": "Resources and Cost Justification :: Staff resources",
+   "text": "The PI (Dr Baghdadi, 12.5 per cent for 36 months) directs the programme and leads WP2 and WP3, the two centres of gravity; the investment in silicon and control leadership is the minimum consistent with a programme whose contribution is created there. Dr Asef (7.5 per cent, 36 months) leads WP1; Dr Everts (7.5 per cent, 36 months) leads WP4 and the thermal strand of WP2. Two full-time postdoctoral research associates are requested: PDRA-A (machines and power integration, 36 months) carries WP1 design and the WP2 module and packaging work; PDRA-B (control, 33 months from month 4) carries WP3 from analysis to demonstrator campaigns. Drafting note: PDRA scale and start months are my proposal under the C1 answer [PI TO CONFIRM: PDRA plan]. A doctoral student, co-funded by the university in collaboration with Eaton as industrial support, works across WP1 and WP3 [PI TO CONFIRM: studentship agreement and cost treatment]. Word count: 150.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "c314rsr1o71",
+   "title": "Resources and Cost Justification :: Equipment and consumables",
+   "text": "The single largest non-staff item is the multi-project-wafer fabrication run for the scaled per-slot integrated circuit in the established 130 nm BCD process, costed at 50,000 pounds from the project budget; Eaton contributes a further 50,000 pounds conditional on the award, recorded under partner contributions and expanding the run's scope rather than enabling it [PI TO CONFIRM: form of contribution]. Demonstrator build materials, comprising the 32-slot stator, rotor, 64 per-slot modules, packaging and instrumentation, are requested at [PI TO CONFIRM: demonstrator materials estimate]. Laboratory operations cover dynamometer and reduced-pressure test campaigns, high-voltage safety provisions for operation up to 1 kV, and consumables [PI TO CONFIRM: figures; include procured facility access if the APL confirmation under WP4 identifies a gap]. Travel and dissemination cover the field's principal conferences, partner review meetings and open-access publication charges [PI TO CONFIRM: figures]. Word count: 139.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "blqlxq81o71",
+   "title": "Resources and Cost Justification :: Justification narrative",
+   "text": "Every requested item maps to a deliverable. The staff plan places one full-time researcher on each centre of gravity, with investigator time concentrated where the contribution is created. The fabrication run is the physical realisation of O2, is matched by an industrial contribution conditional on award, and is the only route to a per-slot module at the current the 100 kW rating implies; without it the programme validates architecture but not scale. The demonstrator materials deliver O4 and O5, the evidence layer of the whole case. Nothing is requested for activities the group's existing infrastructure already covers, which is why no new converter benches, integrated circuit design tooling or rotating rig for the early campaigns appear here; the request funds only what the existing base cannot supply. Word count: 125.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "cl583uz1o71",
+   "title": "Resources and Cost Justification :: Full section draft",
+   "text": "Staff. The PI (Dr Baghdadi, 12.5 per cent for 36 months) directs the programme and leads WP2 and WP3, the two centres of gravity; the investment in silicon and control leadership is the minimum consistent with a programme whose contribution is created there. Dr Asef (7.5 per cent, 36 months) leads WP1; Dr Everts (7.5 per cent, 36 months) leads WP4 and the thermal strand of WP2. Two full-time postdoctoral research associates are requested: PDRA-A (machines and power integration, 36 months) carries WP1 design and the WP2 module and packaging work; PDRA-B (control, 33 months from month 4) carries WP3 from analysis to demonstrator campaigns. Drafting note: PDRA scale and start months are my proposal under the C1 answer [PI TO CONFIRM: PDRA plan]. A doctoral student, co-funded by the university in collaboration with Eaton as industrial support, works across WP1 and WP3 [PI TO CONFIRM: studentship agreement and cost treatment].\nEquipment and fabrication. The single largest non-staff item is the multi-project-wafer fabrication run for the scaled per-slot integrated circuit in the established 130 nm BCD process, costed at 50,000 pounds from the project budget; Eaton contributes a further 50,000 pounds conditional on the award, recorded under partner contributions and expanding the run's scope rather than enabling it [PI TO CONFIRM: form of contribution]. Demonstrator build materials, comprising the 32-slot stator, rotor, 64 per-slot modules, packaging and instrumentation, are requested at [PI TO CONFIRM: demonstrator materials estimate]. Laboratory operations cover dynamometer and reduced-pressure test campaigns, high-voltage safety provisions for operation up to 1 kV, and consumables [PI TO CONFIRM: figures; include procured facility access if the APL confirmation under WP4 identifies a gap].\nTravel and dissemination. Attendance at the field's principal conferences for results presentation, partner review meetings, and open-access publication charges [PI TO CONFIRM: figures].\nJustification of scale. Every requested item maps to a deliverable: the staff plan places one full-time researcher on each centre of gravity; the fabrication run is the physical realisation of O2 and is matched by industrial contribution; the demonstrator materials deliver O4 and O5; nothing is requested for activities the group's existing infrastructure already covers, which is why no new converter benches, integrated circuit design tooling or rotating rig for the early campaigns appear here. Word count: 356; figures flagged for completion within the 1,000-word limit.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "60t6y8r1o71",
+   "title": "Ethics and RRI :: Ethics and RRI statement",
+   "text": "This programme raises no human-participant, animal or personal-data issues; its responsible-innovation questions are real nonetheless, and the team addresses them through the AREA framework of anticipate, reflect, engage and act. The central issue is dual use. High-power-density, gearless, fault-tolerant electric propulsion is pursued for civil decarbonisation, and the same properties are of evident interest to defence and to uncrewed platforms whose uses the team cannot control. The team's position is engagement rather than denial: the underlying physics and the co-design methodology will publish regardless of this programme, so the responsible course is to develop them in the open, within UK governance, with deliberate screening. Concretely, the team will operate a pre-publication dual-use review for every output, drawing on UCL's research governance and export-control compliance processes to assess whether any specific result requires restriction under UK strategic export control legislation before release; will keep the published methodology at the level of design science rather than platform-specific engineering; and will engage the industrial partners, both experienced in aerospace governance, in that screening [PI TO CONFIRM: any partner-specific review arrangements]. The anticipated outcome, based on the technology readiness level 1 to 3 character of the outputs, is open release, and the mechanism exists for the exceptions. Environmental responsibility is intrinsic to the programme's purpose, an enabling technology for the Jet Zero commitment, and is also applied to its conduct: the machine topology deliberately keeps a rotor without permanent magnets among the leading candidates, holding open a rare-earth-free outcome, the demonstrator and its silicon are designed for reuse across the group's onward research rather than as disposable artefacts, and laboratory energy use in the 100 kW campaigns is recovered where the back-to-back configuration permits. Research integrity follows UCL policy: preregistered measurement protocols for the validation matrix, open datasets at the final milestones, and honest reporting of the negative branch of every research question, including any proven fundamental limit under RQ4, which the team regards as a publishable success rather than a failure. The team's development responsibilities are treated as part of responsible innovation: the postdoctoral researchers and the co-funded doctoral student are trained across all four coupled disciplines, recruitment follows UCL's equality, diversity and inclusion practice, and the programme's public summary and outreach present the work's limits as plainly as its promise. Word count: 372 of 500; headroom held for partner-specific review arrangements.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "ee606gi1o71",
+   "title": "Facilities :: Facilities statement",
+   "text": "No EPSRC national facility is required. All experimental work uses UCL Advanced Propulsion Laboratory infrastructure and standard commercial fabrication services, as detailed under Approach and Resources. Word count: 26.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "vnwyi3h1o71",
+   "title": "Project Partners :: Partner contributions and letters",
+   "text": "Eaton. Letter of support: secured [PI TO CONFIRM: named contact and position for the template table]. Contributions: a cash or in-kind contribution of 50,000 pounds toward the integrated circuit fabrication run, conditional on the award [PI TO CONFIRM: form and template-table categorisation]; advisory engagement on certification strategy and industrialisation readiness, drawing on Eaton's stated role in an adjacent programme as, in that programme's documentation, a non-funded Tier-1 adviser on certification, industrialisation readiness and system safety; and industrial support to the co-funded doctoral studentship [PI TO CONFIRM: studentship agreement]. That adjacent engagement concerns a separate, higher-readiness collaborative programme; it is cited here solely as evidence of an established working relationship and implies no commitment beyond the letter provided for this proposal.\nAirbus. Letter of support: secured [PI TO CONFIRM: named contact and position]. Contributions: airframer-perspective review of requirements and operating environment, including altitude, electrical-environment and installation constraints for the validation matrix, and participation in quarterly reviews [PI TO CONFIRM: contribution specifics as stated in the letter, including any in-kind valuation for the template table].\nBoth partnerships are advisory and evidential in character, consistent with a technology readiness level 1 to 3 programme: the partners shape relevance and the certification-facing framing of the evidence, while all research, deliverables and intellectual property obligations rest with the applicant team [PI TO CONFIRM: IP terms referenced in letters]. The template table is completed from the letters at assembly: partner name, contribution type, monetary or in-kind value, and period of support [PI TO CONFIRM: named contacts, to follow]. Word count: 247 of 1,000; table values await the letters.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "ejv1rt21o71",
+   "title": "References :: Reference list",
+   "text": "Drafting note: real author names appear in reference entries only, per the dossier convention; body text anonymises group authors. Entries marked [PI TO CONFIRM] carry over exact strings from drafts/06_References.md or await final metadata.\n[1] [Group authors], per-slot drive integrated circuit, IEEE Trans. Power Electron., vol. 41, no. 8, pp. 12842-12854, Aug. 2026. DOI 10.1109/TPEL.2026.3675044. [PI TO CONFIRM: exact title and author list]\n[2] Q. Farhat and M. Baghdadi, \"Multiple-output level shifters with dead-time control for gate driving in series-stacked voltage domains,\" IEEE Trans. Circuits Syst. I, Early Access. DOI 10.1109/TCSI.2026.3676412. [PI TO CONFIRM: final volume, issue, pages at publication]\n[3] P. Kolahian, \"Ultra efficient bidirectional power converter for battery energy resources,\" doctoral thesis, University College London, Feb. 2026.\n[4] [Group authors], DC autotransformer converter, in Proc. PCIM Europe, 2016. [PI TO CONFIRM: exact citation from existing References file]\n[5] A. Lusuardi et al., IEEE Access, vol. 9, pp. 27485-27495, 2021. DOI 10.1109/ACCESS.2021.3058089. [PI TO CONFIRM: exact title and author list]\n[6] M. Meyer et al., IEEE Trans. Dielectr. Electr. Insul., vol. 25, no. 3, pp. 873-882, 2018. DOI 10.1109/TDEI.2018.006722. [PI TO CONFIRM: exact title and author list]\n[7] V. Madonna et al., IEEE Trans. Ind. Appl., vol. 57, no. 2, pp. 1389-1398, 2021. [PI TO CONFIRM: exact title and DOI]\n[8] V. Madonna et al., IEEE Trans. Ind. Electron., 2019. DOI 10.1109/TIE.2018.2868288. [PI TO CONFIRM: exact title, volume, pages]\n[9] S. Hemmati et al., in Proc. IEEE IEMDC, 2019. [PI TO CONFIRM: exact citation from existing References file]\n[10] E. Levi, \"Multiphase electric machines for variable-speed applications,\" IEEE Trans. Ind. Electron., vol. 55, no. 5, pp. 1893-1909, 2008. DOI 10.1109/TIE.2008.918488.\n[11] E. Levi, \"Advances in converter control and innovative exploitation of additional degrees of freedom for multiphase machines,\" IEEE Trans. Ind. Electron., vol. 63, no. 1, pp. 433-448, 2016.\n[12] H. Stemmler and P. Guggenbach, \"Configurations of high-power voltage source inverter drives,\" in Proc. EPE, Brighton, 1993, pp. 7-14.\n[13] A. Patzak, F. Bachheibl, A. Baumgardt, G. Dajaku, et al., \"ISCAD, electric high performance drive for individual mobility at extra-low voltages,\" SAE Int. J. Alternative Powertrains, vol. 5, no. 1, pp. 148-156, 2016. DOI 10.4271/2016-01-1179.\n[14] J. Wang, Y. Li, and Y. Han, \"Integrated modular motor drive design with GaN power FETs,\" IEEE Trans. Ind. Appl., vol. 51, no. 4, 2015. DOI 10.1109/TIA.2015.2413380.\n[15] A. T. Abebe et al., IET Electr. Power Appl., vol. 10, no. 8, pp. 757-771, 2016. DOI 10.1049/iet-epa.2015.0506. [PI TO CONFIRM: exact title and author initials]\n[16] W. Lee et al., IEEE Trans. Transport. Electrific., vol. 4, no. 3, pp. 684-693, 2018. DOI 10.1109/TTE.2018.2853994. [PI TO CONFIRM: exact title]\n[17] T. M. Jahns and B. Sarlioglu, IEEE Power Electron. Mag., vol. 7, no. 3, pp. 18-27, 2020. DOI 10.1109/MPEL.2020.3011275. [PI TO CONFIRM: exact title]\n[18] Y. Zou et al., IEEE Trans. Transport. Electrific., vol. 8, no. 3, pp. 3578-3593, 2022. DOI 10.1109/TTE.2022.3149786. [PI TO CONFIRM: exact title]\n[19] S. Volpe, M. Popescu, et al., in Proc. IEEE IEMDC, 2021. DOI 10.1109/IEMDC47953.2021.9449498. [PI TO CONFIRM: exact title and author list]\n[20] P. Chaubal et al., in Proc. IEEE ITEC, 2024. [PI TO CONFIRM: exact citation from existing References file]\n[21] E. Libbos et al., IEEE Trans. Power Electron., vol. 37, no. 11, 2022. [PI TO CONFIRM: exact citation from existing References file]\n[22] J. Carroll et al., \"Failure rate, repair time and unscheduled O&M cost analysis of offshore wind turbines,\" Wind Energy, 2016. DOI 10.1002/we.1887.\n[23] EASA, Special Condition SC-VTOL-01, Issue 1, 2 Jul. 2019.\n[24] Department for Transport, \"Jet Zero Strategy: delivering net zero aviation by 2050,\" Jul. 2022.\n[25] Department for Transport, \"Future of Flight Action Plan,\" Mar. 2024.\n[26] PwC, \"Advanced Air Mobility: UK Economic Impact Study,\" Jul. 2023.\n[27] ADS Group, \"UK Aerospace Sector Outlook 2024,\" 2024.\n[28] US Department of Defense, MIL-STD-704F, Aircraft Electric Power Characteristics.\n[29] EASA, Certification Specifications for Large Rotorcraft CS-29, paragraph 29.927(c).\n[30] AAIB, Report 2/2011 on the accident to AS332 L2 Super Puma G-REDL, 2009 accident.\n[31] AIBN (Norway), report on the accident to EC225 LP Super Puma LN-OJF, 2016 accident. [PI TO CONFIRM: report number and year of issue]\nWord count: 96 of narrative; list as shown, within the 1,000-word limit.",
+   "createdAt": 1785594808765
+  },
+  {
+   "id": "xgboo4q1o71",
+   "title": "References :: Citation renumbering map",
+   "text": "This map fixes the canonical meaning-to-number assignment for every inline key in the delivered set; older drafts renumber by matching meaning, never by matching old numbers. BTMLC-IC = [1]. TCAS-LEVELSHIFT = [2]. KOLAHIAN-THESIS (400 V machine, MS2 DCAT, MFWE) = [3]. DCAT-2016 = [4]. LUSUARDI-2021 = [5]. MEYER-2018 = [6]. MADONNA-TIA-2021 = [7]. MADONNA-TIE-2019 = [8]. HEMMATI-IEMDC-2019 = [9]. LEVI-2008 = [10]. LEVI-2016 = [11]. STEMMLER-OEW-1993 = [12]. ISCAD-SAE-2016 = [13]. WISCONSIN-GAN-IMMD-2015 = [14]. ABEBE-IMD-2016 = [15]. LEE-IMD-2018 = [16]. JAHNS-SARLIOGLU-2020 = [17]. ZOU-HAIRPIN-2022 = [18]. VOLPE-HAIRPIN-2021 = [19]. CHAUBAL-ITEC-2024 = [20]. LIBBOS-TPEL-2022 = [21]. CARROLL-WIND-2016 = [22]. SC-VTOL = [23]. JET-ZERO = [24]. FUTURE-OF-FLIGHT = [25]. PWC-AAM = [26]. ADS-2024 = [27]. MIL-STD-704F = [28]. CS-29-927 = [29]. AAIB-G-REDL = [30]. AIBN-LN-OJF = [31]. The BTMLC thesis (Nov. 2025, future-work statement) is referenced in prose without a number; add as [32] only if a direct quotation is retained at assembly [PI TO CONFIRM: whether to add the BTMLC thesis as reference 32]. Word count: 154.",
+   "createdAt": 1785594808765
+  }
+ ],
+ "clips": [],
+ "directives": [],
+ "ideas": [],
+ "milestones": [
+  {
+   "id": "0g6i77s1nyy",
+   "label": "Vision locked",
+   "date": "2026-08-02",
+   "done": false
+  },
+  {
+   "id": "owum78o1nyy",
+   "label": "Approach fully drafted",
+   "date": "2026-08-05",
+   "done": false
+  },
+  {
+   "id": "fn6ktju1nyy",
+   "label": "PI confirmations resolved",
+   "date": "2026-08-09",
+   "done": false
+  },
+  {
+   "id": "hwuumb61nyy",
+   "label": "Partner letters received",
+   "date": "2026-08-12",
+   "done": false
+  },
+  {
+   "id": "21iba3n1nyy",
+   "label": "Costing signed off by Research Services",
+   "date": "2026-08-21",
+   "done": false
+  },
+  {
+   "id": "dj2d64u1nyy",
+   "label": "Internal red team review",
+   "date": "2026-08-17",
+   "done": false
+  },
+  {
+   "id": "5sh05cn1nyy",
+   "label": "Final assembly and submission",
+   "date": "2026-08-23",
+   "done": false
+  }
+ ],
+ "ui": {
+  "selPart": "6bzslenmr90",
+  "view": "part",
+  "editing": null,
+  "editorMode": "write",
+  "compareSel": [],
+  "openSecs": {},
+  "partTab": "strategy",
+  "expand": {
+   "j7akcqu1o71": true
+  }
+ },
+ "sync": {
+  "owner": "me313b",
+  "repo": "proposal",
+  "branch": "claude/epsrc-vision-approach-library-6qr50k",
+  "importPath": "exports/FORGE_Import.md",
+  "autoPull": true,
+  "lastPull": null,
+  "lastPush": null,
+  "lastSha": null,
+  "etag": null
+ },
+ "bin": []
+}
