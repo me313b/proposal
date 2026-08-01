@@ -116,73 +116,73 @@ Plan to 31 October 2028: May–Sept 2026 voltage splitter (analysis, PCB, custom
 
 ### 6. References (pp. 48–50) — quality issues
 
-44 entries, [1]–[44]. Systematic problems: **nearly all journal entries omit volume and issue numbers** (only [27] carries "vol. 38, no. 7"); several conference entries lack page ranges or locations. Specific defects, as printed:
+44 entries, [1]–[44]. Systematic problem: **nearly all journal entries omit volume and issue numbers** (only [27] carries "vol. 38, no. 7"); several conference entries lack pages or locations. Specific defects, as printed:
 
-- **[23] is malformed:** "F. Grimm, J. Wood and M. Baghdadi, 'A DC-Autotransformer based Multilevel Inverter for Automotive Applications,' pp. Grimm, Ferdinand; Wood, John; Baghdadi, Mehdi, 2020." — the author names are duplicated into the page field and **no venue is given**. Since [23] is the foundational DCAT citation, the correct bibliographic record must be established independently before the proposal cites it.
-- **[16]** title contains "…Current-Source Inverter **or** EV Traction Applications" (for "for") and is dated **2026** despite the surrounding text treating it as established work — year needs verification.
-- **[36]** title is truncated: "A tutorial on double pulse test of silicon and silicon" (presumably "…and silicon carbide devices").
-- **[3]** (Statista) and [39] (bare H3X homepage) are weak grey-web citations; [2] carries a `utm_source=chatgpt.com` tracking parameter in its URL.
+- **[23] is malformed:** "F. Grimm, J. Wood and M. Baghdadi, 'A DC-Autotransformer based Multilevel Inverter for Automotive Applications,' pp. Grimm, Ferdinand; Wood, John; Baghdadi, Mehdi, 2020." — author names duplicated into the page field, **no venue given**. As the foundational DCAT citation, its correct bibliographic record must be established independently before the proposal cites it.
+- **[16]** title reads "…Current-Source Inverter **or** EV Traction Applications" (for "for") and is dated **2026** — year needs verification.
+- **[36]** title truncated: "A tutorial on double pulse test of silicon and silicon" (presumably "…silicon carbide").
+- **[3]** (Statista) and [39] (bare H3X homepage) are weak grey-web citations; [2] carries a `utm_source=chatgpt.com` tracking parameter.
 - Dangling in-text citation **[69]** on p. 40 with no corresponding entry.
-- [31] is a **TechRxiv preprint** (not peer-reviewed as listed); [25] is listed with pp. 1–13, apparently early access.
+- [31] is a **TechRxiv preprint** (not peer-reviewed); [25] listed pp. 1–13, apparently early access.
 
 ## 3. Published sources it relies on (citable substitutes)
 
-The proposal should cite these directly, never the transfer report. As printed in the report (details to be verified/completed before use, given the missing volume/issue data):
+Cite these directly, never the transfer report. Details as printed (volume/issue data mostly missing — verify before use):
 
 **Peer-reviewed journals / magazines**
-- [7] Madonna, Giangrande, Zhao, Zhang, Gerada, Galea — "Electrical Machines for the More Electric Aircraft: Partial Discharges Investigation," IEEE Trans. Industry Applications, pp. 1389–1398, 2021. *(PD/PDIV at altitude.)*
-- [8] Lee, Li, Han, Sarlioglu, Minav, Pietola — "A Review of Integrated Motor Drive and Wide-Bandgap Power Electronics for High-Performance Electro-Hydrostatic Actuators," IEEE Trans. Transportation Electrification, pp. 684–693, 2018. *(IMD taxonomy; 10–20% volume; 30–40% cost; EMC.)*
+- [7] Madonna et al. — "Electrical Machines for the More Electric Aircraft: Partial Discharges Investigation," IEEE Trans. Ind. Appl., pp. 1389–1398, 2021. *(PD/PDIV at altitude.)*
+- [8] Lee, Li, Han, Sarlioglu, Minav & Pietola — "A Review of Integrated Motor Drive and Wide-Bandgap Power Electronics for High-Performance Electro-Hydrostatic Actuators," IEEE Trans. Transp. Electrif., pp. 684–693, 2018. *(IMD taxonomy; 10–20% volume; 30–40% cost; EMC.)*
 - [9] Jahns & Sarlioglu — "The Incredible Shrinking Motor Drive," IEEE Power Electronics Magazine, pp. 18–27, Sept 2020.
-- [10] Abebe, Vakil, Lo Calzo, Cox, Lambert, Johnson, Gerada, Mecrow — "Integrated motor drives: state of the art and future trends," IET Electric Power Applications, pp. 757–771, 2016. *(IMD challenges; SiC/GaN 600 °C vs Si 225 °C.)*
-- [16] Chen, Lee, Feng, Chen, Paddock, Jahns, Sarlioglu — "Power-Dense Integrated Motor Drive Using a WBG-Enabled Current-Source Inverter [f]or EV Traction Applications," IEEE Trans. Transportation Electrification, pp. 542–555, printed 2026 (verify).
-- [17] Wang, Jahns, McCluskey, Kizito, Sarlioglu, et al. — "2-kV 1-MW 20 000-r/min Integrated Modular Motor Drive for Electrified Aircraft Propulsion," IEEE JESTPE, pp. 394–407, 2025.
-- [19] El Hajji, Hemeida, Lehikoinen, Martin, Belahcen — "Optimal Design of High Specific Power Electric Machines for Fully Electric Regional Aircraft: A Case Study of 1MW S-PMSM," Aerospace, pp. 1–12, 2024. *(Machine comparison; slot/pole vs speed weight trade-off.)*
-- [21] Poorfakhraei, Narimani, Emadi — "A Review of Multilevel Inverter Topologies in Electric Vehicles…," IEEE Open Journal of Power Electronics, pp. 155–170, 2021.
-- [22] Peng — "A Generalized Multilevel Inverter Topology with Self Voltage Balancing," IEEE Trans. Industry Applications, pp. 611–618, 2001.
-- [24] Aihsan, Idin, Alias, Sutikno — IJPEDS, pp. 1270–1279, 2023. *(Open-end winding.)*
-- [25] Farhat & Baghdadi — "On-Chip Design and Implementation of a Battery-Cell-Level Binary-Tree Multilevel Converter," IEEE Trans. Power Electronics, pp. 1–13, 2026. *(Team's own published on-chip MLC work — copy in repo.)*
+- [10] Abebe et al. — "Integrated motor drives: state of the art and future trends," IET Electric Power Applications, pp. 757–771, 2016. *(Challenges; SiC/GaN 600 °C vs Si 225 °C.)*
+- [16] Chen et al. — "Power-Dense Integrated Motor Drive Using a WBG-Enabled Current-Source Inverter [f]or EV Traction Applications," IEEE Trans. Transp. Electrif., pp. 542–555, printed 2026 (verify).
+- [17] Wang, Jahns, McCluskey, Kizito, Sarlioglu et al. — "2-kV 1-MW 20 000-r/min Integrated Modular Motor Drive for Electrified Aircraft Propulsion," IEEE JESTPE, pp. 394–407, 2025.
+- [19] El Hajji et al. — "Optimal Design of High Specific Power Electric Machines for Fully Electric Regional Aircraft: A Case Study of 1MW S-PMSM," Aerospace, pp. 1–12, 2024. *(Machine comparison; slot/pole vs speed.)*
+- [21] Poorfakhraei, Narimani & Emadi — "A Review of Multilevel Inverter Topologies in Electric Vehicles…," IEEE Open Journal of Power Electronics, pp. 155–170, 2021.
+- [22] Peng — "A Generalized Multilevel Inverter Topology with Self Voltage Balancing," IEEE Trans. Ind. Appl., pp. 611–618, 2001.
+- [24] Aihsan et al. — IJPEDS, pp. 1270–1279, 2023. *(Open-end winding.)*
+- [25] Farhat & Baghdadi — "On-Chip Design and Implementation of a Battery-Cell-Level Binary-Tree Multilevel Converter," IEEE Trans. Power Electron., pp. 1–13, 2026. *(Team's own published on-chip work — copy in repo.)*
 - [27] Li et al. — "200 V Enhancement-Mode p-GaN HEMTs Fabricated on 200 mm GaN-on-SOI…," IEEE Electron Device Letters, vol. 38, no. 7, pp. 918–921, 2017.
-- [30] Barrios, Urtasun, Ursúa, Marroyo, Sanchis — "High-Frequency Power Transformers With Foil Windings…," IEEE Trans. Power Electronics, pp. 5712–5723, 2015.
-- [32] Zhao, Wu, Dao, Lin, Du, Zhao, Zhu — "Design and Demonstration of a 100 kW High-Frequency Matrix Core Transformer for More Electric Aircraft Power Distribution," IEEE Trans. Transportation Electrification, pp. 4279–4290, 2022.
-- [35] Shillaber, Jiang, Ran, Long — "Ultrafast Current Shunt (UFCS)…," IEEE Trans. Power Electronics, pp. 15493–15504, 2022.
-- [41] Wang, Zhang, Zhang, Li — "Review of High-Power-Density and Fault-Tolerant Design of Propulsion Motors for Electric Aircraft," Energies, pp. 1–31, 2023.
+- [30] Barrios et al. — "High-Frequency Power Transformers With Foil Windings…," IEEE Trans. Power Electron., pp. 5712–5723, 2015.
+- [32] Zhao et al. — "Design and Demonstration of a 100 kW High-Frequency Matrix Core Transformer for More Electric Aircraft Power Distribution," IEEE Trans. Transp. Electrif., pp. 4279–4290, 2022.
+- [35] Shillaber et al. — "Ultrafast Current Shunt (UFCS)…," IEEE Trans. Power Electron., pp. 15493–15504, 2022.
+- [41] Wang et al. — "Review of High-Power-Density and Fault-Tolerant Design of Propulsion Motors for Electric Aircraft," Energies, pp. 1–31, 2023.
 
 **Conference papers**
-- [6] Ugwueze, Statheros, Bromfield, Horri — "Trends in eVTOL Aircraft Development…," AIAA SciTech, 2023. *(120-concept survey.)*
-- [12] Brown, Jahns, Lorenz — IEEE IAS Annual Meeting, pp. 1322–1328, 2007. *(IMMD.)*
-- [13] Brockerhoff, Burkhardt, Egger, Rauh — IEEE EDPC, pp. 1–6, 2014. *(Smart Stator Teeth.)*
-- [14] Wheeler, Clare, Apap, Empringham, Bradley, Pickering, Lampard — "A Fully Integrated 30kW Motor Drive Using Matrix Converter Technology," EPE 2005. *(40%-capacitor-volume and motor-envelope claims.)*
-- [15] Hilpert, Brinkfeldt, Arenz — IEEE EDPC, pp. 1–8, 2014.
-- [18] Swanke, Zeng, Bobba, Jahns, Sarlioglu — IEEE IEMDC, pp. 1–8, 2021.
-- [20] Paterakis, Marouchos, Darwish — UPEC 2017. *(13-level vs 3-level THD.)*
+- [6] Ugwueze, Statheros, Bromfield & Horri — "Trends in eVTOL Aircraft Development…," AIAA SciTech, 2023. *(120-concept survey.)*
+- [12] Brown, Jahns & Lorenz — IEEE IAS Annual Meeting, pp. 1322–1328, 2007. *(IMMD.)*
+- [13] Brockerhoff et al. — IEEE EDPC, pp. 1–6, 2014. *(Smart Stator Teeth.)*
+- [14] Wheeler et al. — "A Fully Integrated 30kW Motor Drive Using Matrix Converter Technology," EPE 2005. *(40%-capacitor-volume and motor-envelope claims.)*
+- [15] Hilpert, Brinkfeldt & Arenz — IEEE EDPC, pp. 1–8, 2014.
+- [18] Swanke et al. — IEEE IEMDC, pp. 1–8, 2021.
+- [20] Paterakis, Marouchos & Darwish — UPEC 2017. *(13-level vs 3-level THD.)*
 - [26] Weiss et al. — IEEE CSICS, New Orleans, 2015.
-- [36] Masoud, Issa, Yates — IEEE WEMDCD, 2023.
-- [40] Tallerico, Chapman, Smith — AIAA AVIATION 2023 Forum, San Diego, 2023.
+- [36] Masoud, Issa & Yates — IEEE WEMDCD, 2023.
+- [40] Tallerico, Chapman & Smith — AIAA AVIATION 2023 Forum, San Diego, 2023.
 
 **Book:** [29] Erickson & Maksimovic, *Fundamentals of Power Electronics*, Springer Nature, Cham, 2020.
 
-**Preprint (cite with care):** [31] Kolahian, Grimm, Bucknall, Baghdadi — "Multiport DC Solid State Transformer with Enhanced Power Efficiency: A Modular Architecture," TechRxiv, pp. 1–10, 2025.
+**Preprint (cite with care):** [31] Kolahian, Grimm, Bucknall & Baghdadi — "Multiport DC Solid State Transformer with Enhanced Power Efficiency: A Modular Architecture," TechRxiv, pp. 1–10, 2025.
 
-**Needs bibliographic repair before any use:** [23] Grimm, Wood, Baghdadi — "A DC-Autotransformer based Multilevel Inverter for Automotive Applications," 2020 (venue missing in the report).
+**Needs bibliographic repair before any use:** [23] Grimm, Wood & Baghdadi — "A DC-Autotransformer based Multilevel Inverter for Automotive Applications," 2020 (venue missing in the report).
 
-**Grey/web sources (use primaries instead where possible):** [1] UN net-zero page; [2] IEA Global EV Outlook 2023; [3] Statista aviation-emissions page; [4] ICCT Mukhopadhaya & Graver 2022 (this one is a solid report); [5] ARPA-E FOA (16 Dec 2019); [11] Bartos, Control Engineering, 2000; [28] RS AS22759/34 datasheet; [33] Kemet FPL ferrite tiles; [34] TDK EPCOS ferrite data book 2013; [37] Embry-Riddle textbook chapter; [38] Danfoss VLT DriveMotor FCM 300; [39] H3X website; [42] Meters UK AWG table; [43] Archer aircraft page; [44] Joby Aviation news.
+**Grey/web sources (prefer primaries):** [1] UN net-zero page; [2] IEA Global EV Outlook 2023; [3] Statista aviation-emissions page; [4] ICCT Mukhopadhaya & Graver 2022 (solid report); [5] ARPA-E FOA (16 Dec 2019); [11] Bartos, Control Engineering, 2000; [28] RS AS22759/34 datasheet; [33] Kemet FPL ferrite tiles; [34] TDK EPCOS ferrite data book 2013; [37] Embry-Riddle textbook chapter; [38] Danfoss VLT DriveMotor FCM 300; [39] H3X website; [42] Meters UK AWG table; [43] Archer aircraft page; [44] Joby Aviation news.
 
 ## 4. Proposal mapping
 
-**How it positions the "IMD shortens, per-slot dissolves" differentiation.** The report's taxonomy (pp. 8–9) establishes that conventional IMD practice — radial housing, radial stator, axial housing, axial endplate — *relocates and shortens* the inverter-to-machine path: the inverter remains a discrete block bolted onto or into the machine, and the literature's quantified benefits (10–20% volume, 30–40% cost via [8]) all flow from cable/housing elimination alone. The IMMD/SST thread ([12], [13], and the 1 MW aerospace build [17]/[18]) is the published stepping-stone towards *dissolution*: per-tooth converters, but still fed by a common DC link whose capacitors the same literature identifies as the binding constraint (~40% of drive volume per [14]; ripple-intolerant film capacitors per [12]/[13]). Edwards' Configuration 1 (p. 43) is exactly the differentiated position the proposal argues: a DCAT voltage-splitting stage supplying balanced levels so that **each inverter module drives one machine slot** with a multistep waveform, dissolving both the inverter *and* the DC-link capacitor problem into the machine periphery — with Configuration 2 (dual DCAT, open-ended winding, 36→72 levels) as the scaling escape hatch the gap analysis (p. 21) motivates. The report also supplies the negative result the proposal needs: the multi-wire battery-tap alternative is quantitatively non-scalable (Table 3.1, Figure 3.4), leaving 2-wire + DCAT as the defensible route.
+**How it positions the "IMD shortens, per-slot dissolves" differentiation.** The taxonomy (pp. 8–9) establishes that conventional IMD practice — radial housing, radial stator, axial housing, axial endplate — merely *relocates and shortens* the inverter-to-machine path: the inverter stays a discrete block, and the literature's quantified benefits (10–20% volume, 30–40% cost, via [8]) flow from cable/housing elimination alone. The IMMD/SST thread ([12], [13], and the 1 MW aerospace build [17]/[18]) is the published stepping-stone towards *dissolution*: per-tooth converters, still fed by a common DC link whose capacitors the same literature identifies as the binding constraint (~40% of drive volume per [14]; ripple-intolerant capacitors per [12]/[13]). Edwards' Configuration 1 (p. 43) is exactly the differentiated position the proposal argues: a DCAT voltage-splitting stage supplying balanced levels so that **each inverter module drives one machine slot** with a multistep waveform, dissolving both the inverter *and* the DC-link capacitor problem into the machine periphery — with Configuration 2 (dual DCAT, open-ended winding, 36→72 levels) as the scaling route the gap analysis (p. 21) motivates. The report also supplies the needed negative result: the multi-wire battery-tap alternative is quantitatively non-scalable (Table 3.1, Figure 3.4), leaving 2-wire + DCAT as the defensible route.
 
-**Claims that must NEVER be sourced to this report** (cite the primary instead, or drop):
+**Claims that must NEVER be sourced to this report** (cite the primary, or drop):
 
-1. 10–20% volume reduction and 30–40% installation/manufacturing cost reduction → cite [8] Lee et al. 2018 (and note it is itself a review).
-2. "Boosts system efficiency by 30% or more" → **no adequate source exists in the report**; do not use at all unless an independent primary source is found.
+1. 10–20% volume and 30–40% installation/manufacturing cost reductions → [8] Lee et al. 2018 (itself a review).
+2. "Boosts system efficiency by 30% or more" → **no adequate source exists in the report**; do not use unless an independent primary source is found.
 3. DC-link capacitors ≈ 40% of drive volume; >7.5 kW unfeasible in the motor envelope → [14] Wheeler et al. 2005 — flag the 2005 vintage.
-4. 7.5 kW thermal barrier for IMDs → [11] Bartos 2000, a trade article; avoid as an evidential claim.
-5. ARPA-E 12 kW/kg and 93% cruise efficiency → [5] ARPA-E FOA 2019 (retrieve document directly).
+4. 7.5 kW thermal barrier for IMDs → [11] Bartos 2000, a trade article; avoid as evidence.
+5. ARPA-E 12 kW/kg and 93% cruise efficiency → [5] ARPA-E FOA 2019 (retrieve directly).
 6. Aviation CO₂e 882 Mt (2024) and doubling since 1990 → replace Statista [3] with a primary source; 49–88% CO₂e reduction and 3× cruise efficiency → [4] ICCT 2022.
 7. eVTOL survey statistics (120 concepts; 57% powered-lift; 53% vectored thrust) → [6] Ugwueze et al. 2023.
 8. THD 5.285% (13-level) vs 73.98% (3-level) → [20] Paterakis et al. 2017.
 9. SiC/GaN 600 °C vs Si 225 °C limits → [10] Abebe et al. 2016.
 10. Slot/pole weight-vs-speed plateaus (12/10 @ 10 krpm; 24/20 @ 15 krpm; 36/30 @ 5 krpm) → [19] El Hajji et al. 2024.
-11. **Unpublished and uncitable anywhere:** the Table 3.1 wiring comparison and non-scalability conclusion; the DCAT design algorithm, constraints and Table 3.3 parameters (36 levels, 9 cores, E20/10/6, t_f = 868 ns, t_z = 384 ns, L_m^p = 25.2 µH, L_m^g = 453 µH, 300 mm limit); the two IMD configurations and the 36→72 level doubling; the annular-oil-bath cooling concept; the UFCS/DPT hardware status. These are Edwards' original unpublished results — the proposal may describe them as the team's preliminary work but must not reference this document, and must not present them as established findings.
+11. **Unpublished and uncitable anywhere:** the Table 3.1 wiring comparison and non-scalability conclusion; the DCAT design algorithm, constraints and Table 3.3 parameters (36 levels, 9 cores, E20/10/6, t_f = 868 ns, t_z = 384 ns, L_m^p = 25.2 µH, L_m^g = 453 µH, 300 mm limit); the two IMD configurations and the 36→72 level doubling; the annular-oil-bath cooling concept; the UFCS/DPT hardware status. These are Edwards' original unpublished results — describable as the team's preliminary work, but never referenced to this document nor presented as established findings.
 
-**Internal-use cautions:** the (a)/(b) caption swap on Figure 3.22, the duplicated "Figure 2.12" numbering with crossed [25]/[27]/[26]/[28] attributions, the dangling [69] citation, the "300 μs" airgap unit misprint, the 300 vs 305 mm diameter inconsistency, and the malformed [23] all mean this draft must be treated as a working document: verify every figure and reference against the body text before reuse.
+**Internal-use cautions:** the (a)/(b) caption swap on Figure 3.22, the duplicated "Figure 2.12" numbering with crossed [25]/[27]/[26]/[28] attributions, the dangling [69], the "300 μs" airgap unit misprint, the 300 vs 305 mm diameter inconsistency, and the malformed [23]: treat the draft as a working document and verify every figure and reference against the body text before reuse.
