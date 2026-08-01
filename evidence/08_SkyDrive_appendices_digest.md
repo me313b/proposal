@@ -112,61 +112,61 @@ Integrated **100 kW-class** high-voltage propulsion subsystem: **high-speed six-
 
 | ID | Risk (abridged) | Pre | Post | Mitigation (abridged) | Owner/WP |
 |---|---|---|---|---|---|
-| T1 | Model uncertainty (EM/thermal/PD) for 1 kV, 18,000 RPM multiphase motor, reduced pressure + spray cooling | 3×4=12 | 2×3=6 | FEM correlation vs Epstein/BH and reduced-pressure PD coupons; tune with dyno telemetry; lock ±5% torque / ±5 °C entry criteria | WP1&2, iNetic/UCL |
-| T2 | Incomplete system requirements (duty cycle, DC-link, EMI/EMC, cooling, interfaces) | 3×3=9 | 1×3=3 | OEM/regulator workshops to freeze SRS/ICD; PDM traceability; CCB change control | WP1, iNetic |
-| T3 | Multilevel inverter cannot demonstrate fault-ride-through/redundancy at 1 kV with SiC | 4×4=16 | 2×3=6 | Two topologies to PDR with shared footprints; HIL fault-injection down-select; per-leg isolation; limp-home mode | WP1, iNetic |
-| T4 | AM spray-cooling channels / hollow conductors fail yield/accuracy | 4×4=16 | 2×2=4 | DFAM trials with CT-scanned coupons; if yield <90%, brazed inserts with identical interfaces | WP1, iNetic |
-| T5 | Delays on Vacoflux laminations, carbon sleeves, HV insulation | 3×4=12 | 2×3=6 | Long-lead POs at PDR; dual-source; safety stock; pre-approved equivalents | WP1, iNetic |
-| T6 | Component delay due to licence requirements | 4×5=20 | 3×4=12 | Order via supplier already holding licences; documentation with product photos | WP2, iNetic |
-| T7 | Aerospace-grade SiC/GaN allocation limits | 2×3=6 | 1×2=2 | Pin-compatible second sources; derating; NC/NR buys post-PDR | WP2, iNetic |
-| T8 | Supplier/logistics slips stall assembly | 3×4=12 | 2×2=4 | Early long-lead orders; weekly expediting; pre-qualified alternates | WP3, iNetic/UCL |
-| T9 | Weight/efficiency underperform benchmarks and business case | 3×3=9 | 2×2=4 | Re-optimise with dyno data and costed BoM; gearbox/cooling as tuneable levers | WP1&2, iNetic/UCL |
+| T1 | Model uncertainty (EM/thermal/PD) for 1 kV, 18,000 RPM multiphase motor, reduced pressure + spray cooling | 3×4=12 | 2×3=6 | Correlate FEM vs Epstein/BH and reduced-pressure PD coupons; tune with dyno telemetry; ±5% torque / ±5 °C gate criteria | WP1&2, iNetic/UCL |
+| T2 | Incomplete system requirements (duty cycle, DC-link, EMI/EMC, cooling, interfaces) | 3×3=9 | 1×3=3 | Freeze SRS/ICD via OEM/regulator workshops; CCB change control | WP1, iNetic |
+| T3 | Multilevel inverter cannot demonstrate fault-ride-through/redundancy at 1 kV with SiC | 4×4=16 | 2×3=6 | Two topologies to PDR; HIL fault-injection down-select; per-leg isolation; limp-home mode | WP1, iNetic |
+| T4 | AM spray-cooling channels / hollow conductors fail yield/accuracy | 4×4=16 | 2×2=4 | DFAM trials, CT-scanned coupons; brazed-insert fallback if yield <90% | WP1, iNetic |
+| T5 | Delays on Vacoflux laminations, carbon sleeves, HV insulation | 3×4=12 | 2×3=6 | Long-lead POs at PDR; dual-source; safety stock | WP1, iNetic |
+| T6 | Component delay due to licence requirements | 4×5=20 | 3×4=12 | Order via licence-holding supplier; documentation provided | WP2, iNetic |
+| T7 | Aerospace-grade SiC/GaN allocation limits | 2×3=6 | 1×2=2 | Pin-compatible second sources; derating; post-PDR buys | WP2, iNetic |
+| T8 | Supplier/logistics slips stall assembly | 3×4=12 | 2×2=4 | Early orders; weekly expediting; pre-qualified alternates | WP3, iNetic/UCL |
+| T9 | Weight/efficiency underperform benchmarks and business case | 3×3=9 | 2×2=4 | Re-optimise with dyno data/BoM; gearbox/cooling as levers | WP1&2, iNetic/UCL |
 | T10 | Incorrect/unclear drawings | 4×4=16 | 2×3=6 | Clarification with stakeholders | WP1&2, iNetic/UCL |
 | T11 | Component delivery delays (lead times underestimated) | 4×5=20 | 2×3=6 | Early ordering; dual-source | WP2, iNetic |
 | T12 | Out-of-spec components / quality issues | 4×4=16 | 2×3=6 | Incoming QC; supplier QA agreement | WP3, iNetic |
 | T13 | Performance/economics not commercially competitive | 2×3=6 | 2×2=4 | Re-optimise topology; define further optimisation work | WP1, iNetic |
-| T14 | SkyDrive/test facilities damaged in testing | 1×4=4 | 1×2=2 | Comprehensive instrumentation and protection; destructive tests last | WP3, iNetic/ARC |
-| T15 | Rotor hoop-stress failure at 18,000 rpm (rotor burst) | 3×5=15 | 2×3=6 | FEA (stress/modal/fatigue); high-strength retaining sleeves; staged spin testing | WP3, iNetic |
-| T16 | Coil-winding errors | 3×4=12 | 2×2=4 | Double-checked coil calculator; winding plan; temperature rating validated | WP3, iNetic |
-| T17 | Component overheating (poor thermal design) | 3×4=12 | 2×2=4 | Thermal simulation; derating; heatsink validation; certified materials | WP1, UCL |
-| T18 | Incomplete/non-intuitive assembly SOPs | 3×3=9 | 1×2=2 | Visual SOPs; training; supervised pilot build with hold points | WP3, iNetic |
-| T19 | Motor/powertrain fails final testing (design flaw) | 3×4=12 | 2×3=6 | Simulation; DVP; component and sub-assembly testing | WP3, iNetic |
+| T14 | SkyDrive/test facilities damaged in testing | 1×4=4 | 1×2=2 | Instrumentation and protection; destructive tests last | WP3, iNetic/ARC |
+| T15 | Rotor hoop-stress failure at 18,000 rpm (rotor burst) | 3×5=15 | 2×3=6 | FEA (stress/modal/fatigue); retaining sleeves; staged spin tests | WP3, iNetic |
+| T16 | Coil-winding errors | 3×4=12 | 2×2=4 | Checked coil calculator; winding plan; validated temperature rating | WP3, iNetic |
+| T17 | Component overheating (poor thermal design) | 3×4=12 | 2×2=4 | Thermal simulation; derating; certified materials | WP1, UCL |
+| T18 | Incomplete/non-intuitive assembly SOPs | 3×3=9 | 1×2=2 | Visual SOPs; supervised pilot build with hold points | WP3, iNetic |
+| T19 | Motor/powertrain fails final testing (design flaw) | 3×4=12 | 2×3=6 | Simulation; DVP; sub-assembly testing | WP3, iNetic |
 | T20 | Test rig not ready | 2×4=8 | 2×2=4 | Parallel planning; early rig preparation | WP3, iNetic/ARC |
 | T21 | Inadequate tooling (no early jig plan) | 2×4=8 | 1×2=2 | Fixture planning in early design | WP1, iNetic/UCL |
-| T22 | Inadequate convective heat transfer (microchannel/oil spray) under dynamic loading | 2×4=8 | 1×3=4 | High-resolution CFD; HIL bench test with embedded sensors; redundant cooling path (hollow windings) | WP2, UCL |
-| T23 | Thermal management under real operating conditions | 3×4=12 | 2×3=6 | Flight-like simulation and test; liquid cooling if needed | All, iNetic/UCL |
-| T24 | Power density vs reliability trade-off | 4×4=16 | 2×3=6 | Conservative margins; accelerated life testing; FMEA | WP1&3, iNetic |
+| T22 | Inadequate convective heat transfer (microchannel/oil spray) under dynamic loading | 2×4=8 | 1×3=4 | CFD; HIL bench test; redundant cooling path (hollow windings) | WP2, UCL |
+| T23 | Thermal management under real operating conditions | 3×4=12 | 2×3=6 | Flight-like simulation/test; liquid cooling if needed | All, iNetic/UCL |
+| T24 | Power density vs reliability trade-off | 4×4=16 | 2×3=6 | Conservative margins; accelerated life test; FMEA | WP1&3, iNetic |
 | T25 | NVH from EM forces/assembly | 3×3=9 | 2×2=4 | FEA; NVH testing; precision balancing | WP1, iNetic |
-| T26 | Precision manufacturing tolerances not consistently achievable | 4×4=16 | 2×3=6 | Rigorous supplier selection; CMM validation; pilot production | WP3, iNetic |
+| T26 | Precision manufacturing tolerances not consistently achievable | 4×4=16 | 2×3=6 | Supplier selection; CMM validation; pilot production | WP3, iNetic |
 | T27 | Control tuning / software certification delays (DO-178C) | 3×5=15 | 2×3=6 | Experienced control partners; modular software architecture | WP3, iNetic |
 | T28 | Inadequate testing environment (altitude/vibration/cooling not replicated) | 3×4=12 | 2×2=4 | HIL setups; vibration tables; altitude chambers | WP4*, iNetic |
-| T29 | Battery/power-source compatibility mismatch | 3×4=12 | 2×2=4 | Early system-level power requirements; involve battery partners | WP1, iNetic |
-| T30 | Integration mismatches (mechanical/software interfaces) | 4×5=20 | 3×4=12 | Interfaces defined in WP1, co-developed with ARC; staged test plan | WP3, iNetic |
-| T31 | Inverter/motor subsystem underperformance | 4×4=16 | 3×3=9 | Iterative hardware testing; alternative designs validated in WP1 | WP1&4*, UCL |
-| T32 | Thermal management failures in prototypes | 3×4=12 | 2×3=6 | System-level thermal modelling; phased test validation | WP4*, UCL |
-| T33 | Assembly errors / lack of rotor-specific skill | 3×4=12 | 1×3=3 | Training; work instructions; supervised assembly | WP3, iNetic |
+| T29 | Battery/power-source compatibility mismatch | 3×4=12 | 2×2=4 | Early power requirements; involve battery partners | WP1, iNetic |
+| T30 | Integration mismatches (mechanical/software interfaces) | 4×5=20 | 3×4=12 | WP1 interface definition with ARC; staged test plan | WP3, iNetic |
+| T31 | Inverter/motor subsystem underperformance | 4×4=16 | 3×3=9 | Iterative hardware test; WP1-validated alternatives | WP1&4*, UCL |
+| T32 | Thermal management failures in prototypes | 3×4=12 | 2×3=6 | System thermal modelling; phased validation | WP4*, UCL |
+| T33 | Assembly errors / lack of rotor-specific skill | 3×4=12 | 1×3=3 | Training; work instructions; supervision | WP3, iNetic |
 | C34 | Failure to meet specs (delays/rework) | 4×5=20 | 2×3=6 | Schedule buffer | All, iNetic |
-| C35 | Cost overrun | 3×3=9 | 2×2=4 | Cost tracking; contingency; fixed-price supply deals | WP2, iNetic |
-| C36 | Customer concentration risk | 3×4=12 | 2×3=6 | Diversify customers, incl. heavy-duty (buses) | All, iNetic |
-| C37 | IP infringement / insufficient protection | 3×4=12 | 2×3=6 | Early patents; NDAs; infringement monitoring | All, iNetic |
-| C38 | Misalignment with customer roadmaps | 3×4=12 | 2×2=4 | Co-develop with anchor customers; modular design | All, iNetic |
-| C39 | Geopolitical/trade risks | 3×4=12 | 2×3=6 | Multiple international suppliers; UK/EU/US routes | All, iNetic |
+| C35 | Cost overrun | 3×3=9 | 2×2=4 | Cost tracking; contingency; fixed-price deals | WP2, iNetic |
+| C36 | Customer concentration risk | 3×4=12 | 2×3=6 | Diversify customers, incl. buses | All, iNetic |
+| C37 | IP infringement / insufficient protection | 3×4=12 | 2×3=6 | Early patents; NDAs; monitoring | All, iNetic |
+| C38 | Misalignment with customer roadmaps | 3×4=12 | 2×2=4 | Co-develop with anchor customers; modularity | All, iNetic |
+| C39 | Geopolitical/trade risks | 3×4=12 | 2×3=6 | Multiple suppliers; UK/EU/US routes | All, iNetic |
 | C40 | Late customer requirement changes | 3×4=12 | 2×2=4 | Design lock at order; change control | WP1 |
-| M41 | Resource constraints / skills gaps | 4×5=20 | 3×3=9 | Workforce planning; cross-training; experienced subcontractors | All, iNetic |
+| M41 | Resource constraints / skills gaps | 4×5=20 | 3×3=9 | Workforce planning; cross-training; subcontractors | All, iNetic |
 | M42 | Key staff attrition | 3×4=12 | 2×3=6 | Retention bonuses; cross-training | All |
-| M43 | Communication breakdown | 3×4=12 | 2×2=4 | Regular reviews; collaborative tools; dashboard | All, iNetic |
-| M44 | Inadequate risk-management culture | 4×4=16 | 2×3=6 | Risk register; scheduled reviews; escalation matrix | All, iNetic |
-| M45 | Delayed decision-making | 3×4=12 | 2×3=6 | Delegated authority matrix; time-boxed decisions | All, iNetic |
-| M46 | Weak project governance | 4×4=16 | 2×3=6 | RACI; governance board; performance tracking | All, iNetic |
-| M47 | Inconsistent stakeholder engagement | 3×4=12 | 2×3=6 | Stakeholder map; newsletters; quarterly briefings | All, iNetic |
+| M43 | Communication breakdown | 3×4=12 | 2×2=4 | Reviews; collaborative tools; dashboard | All, iNetic |
+| M44 | Inadequate risk-management culture | 4×4=16 | 2×3=6 | Register; scheduled reviews; escalation matrix | All, iNetic |
+| M45 | Delayed decision-making | 3×4=12 | 2×3=6 | Authority matrix; time-boxed decisions | All, iNetic |
+| M46 | Weak project governance | 4×4=16 | 2×3=6 | RACI; governance board; tracking | All, iNetic |
+| M47 | Inconsistent stakeholder engagement | 3×4=12 | 2×3=6 | Stakeholder map; quarterly briefings | All, iNetic |
 | M48 | Timeline slippage | 3×3=9 | 2×2=4 | Milestone buffers; weekly stand-ups | All |
 | M49 | Budget overrun (subcontractor delays) | 2×4=8 | 1×3=3 | Fixed-price contracts; contingency fund | All |
 | M50 | Data/documentation loss or miscommunication | 3×3=9 | 1×2=2 | Central document control | WP3 |
-| E51 | Rare-earth magnet supply and sustainability (NdFeB, e.g. N48UH) | 4×5=20 | 3×3=9 | ISO 14001 suppliers; recycled magnet options; disclosure | (no owner listed) |
-| E52 | Energy savings not achieved | 3×3=9 | 2×2=4 | Real-time energy monitoring; AI tweaks | WP3 |
+| E51 | Rare-earth magnet supply and sustainability (NdFeB, e.g. N48UH) | 4×5=20 | 3×3=9 | ISO 14001 suppliers; recycled magnets; disclosure | (no owner listed) |
+| E52 | Energy savings not achieved | 3×3=9 | 2×2=4 | Energy monitoring; AI tweaks | WP3 |
 | E53 | Scrap rate exceeds target | 2×4=8 | 1×3=3 | Lean kitting; error-proofing | WP3 |
 | S54 | Skills gap in digital manufacturing | 2×3=6 | 1×2=2 | STEM workshops | WP3, iNetic |
-| S55 | H&S incident during assembly | 2×5=10 | 1×2=2 | Document controls; version control (as written) | WP3, iNetic |
+| S55 | H&S incident during assembly | 2×5=10 | 1×2=2 | Document/version control (as written) | WP3, iNetic |
 
 \*T28/T31/T32 cite "WP4/Testing" although Q12 defines WP4 as exploitation — another internal inconsistency between the register and the final WP structure. **These risks inform the EPSRC risk table's thinking (e.g. PD at altitude, rotor burst, SiC supply, interface freeze) but are not to be copied into it** — the EPSRC risks must be research risks owned by the EPSRC team.
 
