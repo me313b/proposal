@@ -59,10 +59,12 @@ All word counts are stated at the end of each variant and verified within limits
 **Resolved by primary-source mining (no PI action needed beyond noting):**
 - BTMLC final citation ✔ (item 1 partially); TCAS-I exact title ✔; both theses' titles/dates/department ✔; Eaton SkyDrive engagement ✔; IMD-review candidates identified ✔ (selection still needed); EP/T517793/1 acknowledgement confirmed in print ✔.
 
+**Newly resolved by web literature verification (Aug 2026):** hairpin references found and verified (Zou et al. TTE 2022 now drafted as [17]; Volpe/Popescu IEMDC 2021 as companion); IMD review candidates fully verified with volumes/pages/DOIs (Abebe IET EPA 10(8) 2016 recommended); Libbos DOI found; Sarlioglu/Cao DOIs confirmed; Jet Zero Strategy exact citation confirmed (DfT, Jul. 2022). ⚠️ TWO IMPACT-CLAIM WARNINGS: (a) the "£3.2 bn UK AAM market by 2030" figure is UNSUPPORTED — no ATI or other source found; verified substitutes are PwC 2023 (up to £2.1 bn annual UK benefit by 2040, AAM-specific) or DfT Future of Flight Action Plan 2024 (£45 bn by 2030, whole drone/eVTOL economy); (b) "~111,000 direct UK aerospace jobs" is the stale 2019 ADS edition — current verified figure is ~104,000 (ADS Aerospace Sector Outlook 2024). Both claims appear in the Vision settled text and arc revision with [PI TO CONFIRM] flags; the PI must pick the replacement figures before submission. Details in 06_References.md entries [18] and [19].
+
 **Still open (from master handover §11 + new):**
 1. Venue/year/DOI for A3 (NPC), A4 (equalizer), A5 (eVTOL — venue + institutions), A6 (flux-reversal — vol/issue/pages/DOI), A7 (thermal).
-2. PD companion reference(s) [14]; hairpin winding reference(s) [17].
-3. ATI edition (supports £3.2 bn by 2030); ADS edition (supports ~111,000 jobs).
+2. PD companion reference(s) [14] (verification agent still out).
+3. Decide replacement market and jobs figures per the warning above.
 4. Ordering of [1]–[3]; thesis insertion points; old-[4] resolution.
 5. Renumber all inline keys once References is final (Map A/B in 06).
 6. APL dynamometer envelope 6,000–10,000 RPM at 5–15 kW (confirmed NOT resolvable from the SkyDrive documents — no UCL dynamometer is described there).
