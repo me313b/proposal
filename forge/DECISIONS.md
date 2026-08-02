@@ -1,6 +1,6 @@
 # Forge decisions
 
-Generated 2 Aug 09:42 by Forge v8.1. Chosen text is authoritative for assembly; directives are queued changes for the next drafting pass.
+Generated 3 Aug 00:06 by Forge v9.3. Chosen text is authoritative for assembly; directives are queued changes for the next drafting pass.
 
 ## Chosen variants
 
