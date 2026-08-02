@@ -10,7 +10,7 @@
   "lastBackupAt": null,
   "createdAt": 1785655365678,
   "firstRun": true,
-  "touchedAt": 1785655823885
+  "touchedAt": 1785656570823
  },
  "sections": [
   {
@@ -967,8 +967,8 @@
   "branch": "claude/epsrc-vision-approach-library-6qr50k",
   "importPath": "exports/FORGE_Import.md",
   "autoPull": false,
-  "lastPull": 1785655789467,
-  "lastPush": null,
+  "lastPull": 1785656570823,
+  "lastPush": 1785655839003,
   "lastSha": "4118315",
   "etag": "\"4118315a793b3087773c0f3c24b2ce2b35d4c46f\""
  },
@@ -1018,11 +1018,12 @@
  ],
  "ui": {
   "selPart": "e2nvug23m7j",
-  "view": "read",
+  "view": "part",
   "editing": null,
   "editorMode": "write",
   "compareSel": [],
   "openSecs": {},
-  "newDrafts": false
+  "newDrafts": false,
+  "pushPending": false
  }
 }
