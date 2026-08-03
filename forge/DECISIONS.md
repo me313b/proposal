@@ -1,11 +1,11 @@
 # Forge decisions
 
-Generated 3 Aug 00:06 by Forge v9.3. Chosen text is authoritative for assembly; directives are queued changes for the next drafting pass.
+Generated 3 Aug 12:29 by Forge v9.3. Chosen text is authoritative for assembly; directives are queued changes for the next drafting pass.
 
 ## Chosen variants
 
 - Summary :: Summary: none
-- Summary :: Public summary (550 words): none
+- Summary :: Public summary (550 words): SUM-PUB-v1 (550 words)
 - Vision :: Opening: stand beside the expert: none
 - Vision :: The unseen line: none
 - Vision :: Crossing the line: the 50 V claim: none
